@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NIHIL — Curiozitatea ca act de supraviețuire</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Unna:ital,wght@0,400;0,700;1,400&family=Epilogue:wght@300;400;500;700;900&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;1,9..144,300;1,9..144,400;1,9..144,700&display=swap" rel="stylesheet">
+<style>
+:root{--crem:#f5f0e0;--crem-dk:#ece5cc;--crem-dkr:#ddd4b5;--hartie:#f9f5e8;--terra:#c4522a;--terra-lt:#d9714e;--terra-dk:#8b3318;--negru:#1a1710;--cerneala:#2c2819;--gri:#6b6454;--gri-lt:#9a9080;--linie:rgba(26,23,16,0.12);--linie-bold:rgba(26,23,16,0.7);}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--hartie);color:var(--negru);font-family:'Epilogue',sans-serif;font-weight:400;overflow-x:hidden;}
+body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9998;opacity:0.25;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E");mix-blend-mode:multiply;}
+
+/* TOP BAR */
+.top-bar{background:var(--terra);padding:.5rem 3rem;display:flex;justify-content:space-between;align-items:center;}
+.top-bar-left{font-family:'Epilogue',sans-serif;font-size:.62rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.7);}
+.top-bar-left b{color:white;}
+.top-bar-right{font-family:'Fraunces',serif;font-style:italic;font-size:.8rem;color:rgba(255,255,255,.6);}
+
+/* MASTHEAD */
+.masthead{background:var(--crem);border-bottom:2px solid var(--linie-bold);position:sticky;top:0;z-index:100;}
+.masthead-inner{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:1.2rem 3rem;border-bottom:1px solid var(--linie);}
+.masthead-stanga{font-family:'Epilogue',sans-serif;font-size:.6rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--gri);line-height:1.6;}
+.logo{text-align:center;text-decoration:none;display:block;}
+.logo-text{font-family:'Fraunces',serif;font-size:3.2rem;font-weight:700;letter-spacing:.25em;color:var(--negru);line-height:1;text-transform:uppercase;}
+.logo-text span{color:var(--terra);}
+.logo-sub{font-family:'Fraunces',serif;font-style:italic;font-size:.72rem;font-weight:300;color:var(--gri);letter-spacing:.08em;margin-top:.2rem;}
+.masthead-dreapta{text-align:right;font-family:'Epilogue',sans-serif;font-size:.6rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--gri);line-height:1.6;}
+.nav-bar{display:flex;justify-content:center;overflow-x:auto;scrollbar-width:none;}
+.nav-bar::-webkit-scrollbar{display:none;}
+.nav-link{font-family:'Epilogue',sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--cerneala);text-decoration:none;padding:.75rem 1.8rem;border-right:1px solid var(--linie);white-space:nowrap;transition:background .2s,color .2s;}
+.nav-link:first-child{border-left:1px solid var(--linie);}
+.nav-link:hover,.nav-link.activ{background:var(--terra);color:white;}
+
+/* HERO */
+.hero{display:grid;grid-template-columns:55% 1px 45%;min-height:82vh;border-bottom:2px solid var(--linie-bold);}
+.hero-separator{background:var(--linie-bold);}
+.hero-stanga{padding:4rem 3.5rem 3rem;display:flex;flex-direction:column;justify-content:flex-end;position:relative;background:var(--hartie);overflow:hidden;}
+.hero-stanga::before{content:'N';font-family:'Fraunces',serif;font-size:38vw;font-weight:700;color:rgba(196,82,42,.04);position:absolute;top:-5vw;left:-3vw;line-height:1;pointer-events:none;}
+.hero-rubrica{display:inline-flex;align-items:center;gap:.7rem;margin-bottom:1.5rem;position:relative;z-index:1;}
+.rubrica-tag{background:var(--terra);color:white;font-family:'Epilogue',sans-serif;font-size:.58rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;padding:.25rem .8rem;}
+.rubrica-loc{font-family:'Fraunces',serif;font-style:italic;font-size:.8rem;color:var(--gri);}
+.hero-titlu{font-family:'Fraunces',serif;font-size:clamp(2.5rem,4.5vw,4.8rem);font-weight:700;line-height:1;letter-spacing:-.02em;color:var(--negru);margin-bottom:1.5rem;position:relative;z-index:1;max-width:640px;}
+.hero-titlu em{font-style:italic;font-weight:300;color:var(--terra);}
+.hero-intro{font-family:'Unna',serif;font-size:1.05rem;line-height:1.8;color:var(--cerneala);max-width:520px;margin-bottom:2rem;position:relative;z-index:1;}
+.hero-meta{display:flex;align-items:center;gap:1.5rem;position:relative;z-index:1;flex-wrap:wrap;}
+.hero-citeste{font-family:'Epilogue',sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--terra);text-decoration:none;display:flex;align-items:center;gap:.6rem;border-bottom:1px solid var(--terra);padding-bottom:.1rem;transition:gap .25s,color .25s;}
+.hero-citeste:hover{gap:1rem;color:var(--terra-dk);}
+.hero-timp{font-family:'Fraunces',serif;font-style:italic;font-size:.82rem;color:var(--gri);}
+.hero-dreapta{display:flex;flex-direction:column;}
+.hero-sub{flex:1;padding:2rem 2.5rem;border-bottom:1px solid var(--linie);cursor:default;transition:background .25s;position:relative;overflow:hidden;}
+.hero-sub:last-child{border-bottom:none;}
+.hero-sub:hover{background:var(--crem-dk);}
+.hero-sub::after{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--terra);transform:scaleY(0);transform-origin:bottom;transition:transform .35s ease;}
+.hero-sub:hover::after{transform:scaleY(1);}
+.sub-emoji{font-size:1.6rem;margin-bottom:.6rem;display:block;}
+.sub-cat{font-family:'Epilogue',sans-serif;font-size:.55rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--terra);margin-bottom:.5rem;}
+.sub-titlu{font-family:'Fraunces',serif;font-size:1.2rem;font-weight:700;line-height:1.15;color:var(--negru);margin-bottom:.5rem;}
+.sub-titlu em{font-style:italic;font-weight:300;}
+.sub-desc{font-family:'Unna',serif;font-size:.85rem;line-height:1.65;color:var(--gri);}
+
+/* FA ASTA AZI */
+.fa-asta-section{background:var(--terra);border-bottom:2px solid var(--terra-dk);padding:3.5rem 3rem;position:relative;overflow:hidden;}
+.fa-asta-section::before{content:'!';font-family:'Fraunces',serif;font-size:30rem;font-weight:700;color:rgba(255,255,255,.04);position:absolute;right:0;top:50%;transform:translateY(-50%);line-height:1;pointer-events:none;}
+.fa-header{margin-bottom:2.5rem;}
+.fa-eyebrow{font-family:'Epilogue',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:.6rem;}
+.fa-titlu{font-family:'Fraunces',serif;font-size:clamp(2rem,4vw,3.5rem);font-weight:700;line-height:1;color:white;letter-spacing:-.02em;}
+.fa-titlu em{font-style:italic;font-weight:300;}
+.fa-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.15);}
+.fa-card{background:var(--terra);padding:2rem 1.8rem;cursor:default;transition:background .25s;}
+.fa-card:hover{background:var(--terra-lt);}
+.fa-nr{font-family:'Fraunces',serif;font-size:3.5rem;font-weight:700;color:rgba(255,255,255,.12);line-height:1;margin-bottom:.5rem;}
+.fa-icon{font-size:1.4rem;margin-bottom:.8rem;display:block;}
+.fa-card-titlu{font-family:'Fraunces',serif;font-size:1.05rem;font-weight:700;color:white;line-height:1.2;margin-bottom:.6rem;}
+.fa-card-desc{font-family:'Unna',serif;font-size:.82rem;line-height:1.65;color:rgba(255,255,255,.65);}
+.fa-dificultate{margin-top:.8rem;font-family:'Epilogue',sans-serif;font-size:.52rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.4);}
+
+/* SECTIUNE HEADER */
+.sectiune-header{display:flex;align-items:center;border-bottom:2px solid var(--linie-bold);border-top:2px solid var(--linie-bold);}
+.sh-label{font-family:'Epilogue',sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.25em;text-transform:uppercase;background:var(--negru);color:var(--crem);padding:.8rem 2rem;white-space:nowrap;}
+.sh-desc{font-family:'Fraunces',serif;font-style:italic;font-size:.8rem;color:var(--gri);padding:.8rem 2rem;}
+.sh-rule{flex:1;}
+.sh-data{font-family:'Epilogue',sans-serif;font-size:.58rem;font-weight:500;letter-spacing:.1em;color:var(--gri-lt);padding:.8rem 2rem;border-left:1px solid var(--linie);white-space:nowrap;}
+
+/* BIZARE GRID */
+.bizare-grid{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:2px solid var(--linie-bold);}
+.bizar-card{padding:3rem 2.5rem;border-right:1px solid var(--linie);cursor:default;transition:background .25s;overflow:hidden;}
+.bizar-card:last-child{border-right:none;}
+.bizar-card:hover{background:var(--crem);}
+.bizar-tara{font-family:'Epilogue',sans-serif;font-size:.55rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gri-lt);margin-bottom:.5rem;}
+.bizar-emoji{font-size:2.5rem;display:block;margin-bottom:1rem;}
+.bizar-titlu{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:700;line-height:1.1;color:var(--negru);margin-bottom:1rem;}
+.bizar-titlu em{font-style:italic;color:var(--terra);}
+.bizar-text{font-family:'Unna',serif;font-size:.9rem;line-height:1.75;color:var(--cerneala);margin-bottom:1.2rem;}
+.bizar-sursa{font-family:'Epilogue',sans-serif;font-size:.55rem;font-weight:500;letter-spacing:.1em;color:var(--gri-lt);text-transform:uppercase;border-top:1px solid var(--linie);padding-top:1rem;}
+.bizar-sursa a{color:var(--terra);text-decoration:none;}
+
+/* FAPTE */
+.fapte-section{background:var(--crem-dk);border-bottom:2px solid var(--linie-bold);padding:4rem 3rem;}
+.fapte-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;margin-top:2.5rem;background:var(--linie-bold);}
+.fapt{background:var(--crem-dk);padding:2.5rem;display:flex;gap:2rem;align-items:flex-start;cursor:default;transition:background .25s;}
+.fapt:hover{background:var(--crem);}
+.fapt-nr{font-family:'Fraunces',serif;font-size:3rem;font-weight:700;color:var(--terra);line-height:1;flex-shrink:0;min-width:50px;}
+.fapt-text{font-family:'Fraunces',serif;font-size:1.15rem;font-weight:400;line-height:1.45;color:var(--negru);margin-bottom:.5rem;}
+.fapt-text em{font-style:italic;color:var(--terra);}
+.fapt-sursa{font-family:'Epilogue',sans-serif;font-size:.55rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--gri-lt);}
+
+/* CITAT */
+.citat-section{padding:6rem 3rem;text-align:center;border-bottom:2px solid var(--linie-bold);background:var(--hartie);position:relative;overflow:hidden;}
+.citat-ghilimele{font-family:'Fraunces',serif;font-size:20rem;font-weight:700;color:rgba(196,82,42,.05);position:absolute;top:-3rem;left:50%;transform:translateX(-50%);line-height:1;pointer-events:none;}
+.citat-text{font-family:'Fraunces',serif;font-size:clamp(1.8rem,3.5vw,3.2rem);font-weight:300;font-style:italic;line-height:1.35;color:var(--negru);max-width:900px;margin:0 auto 1.5rem;position:relative;z-index:1;}
+.citat-text strong{font-weight:700;font-style:normal;color:var(--terra);}
+.citat-autor{font-family:'Epilogue',sans-serif;font-size:.62rem;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:var(--gri);position:relative;z-index:1;}
+
+/* ESEU */
+.eseu-section{display:grid;grid-template-columns:1fr 300px;border-bottom:2px solid var(--linie-bold);}
+.eseu-main{padding:4rem 3.5rem;border-right:1px solid var(--linie);}
+.eseu-kicker{font-family:'Epilogue',sans-serif;font-size:.58rem;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:var(--terra);margin-bottom:1.2rem;display:flex;align-items:center;gap:.8rem;}
+.eseu-kicker::before{content:'';width:25px;height:2px;background:var(--terra);display:inline-block;}
+.eseu-titlu{font-family:'Fraunces',serif;font-size:clamp(2rem,3.5vw,3rem);font-weight:700;line-height:1.05;color:var(--negru);margin-bottom:1rem;letter-spacing:-.02em;}
+.eseu-titlu em{font-style:italic;font-weight:300;color:var(--terra);}
+.eseu-subtitlu{font-family:'Fraunces',serif;font-style:italic;font-size:1.1rem;font-weight:300;color:var(--gri);margin-bottom:2rem;line-height:1.5;}
+.eseu-text{font-family:'Unna',serif;font-size:1rem;line-height:1.9;color:var(--cerneala);margin-bottom:1.2rem;}
+.eseu-text:first-of-type::first-letter{font-family:'Fraunces',serif;font-size:4.5rem;font-weight:700;float:left;line-height:.75;margin-right:.1em;margin-top:.1em;color:var(--terra);}
+.eseu-sidebar{padding:3rem 2rem;background:var(--crem);}
+.sidebar-titlu{font-family:'Epilogue',sans-serif;font-size:.58rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gri);margin-bottom:1.5rem;padding-bottom:.8rem;border-bottom:1px solid var(--linie);}
+.sidebar-item{padding:1.2rem 0;border-bottom:1px solid var(--linie);cursor:default;transition:padding-left .2s;}
+.sidebar-item:hover{padding-left:.5rem;}
+.si-cat{font-family:'Epilogue',sans-serif;font-size:.52rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--terra);margin-bottom:.3rem;}
+.si-titlu{font-family:'Fraunces',serif;font-size:.98rem;font-weight:700;line-height:1.25;color:var(--negru);}
+.si-titlu em{font-style:italic;font-weight:300;}
+.si-timp{font-family:'Fraunces',serif;font-style:italic;font-size:.72rem;color:var(--gri-lt);margin-top:.25rem;}
+
+/* NEWSLETTER */
+.newsletter{background:var(--negru);color:white;padding:5rem 3rem;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;border-bottom:3px solid var(--terra);position:relative;overflow:hidden;}
+.newsletter::before{content:'NIHIL';font-family:'Fraunces',serif;font-size:20vw;font-weight:700;color:rgba(255,255,255,.025);position:absolute;bottom:-3vw;right:-2vw;line-height:1;pointer-events:none;letter-spacing:.1em;}
+.nl-eyebrow{font-family:'Epilogue',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:var(--terra-lt);margin-bottom:1rem;}
+.nl-titlu{font-family:'Fraunces',serif;font-size:clamp(2.2rem,4vw,3.8rem);font-weight:700;line-height:1;color:white;margin-bottom:1.2rem;letter-spacing:-.02em;}
+.nl-titlu em{font-style:italic;font-weight:300;color:var(--terra-lt);}
+.nl-desc{font-family:'Unna',serif;font-size:.95rem;line-height:1.8;color:rgba(255,255,255,.45);}
+.nl-promise{display:flex;flex-direction:column;gap:.8rem;margin-bottom:2rem;}
+.nl-p-item{display:flex;align-items:flex-start;gap:1rem;font-family:'Fraunces',serif;font-size:1rem;color:rgba(255,255,255,.7);line-height:1.4;}
+.nl-p-icon{color:var(--terra-lt);flex-shrink:0;}
+.nl-form-row{display:flex;}
+.nl-input{flex:1;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-right:none;color:white;font-family:'Unna',serif;font-size:.95rem;padding:.9rem 1.3rem;outline:none;transition:border-color .25s;}
+.nl-input::placeholder{color:rgba(255,255,255,.25);font-style:italic;}
+.nl-input:focus{border-color:var(--terra-lt);}
+.nl-submit{background:var(--terra);border:1px solid var(--terra);color:white;font-family:'Epilogue',sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;padding:.9rem 1.8rem;cursor:pointer;transition:background .25s;white-space:nowrap;}
+.nl-submit:hover{background:var(--terra-lt);}
+.nl-nota{font-family:'Fraunces',serif;font-style:italic;font-size:.75rem;color:rgba(255,255,255,.2);margin-top:.8rem;}
+
+/* FOOTER */
+footer{background:var(--crem-dk);border-top:2px solid var(--linie-bold);}
+.footer-top-bar{background:var(--negru);padding:.6rem 3rem;display:flex;justify-content:space-between;align-items:center;}
+.ftb-text{font-family:'Fraunces',serif;font-style:italic;font-size:.78rem;color:rgba(255,255,255,.35);}
+.ftb-logo{font-family:'Fraunces',serif;font-size:1rem;font-weight:700;letter-spacing:.15em;color:white;text-decoration:none;}
+.ftb-logo span{color:var(--terra-lt);}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;border-bottom:1px solid var(--linie);}
+.footer-col{padding:3rem 2.5rem;border-right:1px solid var(--linie);}
+.footer-col:last-child{border-right:none;}
+.footer-brand-name{font-family:'Fraunces',serif;font-size:1.4rem;font-weight:700;letter-spacing:.1em;color:var(--negru);margin-bottom:.2rem;}
+.footer-brand-name span{color:var(--terra);}
+.footer-motto{font-family:'Fraunces',serif;font-style:italic;font-size:.8rem;color:var(--gri);margin-bottom:1rem;}
+.footer-desc{font-family:'Unna',serif;font-size:.85rem;line-height:1.75;color:var(--gri);}
+.footer-col-titlu{font-family:'Epilogue',sans-serif;font-size:.55rem;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:var(--gri-lt);margin-bottom:1.2rem;padding-bottom:.7rem;border-bottom:1px solid var(--linie);}
+.footer-links{list-style:none;}
+.footer-links li{margin-bottom:.5rem;}
+.footer-links a{font-family:'Fraunces',serif;font-size:.95rem;color:var(--cerneala);text-decoration:none;transition:color .2s;}
+.footer-links a:hover{color:var(--terra);}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;padding:1.2rem 2.5rem;flex-wrap:wrap;gap:.5rem;}
+.footer-copy{font-family:'Epilogue',sans-serif;font-size:.58rem;color:var(--gri-lt);}
+.footer-latin{font-family:'Fraunces',serif;font-style:italic;font-size:.78rem;color:var(--gri-lt);}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+.rd1{transition-delay:.1s;}.rd2{transition-delay:.2s;}.rd3{transition-delay:.3s;}.rd4{transition-delay:.4s;}
+
+/* LOAD ANIMS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
+.hero-rubrica{animation:fadeUp .7s ease forwards;}
+.hero-titlu{animation:fadeUp .7s ease forwards .15s;opacity:0;}
+.hero-intro{animation:fadeUp .7s ease forwards .3s;opacity:0;}
+.hero-meta{animation:fadeUp .7s ease forwards .45s;opacity:0;}
+
+/* RESPONSIVE */
+@media(max-width:1100px){
+  .top-bar,.masthead-inner{padding-left:1.5rem;padding-right:1.5rem;}
+  .masthead-stanga,.masthead-dreapta{display:none;}
+  .masthead-inner{grid-template-columns:1fr;justify-items:center;}
+  .hero{grid-template-columns:1fr;}
+  .hero-separator,.hero-dreapta{display:none;}
+  .hero-stanga{padding:2.5rem 1.5rem;min-height:60vh;}
+  .fa-grid{grid-template-columns:1fr 1fr;}
+  .bizare-grid{grid-template-columns:1fr;}
+  .bizar-card{border-right:none;border-bottom:1px solid var(--linie);}
+  .fapte-grid{grid-template-columns:1fr;}
+  .eseu-section{grid-template-columns:1fr;}
+  .eseu-sidebar{display:none;}
+  .newsletter{grid-template-columns:1fr;padding:3.5rem 1.5rem;gap:3rem;}
+  .footer-grid{grid-template-columns:1fr 1fr;}
+  .footer-bottom{flex-direction:column;text-align:center;}
+  .fa-asta-section,.fapte-section,.citat-section,.eseu-main{padding:3rem 1.5rem;}
+}
+@media(max-width:640px){
+  .fa-grid{grid-template-columns:1fr;}
+  .footer-grid{grid-template-columns:1fr;}
+  .logo-text{font-size:2.2rem;}
+}
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+  <div class="top-bar-left">nihil.ro · <b>Ediția de Azi</b> · România</div>
+  <div class="top-bar-right" id="data-azi">vineri, 20 februarie 2025</div>
+</div>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <div class="masthead-stanga">Curiozitatea<br>ca act de supraviețuire</div>
+    <a href="#" class="logo">
+      <div class="logo-text">NIHIL<span>.</span>ro</div>
+      <div class="logo-sub">pentru oameni care vor să rămână treji</div>
+    </a>
+    <div class="masthead-dreapta">Știri ciudate<br>Lucruri de făcut<br>Fapte care contează</div>
+  </div>
+  <nav class="nav-bar">
+    <a href="#" class="nav-link activ">Azi</a>
+    <a href="#" class="nav-link">Ciudățenii</a>
+    <a href="#" class="nav-link">Fă Asta Azi</a>
+    <a href="#" class="nav-link">Fapte</a>
+    <a href="#" class="nav-link">Lume</a>
+    <a href="#" class="nav-link">Cultură</a>
+    <a href="#" class="nav-link">Eseu</a>
+    <a href="#" class="nav-link">Arhivă</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-stanga">
+    <div class="hero-rubrica">
+      <span class="rubrica-tag">Ciudățenia zilei</span>
+      <span class="rubrica-loc">📍 Norvegia</span>
+    </div>
+    <h1 class="hero-titlu">Orașul în care<br>este <em>ilegal să mori</em><br>dacă nu ești pregătit</h1>
+    <p class="hero-intro">În Longyearbyen, cel mai nordic oraș din lume, înmormântările sunt interzise din 1950. Permafrostul conservă prea bine cadavrele — inclusiv virusuri vechi de decenii. Dacă ești pe moarte, ești pus în avion spre continent. Dacă mori înainte să poți fi evacuat, ești problema altcuiva.</p>
+    <div class="hero-meta">
+      <a href="#" class="hero-citeste">Citește articolul →</a>
+      <span class="hero-timp">4 minute</span>
+    </div>
+  </div>
+  <div class="hero-separator"></div>
+  <div class="hero-dreapta">
+    <div class="hero-sub">
+      <span class="sub-emoji">🐙</span>
+      <div class="sub-cat">Știință</div>
+      <div class="sub-titlu">Caracatițele <em>visează</em> și schimbă culori în somn</div>
+      <div class="sub-desc">Cercetătorii au filmat cum pielea lor face animații în timp ce dorm. Nimeni nu știe exact de ce.</div>
+    </div>
+    <div class="hero-sub">
+      <span class="sub-emoji">🏦</span>
+      <div class="sub-cat">Economie Ciudată</div>
+      <div class="sub-titlu">Elveția are mai multe bănci <em>decât dentiști</em></div>
+      <div class="sub-desc">Un fapt pe care băncile elvețiene preferă să nu îl publiciteze, dar care spune totul despre ce își permit elvețienii.</div>
+    </div>
+    <div class="hero-sub">
+      <span class="sub-emoji">🛖</span>
+      <div class="sub-cat">Lume</div>
+      <div class="sub-titlu">Omul care a trăit <em>10 ani singur</em> în pădure — și nu vrea să se întoarcă</div>
+      <div class="sub-desc">Chris Knight nu era în criză. Era curios dacă poate. Poate că asta e diferența care contează.</div>
+    </div>
+  </div>
+</section>
+
+<section class="fa-asta-section">
+  <div class="fa-header">
+    <div class="fa-eyebrow">✦ rubrica săptămânală</div>
+    <h2 class="fa-titlu">Fă Asta <em>Azi</em></h2>
+  </div>
+  <div class="fa-grid">
+    <div class="fa-card reveal rd1">
+      <div class="fa-nr">01</div>
+      <span class="fa-icon">📞</span>
+      <div class="fa-card-titlu">Sună pe cineva pe care nu l-ai sunat de mai bine de un an</div>
+      <div class="fa-card-desc">Nu trimite mesaj. Sună. Primele 10 secunde vor fi ciudate. Restul conversației nu va fi.</div>
+      <div class="fa-dificultate">Dificultate: emoțională ↑↑</div>
+    </div>
+    <div class="fa-card reveal rd2">
+      <div class="fa-nr">02</div>
+      <span class="fa-icon">🗺️</span>
+      <div class="fa-card-titlu">Mergi pe un drum pe care nu l-ai luat niciodată spre casă</div>
+      <div class="fa-card-desc">Oricare drum nou activează același sistem cerebral ca o aventură. Creierul nu face diferența.</div>
+      <div class="fa-dificultate">Dificultate: logistică ↑</div>
+    </div>
+    <div class="fa-card reveal rd3">
+      <div class="fa-nr">03</div>
+      <span class="fa-icon">📖</span>
+      <div class="fa-card-titlu">Citește primul capitol dintr-o carte pe care o ai de un an</div>
+      <div class="fa-card-desc">Numai primul. Dacă după primul capitol vrei să continui, a meritat să o cumperi. Dacă nu, ai rezolvat problema vinovăției.</div>
+      <div class="fa-dificultate">Dificultate: atenție ↑↑</div>
+    </div>
+    <div class="fa-card reveal rd4">
+      <div class="fa-nr">04</div>
+      <span class="fa-icon">🌅</span>
+      <div class="fa-card-titlu">Stabilește o zi fără planuri pentru săptămâna viitoare</div>
+      <div class="fa-card-desc">Nu weekend-ul. O zi de miercuri. Blochează-o în calendar. Scrie „ocupat". Nu spune nimănui ce faci cu ea.</div>
+      <div class="fa-dificultate">Dificultate: vinovăție ↑↑↑</div>
+    </div>
+  </div>
+</section>
+
+<div class="sectiune-header">
+  <div class="sh-label">Ciudățenii Verificate</div>
+  <div class="sh-desc">lucruri reale care par imposibile</div>
+  <div class="sh-rule"></div>
+  <div class="sh-data" id="data-sectiune">Azi</div>
+</div>
+
+<section class="bizare-grid">
+  <div class="bizar-card reveal rd1">
+    <div class="bizar-tara">🇯🇵 Japonia</div>
+    <span class="bizar-emoji">🚪</span>
+    <h3 class="bizar-titlu">Hikikomori: <em>1,5 milioane</em> de japonezi care nu au ieșit din casă de ani de zile</h3>
+    <p class="bizar-text">Nu sunt bolnavi. Nu sunt în pericol. Au ales, cu tot confortul dat de o societate care funcționează, să se retragă complet din ea. Guvernul japonez a creat un minister special pentru a-i convinge să iasă afară.</p>
+    <div class="bizar-sursa">Sursa: <a href="#">NHK World, 2024</a></div>
+  </div>
+  <div class="bizar-card reveal rd2">
+    <div class="bizar-tara">🇪🇸 Spania</div>
+    <span class="bizar-emoji">🍅</span>
+    <h3 class="bizar-titlu">La Tomatina: <em>20.000 de oameni</em> aruncă roșii unul în altul timp de o oră</h3>
+    <p class="bizar-text">A început în 1945 când un grup de tineri s-a bătut cu roșii la un festival. S-au simțit atât de bine că au venit și anul următor. Acum e patrimoniu cultural imaterial. Primăria cumpără 40 de tone de roșii special pentru asta.</p>
+    <div class="bizar-sursa">Sursa: <a href="#">El País, 2023</a></div>
+  </div>
+  <div class="bizar-card reveal rd3">
+    <div class="bizar-tara">🇫🇮 Finlanda</div>
+    <span class="bizar-emoji">📱</span>
+    <h3 class="bizar-titlu">Campionatul Mondial de <em>Aruncat Telefoane</em> se ține în Finlanda din 2000</h3>
+    <p class="bizar-text">Există categorii pe distanță, pe stil și pe originalitate. Recordul mondial este de 110 metri. Organizatorii colectează telefoanele și le reciclează. A început ca protest la adresa tehnologiei. A devenit cel mai mare eveniment de reciclare din țară.</p>
+    <div class="bizar-sursa">Sursa: <a href="#">Finnish Broadcasting Company</a></div>
+  </div>
+</section>
+
+<div class="sectiune-header">
+  <div class="sh-label">Fapte care dezechilibrează</div>
+  <div class="sh-desc">informații în 3 rânduri care schimbă cum privești lumea</div>
+  <div class="sh-rule"></div>
+</div>
+
+<section class="fapte-section">
+  <div class="fapte-grid">
+    <div class="fapt reveal">
+      <div class="fapt-nr">1</div>
+      <div>
+        <div class="fapt-text">Cleopatra a trăit mai aproape în timp de <em>iPhone</em> decât de construcția piramidelor.</div>
+        <div class="fapt-sursa">Piramidele: ~2560 î.Hr. · Cleopatra: ~50 î.Hr. · iPhone: 2007</div>
+      </div>
+    </div>
+    <div class="fapt reveal rd1">
+      <div class="fapt-nr">2</div>
+      <div>
+        <div class="fapt-text">Mamuții lanosi încă trăiau când <em>egiptenii construiau piramide</em>. Extincția nu a fost simultană.</div>
+        <div class="fapt-sursa">Ultimii mamuți: ~1700 î.Hr., pe insula Wrangel, Siberia</div>
+      </div>
+    </div>
+    <div class="fapt reveal rd2">
+      <div class="fapt-nr">3</div>
+      <div>
+        <div class="fapt-text">Există mai multe <em>combinații posibile</em> într-un pachet de 52 de cărți de joc decât atomi în soare.</div>
+        <div class="fapt-sursa">52! = 8×10⁶⁷ · Atomi în soare: ~10⁵⁷</div>
+      </div>
+    </div>
+    <div class="fapt reveal rd3">
+      <div class="fapt-nr">4</div>
+      <div>
+        <div class="fapt-text">Dacă ai 23 de oameni într-o cameră, există <em>50% șanse</em> că doi au aceeași zi de naștere.</div>
+        <div class="fapt-sursa">Paradoxul zilei de naștere · Probabilitate matematică</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="citat-section">
+  <div class="citat-ghilimele">„</div>
+  <blockquote class="citat-text reveal">„Problema nu e că viața e scurtă. E că așteptăm prea mult timp înainte să <strong>îndrăznim să o trăim</strong>."</blockquote>
+  <div class="citat-autor reveal rd1">— Seneca · De Brevitate Vitae · ~49 d.Hr.</div>
+</div>
+
+<div class="sectiune-header">
+  <div class="sh-label">Eseul Săptămânii</div>
+  <div class="sh-desc">lung, intenționat, fără grabă</div>
+  <div class="sh-rule"></div>
+</div>
+
+<section class="eseu-section">
+  <div class="eseu-main">
+    <div class="eseu-kicker">Eseu · Timp & Viață</div>
+    <h2 class="eseu-titlu">De ce ne plictisim<br><em>mai greu</em> ca oricând —<br>și ce pierdem din asta</h2>
+    <div class="eseu-subtitlu">Despre arta de a nu face nimic și de ce creierul tău are nevoie de ea ca de aer</div>
+    <p class="eseu-text">Există un paradox al epocii noastre: niciodată nu am avut mai mult acces la conținut, la stimuli, la distracție de orice fel — și totuși, niciodată nu am simțit mai puternic nevoia de și mai mult. Răsfoim prin feed-uri nu pentru că ne dorim ceva anume. O facem pentru că nu știm cum să nu o facem.</p>
+    <p class="eseu-text">Plictiseala, spun neuroștiințele, nu este absența gândurilor. Este un mod de procesare. Când nu avem nimic de urmărit activ, creierul intră în ceea ce cercetătorii numesc modul implicit — o stare în care conectăm puncte, rezolvăm probleme pe care nici nu știam că le avem, procesăm emoții nerezolvate. E fabrica secretă a ideilor bune.</p>
+    <p class="eseu-text">Am eliminat-o aproape complet din viețile noastre. Și nu prin neglijență, ci prin design intenționat al unor platforme care câștigă bani din fiecare secundă în care atenția noastră e capturată.</p>
+    <a href="#" class="hero-citeste" style="margin-top:1.5rem;display:inline-flex;">Continuă să citești →</a>
+  </div>
+  <div class="eseu-sidebar">
+    <div class="sidebar-titlu">Mai citește</div>
+    <div class="sidebar-item"><div class="si-cat">Ciudățenie</div><div class="si-titlu">Satul din Italia care plătește €30.000 să te muți acolo</div><div class="si-timp">3 minute</div></div>
+    <div class="sidebar-item"><div class="si-cat">Fă Asta Azi</div><div class="si-titlu">Înscrie-te la un curs de ceva <em>complet inutil</em></div><div class="si-timp">2 minute</div></div>
+    <div class="sidebar-item"><div class="si-cat">Lume</div><div class="si-titlu">De ce finlandezii sunt cei mai fericiți și nu știu să explice</div><div class="si-timp">6 minute</div></div>
+    <div class="sidebar-item"><div class="si-cat">Fapt</div><div class="si-titlu">Oxford University e mai <em>veche</em> decât imperiul aztec</div><div class="si-timp">1 minut</div></div>
+    <div class="sidebar-item"><div class="si-cat">Eseu</div><div class="si-titlu">Stoicismul nu e despre <em>a nu simți</em>. E despre a alege ce simți.</div><div class="si-timp">8 minute</div></div>
+  </div>
+</section>
+
+<section class="newsletter">
+  <div>
+    <div class="nl-eyebrow">✦ Nihil · Newsletter Săptămânal</div>
+    <h2 class="nl-titlu">Rămâi <em>treaz</em>.<br>Rămâi curios.</h2>
+    <p class="nl-desc">O ciudățenie, un lucru de făcut, un fapt care dezechilibrează și un eseu scurt — în fiecare sâmbătă dimineață, înainte să deschizi alte ferestre.</p>
+  </div>
+  <div>
+    <div class="nl-promise">
+      <div class="nl-p-item"><span class="nl-p-icon">→</span>1 ciudățenie verificată din lume</div>
+      <div class="nl-p-item"><span class="nl-p-icon">→</span>1 lucru concret de făcut în week-end</div>
+      <div class="nl-p-item"><span class="nl-p-icon">→</span>1 fapt care schimbă perspectiva</div>
+      <div class="nl-p-item"><span class="nl-p-icon">→</span>Fără reclame. Fără bullshit.</div>
+    </div>
+    <div class="nl-form-row">
+      <input class="nl-input" type="email" placeholder="adresa@ta.ro">
+      <button class="nl-submit">Abonează-te →</button>
+    </div>
+    <div class="nl-nota">Nicio reclamă. Dezabonare cu un click. Citit de oameni curioși din România.</div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top-bar">
+    <div class="ftb-text">nihil: din latină, „nimic" — și totuși, e ceva.</div>
+    <a href="#" class="ftb-logo">NIHIL<span>.ro</span></a>
+  </div>
+  <div class="footer-grid">
+    <div class="footer-col">
+      <div class="footer-brand-name">NIHIL<span>.</span>ro</div>
+      <div class="footer-motto">pentru oameni care vor să rămână treji</div>
+      <p class="footer-desc">Un loc pentru ciudățenii verificate, lucruri neașteptate de făcut, fapte care dezechilibrează și eseuri fără grabă. În română. Gratuit. Fără algoritm.</p>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-titlu">Rubrici</div>
+      <ul class="footer-links">
+        <li><a href="#">Ciudățenii</a></li>
+        <li><a href="#">Fă Asta Azi</a></li>
+        <li><a href="#">Fapte</a></li>
+        <li><a href="#">Eseuri</a></li>
+        <li><a href="#">Lume</a></li>
+        <li><a href="#">Cultură</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-titlu">Nihil</div>
+      <ul class="footer-links">
+        <li><a href="#">Despre noi</a></li>
+        <li><a href="#">Filozofia noastră</a></li>
+        <li><a href="#">Newsletter</a></li>
+        <li><a href="#">Arhivă</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-titlu">Urmărește</div>
+      <ul class="footer-links">
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">TikTok</a></li>
+        <li><a href="#">RSS Feed</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2025 nihil.ro · Toate drepturile rezervate</span>
+    <span class="footer-latin">dum vivimus, vivamus — cât trăim, să trăim</span>
+  </div>
+</footer>
+
+<script>
+const zile=['duminică','luni','marți','miercuri','joi','vineri','sâmbătă'];
+const luni=['ianuarie','februarie','martie','aprilie','mai','iunie','iulie','august','septembrie','octombrie','noiembrie','decembrie'];
+const azi=new Date();
+document.getElementById('data-azi').textContent=`${zile[azi.getDay()]}, ${azi.getDate()} ${luni[azi.getMonth()]} ${azi.getFullYear()}`;
+document.getElementById('data-sectiune').textContent=`${azi.getDate()} ${luni[azi.getMonth()]}`;
+document.querySelectorAll('.nav-link').forEach(l=>{l.addEventListener('click',e=>{e.preventDefault();document.querySelectorAll('.nav-link').forEach(x=>x.classList.remove('activ'));l.classList.add('activ');});});
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});},{threshold:0.08});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
