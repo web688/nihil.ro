@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fă Asta Azi — NIHIL.ro</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Unna:ital,wght@0,400;0,700;1,400&family=Epilogue:wght@300;400;500;700;900&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;1,9..144,300;1,9..144,400;1,9..144,700&display=swap" rel="stylesheet">
+<style>
+:root{--crem:#f5f0e0;--crem-dk:#ece5cc;--crem-dkr:#ddd4b5;--hartie:#f9f5e8;--terra:#c4522a;--terra-lt:#d9714e;--terra-dk:#8b3318;--negru:#1a1710;--cerneala:#2c2819;--gri:#6b6454;--gri-lt:#9a9080;--linie:rgba(26,23,16,0.12);--linie-bold:rgba(26,23,16,0.7);}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--hartie);color:var(--negru);font-family:'Epilogue',sans-serif;font-weight:400;overflow-x:hidden;}
+body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9998;opacity:0.25;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E");mix-blend-mode:multiply;}
+
+/* TOP BAR */
+.top-bar{background:var(--terra);padding:.5rem 3rem;display:flex;justify-content:space-between;align-items:center;}
+.top-bar-left{font-family:'Epilogue',sans-serif;font-size:.62rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.7);}
+.top-bar-left b{color:white;}
+.top-bar-right{font-family:'Fraunces',serif;font-style:italic;font-size:.8rem;color:rgba(255,255,255,.6);}
+
+/* MASTHEAD */
+.masthead{background:var(--crem);border-bottom:2px solid var(--linie-bold);position:sticky;top:0;z-index:100;}
+.masthead-inner{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:1.2rem 3rem;border-bottom:1px solid var(--linie);}
+.masthead-stanga{font-family:'Epilogue',sans-serif;font-size:.6rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--gri);line-height:1.6;}
+.logo{text-align:center;text-decoration:none;display:block;}
+.logo-text{font-family:'Fraunces',serif;font-size:3.2rem;font-weight:700;letter-spacing:.25em;color:var(--negru);line-height:1;text-transform:uppercase;}
+.logo-text span{color:var(--terra);}
+.logo-sub{font-family:'Fraunces',serif;font-style:italic;font-size:.72rem;font-weight:300;color:var(--gri);letter-spacing:.08em;margin-top:.2rem;}
+.masthead-dreapta{text-align:right;font-family:'Epilogue',sans-serif;font-size:.6rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--gri);line-height:1.6;}
+.nav-bar{display:flex;justify-content:center;overflow-x:auto;scrollbar-width:none;}
+.nav-bar::-webkit-scrollbar{display:none;}
+.nav-link{font-family:'Epilogue',sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--cerneala);text-decoration:none;padding:.75rem 1.8rem;border-right:1px solid var(--linie);white-space:nowrap;transition:background .2s,color .2s;}
+.nav-link:first-child{border-left:1px solid var(--linie);}
+.nav-link:hover,.nav-link.activ{background:var(--terra);color:white;}
+
+/* PAGE HEADER */
+.page-header{background:var(--negru);color:white;padding:6rem 3rem 4rem;text-align:center;position:relative;overflow:hidden;}
+.page-header::before{content:'!';font-family:'Fraunces',serif;font-size:30rem;font-weight:700;color:rgba(255,255,255,.04);position:absolute;right:0;top:50%;transform:translateY(-50%);line-height:1;pointer-events:none;}
+.page-eyebrow{font-family:'Epilogue',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--terra-lt);margin-bottom:1rem;position:relative;z-index:1;}
+.page-titlu{font-family:'Fraunces',serif;font-size:clamp(3rem,6vw,5rem);font-weight:700;line-height:1;color:white;letter-spacing:-.02em;position:relative;z-index:1;}
+.page-titlu em{font-style:italic;font-weight:300;color:var(--terra-lt);}
+.page-subtitlu{font-family:'Fraunces',serif;font-style:italic;font-size:1.2rem;color:rgba(255,255,255,.7);margin-top:1rem;max-width:600px;margin-left:auto;margin-right:auto;position:relative;z-index:1;}
+
+/* ACTIONS GRID */
+.actions-section{padding:4rem 3rem;}
+.actions-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;}
+.action-card{background:var(--crem-dk);border:1px solid var(--linie);border-radius:8px;padding:3rem 2rem;text-align:center;transition:transform .3s,box-shadow .3s;cursor:pointer;position:relative;overflow:hidden;}
+.action-card:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(0,0,0,.1);background:var(--crem);}
+.action-card::after{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--terra);transform:scaleY(0);transform-origin:bottom;transition:transform .35s ease;}
+.action-card:hover::after{transform:scaleY(1);}
+.action-nr{font-family:'Fraunces',serif;font-size:3.5rem;font-weight:700;color:rgba(196,82,42,.15);line-height:1;margin-bottom:1rem;}
+.action-icon{font-size:2.5rem;margin-bottom:1.5rem;display:block;}
+.action-titlu{font-family:'Fraunces',serif;font-size:1.3rem;font-weight:700;color:var(--negru);line-height:1.2;margin-bottom:1rem;}
+.action-titlu em{font-style:italic;color:var(--terra);}
+.action-text{font-family:'Unna',serif;font-size:1rem;line-height:1.7;color:var(--cerneala);margin-bottom:1.5rem;}
+.action-dificultate{font-family:'Epilogue',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--gri-lt);margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--linie);}
+
+/* ARCHIVE SECTION */
+.archive-section{background:var(--crem);padding:4rem 3rem;border-top:2px solid var(--linie-bold);}
+.archive-header{text-align:center;margin-bottom:3rem;}
+.archive-titlu{font-family:'Fraunces',serif;font-size:2.5rem;font-weight:700;color:var(--negru);margin-bottom:1rem;}
+.archive-subtitlu{font-family:'Fraunces',serif;font-style:italic;font-size:1.1rem;color:var(--gri);}
+.archive-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;}
+.archive-item{background:var(--hartie);padding:2rem;border:1px solid var(--linie);border-radius:6px;}
+.archive-data{font-family:'Epilogue',sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--terra);margin-bottom:1rem;}
+.archive-text{font-family:'Unna',serif;font-size:1rem;line-height:1.6;color:var(--cerneala);}
+
+/* FOOTER */
+footer{background:var(--crem-dk);border-top:2px solid var(--linie-bold);}
+.footer-top-bar{background:var(--negru);padding:.6rem 3rem;display:flex;justify-content:space-between;align-items:center;}
+.ftb-text{font-family:'Fraunces',serif;font-style:italic;font-size:.78rem;color:rgba(255,255,255,.35);}
+.ftb-logo{font-family:'Fraunces',serif;font-size:1rem;font-weight:700;letter-spacing:.15em;color:white;text-decoration:none;}
+.ftb-logo span{color:var(--terra-lt);}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;padding:1.2rem 2.5rem;flex-wrap:wrap;gap:.5rem;}
+.footer-copy{font-family:'Epilogue',sans-serif;font-size:.58rem;color:var(--gri-lt);}
+.footer-latin{font-family:'Fraunces',serif;font-style:italic;font-size:.78rem;color:var(--gri-lt);}
+
+/* RESPONSIVE */
+@media(max-width:1100px){
+  .top-bar,.masthead-inner{padding-left:1.5rem;padding-right:1.5rem;}
+  .masthead-stanga,.masthead-dreapta{display:none;}
+  .masthead-inner{grid-template-columns:1fr;justify-items:center;}
+  .page-header,.actions-section,.archive-section{padding:3rem 1.5rem;}
+  .actions-grid{grid-template-columns:1fr;}
+}
+@media(max-width:640px){
+  .logo-text{font-size:2.2rem;}
+  .nav-link{padding:.6rem 1rem;font-size:.6rem;}
+  .action-card{padding:2rem 1.5rem;}
+}
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+  <div class="top-bar-left">nihil.ro · <b>Fă Asta Azi</b> · România</div>
+  <div class="top-bar-right" id="data-azi">vineri, 27 februarie 2026</div>
+</div>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <div class="masthead-stanga">Curiozitatea<br>ca act de supraviețuire</div>
+    <a href="index.html" class="logo">
+      <div class="logo-text">NIHIL<span>.</span>ro</div>
+      <div class="logo-sub">pentru oameni care vor să rămână treji</div>
+    </a>
+    <div class="masthead-dreapta">Știri ciudate<br>Lucruri de făcut<br>Fapte care contează</div>
+  </div>
+  <nav class="nav-bar">
+    <a href="index.html" class="nav-link">Azi</a>
+    <a href="ciudatenii.html" class="nav-link">Ciudățenii</a>
+    <a href="fa-asta-azi.html" class="nav-link activ">Fă Asta Azi</a>
+    <a href="fapte.html" class="nav-link">Fapte</a>
+    <a href="lume-larga.html" class="nav-link">Lume Largă</a>
+    <a href="romania-neștiută.html" class="nav-link">România Neștiută</a>
+    <a href="oameni-remarcabili.html" class="nav-link">Oameni Remarcabili</a>
+    <a href="cultura.html" class="nav-link">Cultură</a>
+    <a href="opinie.html" class="nav-link">Opinie</a>
+    <a href="arhiva.html" class="nav-link">Arhivă</a>
+  </nav>
+</header>
+
+<section class="page-header">
+  <div class="page-eyebrow">✦ rubrica săptămânală</div>
+  <h1 class="page-titlu">Fă Asta <em>Azi</em></h1>
+  <div class="page-subtitlu">Lucruri concrete pe care le poți face astăzi pentru a nu lăsa viața să treacă pe lângă tine. Unele sunt ușoare. Altele nu.</div>
+</section>
+
+<section class="actions-section">
+  <div class="actions-grid">
+    <article class="action-card">
+      <div class="action-nr">01</div>
+      <span class="action-icon">📞</span>
+      <h3 class="action-titlu">Sună pe cineva pe care nu l-ai sunat de mai bine de un an</h3>
+      <p class="action-text">Nu trimite mesaj. Sună. Primele 10 secunde vor fi ciudate. Restul conversației nu va fi. Veți vorbi despre lucruri pe care le știți deja, dar de data asta le veți asculta cu adevărat.</p>
+      <div class="action-dificultate">Dificultate: emoțională ↑↑</div>
+    </article>
+
+    <article class="action-card">
+      <div class="action-nr">02</div>
+      <span class="action-icon">🗺️</span>
+      <h3 class="action-titlu">Mergi pe un drum pe care nu l-ai luat niciodată spre casă</h3>
+      <p class="action-text">Oricare drum nou activează același sistem cerebral ca o aventură. Creierul nu face diferența dintre explorare reală și explorare urbană. O stradă nouă e o lume nouă.</p>
+      <div class="action-dificultate">Dificultate: logistică ↑</div>
+    </article>
+
+    <article class="action-card">
+      <div class="action-nr">03</div>
+      <span class="action-icon">📖</span>
+      <h3 class="action-titlu">Citește primul capitol dintr-o carte pe care o ai de un an</h3>
+      <p class="action-text">Numai primul. Dacă după primul capitol vrei să continui, a meritat să o cumperi. Dacă nu, ai rezolvat problema vinovăției. Fără compromisuri.</p>
+      <div class="action-dificultate">Dificultate: atenție ↑↑</div>
+    </article>
+
+    <article class="action-card">
+      <div class="action-nr">04</div>
+      <span class="action-icon">🌅</span>
+      <h3 class="action-titlu">Stabilește o zi fără planuri pentru săptămâna viitoare</h3>
+      <p class="action-text">Nu weekend-ul. O zi de miercuri. Blochează-o în calendar. Scrie „ocupat". Nu spune nimănui ce faci cu ea. Adevărata libertate e planificată.</p>
+      <div class="action-dificultate">Dificultate: vinovăție ↑↑↑</div>
+    </article>
+
+    <article class="action-card">
+      <div class="action-nr">05</div>
+      <span class="action-icon">✍️</span>
+      <h3 class="action-titlu">Scrie o scrisoare către tine însuți peste 10 ani</h3>
+      <p class="action-text">Nu fii politicos. Fii sincer. întreabă-l ce a reușit și ce nu. întreabă-l dacă ești mândru de el. Pune-o într-un plic. Deschide-o în 2036.</p>
+      <div class="action-dificultate">Dificultate: vulnerabilitate ↑↑</div>
+    </article>
+
+    <article class="action-card">
+      <div class="action-nr">06</div>
+      <span class="action-icon">🍽️</span>
+      <h3 class="action-titlu">Mănâncă ceva ce nu ai mâncat niciodată fără să cauți pe Google</h3>
+      <p class="action-text">La restaurant sau la piață. Alege ceva la întâmplare. Gustă fără prejudecăți. Descoperă ceva nou sau confirmă că nu-ți place. Ambele sunt victorii.</p>
+      <div class="action-dificultate">Dificultate: control ↑</div>
+    </article>
+  </div>
+</section>
+
+<section class="archive-section">
+  <div class="archive-header">
+    <h2 class="archive-titlu">Din arhivă</h2>
+    <div class="archive-subtitlu">Alte lucruri pe care le-ai fi putut face zilele trecute</div>
+  </div>
+  <div class="archive-grid">
+    <article class="archive-item">
+      <div class="archive-data">20 februarie 2026</div>
+      <p class="archive-text">Stai pe o bancă 30 de minute fără telefon. Doar privește oamenii. Ficărele are o poveste pe care nu o vei afla niciodată.</p>
+    </article>
+    <article class="archive-item">
+      <div class="archive-data">13 februarie 2026</div>
+      <p class="archive-text">Învăță un cuvânt nou într-o limbă pe care nu o vorbești. Folosește-l astăzi în conversație. Oricine.</p>
+    </article>
+    <article class="archive-item">
+      <div class="archive-data">6 februarie 2026</div>
+      <p class="archive-text">Cumpără ceva de la un magazin de cartier, nu de la supermarket. Vorbește cu vânzătorul 5 minute.</p>
+    </article>
+    <article class="archive-item">
+      <div class="archive-data">30 ianuarie 2026</div>
+      <p class="archive-text">Uită-te la un film fără să verifici ratingul. Alege-l după poster. Poate e genial. Poate e groaznic. Important e că ai ales tu.</p>
+    </article>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top-bar">
+    <div class="ftb-text">nihil: din latină, „nimic" — și totuși, e ceva.</div>
+    <a href="index.html" class="ftb-logo">NIHIL<span>.ro</span></a>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2026 nihil.ro · Toate drepturile rezervate</span>
+    <span class="footer-latin">dum vivimus, vivamus — cât trăim, să trăim</span>
+  </div>
+</footer>
+
+<script>
+const zile=['duminică','luni','marți','miercuri','joi','vineri','sâmbătă'];
+const luni=['ianuarie','februarie','martie','aprilie','mai','iunie','iulie','august','septembrie','octombrie','noiembrie','decembrie'];
+const azi=new Date();
+document.getElementById('data-azi').textContent=`${zile[azi.getDay()]}, ${azi.getDate()} ${luni[azi.getMonth()]} ${azi.getFullYear()}`;
+document.querySelectorAll('.nav-link').forEach(l=>{l.addEventListener('click',e=>{e.preventDefault();document.querySelectorAll('.nav-link').forEach(x=>x.classList.remove('activ'));l.classList.add('activ');});});
+</script>
+</body>
+</html>
