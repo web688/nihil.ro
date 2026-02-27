@@ -247,8 +247,10 @@ footer{background:var(--crem-dk);border-top:2px solid var(--linie-bold);}
       <span class="rubrica-loc">📍 ANTARCTICA</span>
     </div>
     <h1 class="hero-titlu">Vostok: orașul secret de sub gheață<br>unde <em>viața așteaptă</em> de 15 milioane de ani</h1>
-    <div style="margin-bottom: 1.5rem;">
-      <img src="images/norway-svalbard.jpg" alt="Lake Vostok research station" style="width: 100%; height: 300px; object-fit: cover; border-radius: 8px;">
+    <div style="margin-bottom: 1.5rem; background: #000; height: 300px; display: flex; align-items: center; justify-content: center; border-radius: 8px;">
+      <div style="color: white; font-family: 'Fraunces', serif; font-size: 1.2rem; text-align: center; padding: 2rem;">
+        🧊<br>Lake Vostok<br>Antarctica Research Station
+      </div>
     </div>
     <p class="hero-intro">La 4km sub gheața Antarcticii, lacul Vostok a fost izolat de restul lumii timp de 15 milioane de ani. Rușii au forat 20 de ani să ajungă la el. Au găsit bacterii care nu seamănă cu nimic cunoscut. Organisme care au evoluat separat de tot restul vieții de pe Pământ.</p>
     <div class="hero-meta">
@@ -574,7 +576,7 @@ const luni=['ianuarie','februarie','martie','aprilie','mai','iunie','iulie','aug
 const azi=new Date();
 document.getElementById('data-azi').textContent=`${zile[azi.getDay()]}, ${azi.getDate()} ${luni[azi.getMonth()]} ${azi.getFullYear()}`;
 document.getElementById('data-sectiune').textContent=`${azi.getDate()} ${luni[azi.getMonth()]}`;
-document.querySelectorAll('.nav-link').forEach(l=>{l.addEventListener('click',e=>{e.preventDefault();document.querySelectorAll('.nav-link').forEach(x=>x.classList.remove('activ'));l.classList.add('activ');});});
+// Navigation works without JavaScript blocking
 const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});},{threshold:0.08});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 </script>
