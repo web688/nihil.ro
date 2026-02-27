@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cultură — NIHIL.ro</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Unna:ital,wght@0,400;0,700;1,400&family=Epilogue:wght@300;400;500;700;900&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;1,9..144,300;1,9..144,400;1,9..144,700&display=swap" rel="stylesheet">
+<style>
+:root{--crem:#f5f0e0;--crem-dk:#ece5cc;--crem-dkr:#ddd4b5;--hartie:#f9f5e8;--terra:#c4522a;--terra-lt:#d9714e;--terra-dk:#8b3318;--negru:#1a1710;--cerneala:#2c2819;--gri:#6b6454;--gri-lt:#9a9080;--linie:rgba(26,23,16,0.12);--linie-bold:rgba(26,23,16,0.7);}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--hartie);color:var(--negru);font-family:'Epilogue',sans-serif;font-weight:400;overflow-x:hidden;}
+body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9998;opacity:0.25;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E");mix-blend-mode:multiply;}
+
+/* TOP BAR */
+.top-bar{background:var(--terra);padding:.5rem 3rem;display:flex;justify-content:space-between;align-items:center;}
+.top-bar-left{font-family:'Epilogue',sans-serif;font-size:.62rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.7);}
+.top-bar-left b{color:white;}
+.top-bar-right{font-family:'Fraunces',serif;font-style:italic;font-size:.8rem;color:rgba(255,255,255,.6);}
+
+/* MASTHEAD */
+.masthead{background:var(--crem);border-bottom:2px solid var(--linie-bold);position:sticky;top:0;z-index:100;}
+.masthead-inner{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:1.2rem 3rem;border-bottom:1px solid var(--linie);}
+.masthead-stanga{font-family:'Epilogue',sans-serif;font-size:.6rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--gri);line-height:1.6;}
+.logo{text-align:center;text-decoration:none;display:block;}
+.logo-text{font-family:'Fraunces',serif;font-size:3.2rem;font-weight:700;letter-spacing:.25em;color:var(--negru);line-height:1;text-transform:uppercase;}
+.logo-text span{color:var(--terra);}
+.logo-sub{font-family:'Fraunces',serif;font-style:italic;font-size:.72rem;font-weight:300;color:var(--gri);letter-spacing:.08em;margin-top:.2rem;}
+.masthead-dreapta{text-align:right;font-family:'Epilogue',sans-serif;font-size:.6rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--gri);line-height:1.6;}
+.nav-bar{display:flex;justify-content:center;overflow-x:auto;scrollbar-width:none;}
+.nav-bar::-webkit-scrollbar{display:none;}
+.nav-link{font-family:'Epilogue',sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--cerneala);text-decoration:none;padding:.75rem 1.8rem;border-right:1px solid var(--linie);white-space:nowrap;transition:background .2s,color .2s;}
+.nav-link:first-child{border-left:1px solid var(--linie);}
+.nav-link:hover,.nav-link.activ{background:var(--terra);color:white;}
+
+/* PAGE HEADER */
+.page-header{background:linear-gradient(135deg,var(--crem) 0%,var(--crem-dk) 100%);padding:6rem 3rem 4rem;text-align:center;position:relative;}
+.page-header::before{content:'🎭';font-size:20rem;position:absolute;right:0;top:50%;transform:translateY(-50%);opacity:.05;pointer-events:none;}
+.page-eyebrow{font-family:'Epilogue',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--terra);margin-bottom:1rem;position:relative;z-index:1;}
+.page-titlu{font-family:'Fraunces',serif;font-size:clamp(3rem,6vw,5rem);font-weight:700;line-height:1;color:var(--negru);letter-spacing:-.02em;position:relative;z-index:1;}
+.page-titlu em{font-style:italic;font-weight:300;color:var(--terra);}
+.page-subtitlu{font-family:'Fraunces',serif;font-style:italic;font-size:1.2rem;color:var(--gri);margin-top:1rem;max-width:600px;margin-left:auto;margin-right:auto;position:relative;z-index:1;}
+
+/* CULTURE GRID */
+.culture-section{padding:4rem 3rem;}
+.culture-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem;}
+.culture-card{background:var(--hartie);border:1px solid var(--linie);border-radius:8px;overflow:hidden;transition:transform .3s,box-shadow .3s;cursor:pointer;}
+.culture-card:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(0,0,0,.1);}
+.culture-content{padding:2rem;}
+.culture-titlu{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:700;line-height:1.2;color:var(--negru);margin-bottom:1rem;}
+.culture-titlu em{font-style:italic;color:var(--terra);}
+.culture-text{font-family:'Unna',serif;font-size:.95rem;line-height:1.7;color:var(--cerneala);margin-bottom:1.5rem;}
+.culture-meta{display:flex;justify-content:space-between;align-items:center;font-family:'Epilogue',sans-serif;font-size:.65rem;color:var(--gri);}
+.culture-citeste{color:var(--terra);text-decoration:none;font-weight:700;letter-spacing:.1em;text-transform:uppercase;}
+.culture-citeste:hover{color:var(--terra-dk);}
+
+/* FEATURED ESSAY */
+.featured-essay{background:var(--negru);color:white;padding:4rem 3rem;margin:4rem 0;}
+.featured-content{max-width:800px;margin:0 auto;}
+.featured-eyebrow{font-family:'Epilogue',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--terra-lt);margin-bottom:1rem;}
+.featured-titlu{font-family:'Fraunces',serif;font-size:clamp(2rem,4vw,3rem);font-weight:700;line-height:1.2;color:white;margin-bottom:2rem;}
+.featured-titlu em{font-style:italic;font-weight:300;color:var(--terra-lt);}
+.featured-subtitlu{font-family:'Fraunces',serif;font-style:italic;font-size:1.1rem;color:rgba(255,255,255,.8);margin-bottom:3rem;line-height:1.6;}
+.featured-text{font-family:'Unna',serif;font-size:1.1rem;line-height:1.8;color:rgba(255,255,255,.85);margin-bottom:2rem;}
+.featured-text:first-of-type::first-letter{font-family:'Fraunces',serif;font-size:4rem;font-weight:700;float:left;line-height:.75;margin-right:.1em;margin-top:.1em;color:var(--terra-lt);}
+.featured-citeste{display:inline-block;color:var(--terra-lt);text-decoration:none;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.8rem 2rem;border:1px solid var(--terra-lt);transition:all .3s;}
+.featured-citeste:hover{background:var(--terra-lt);color:white;}
+
+/* BOOKS SECTION */
+.books-section{background:var(--crem-dk);padding:4rem 3rem;}
+.books-header{text-align:center;margin-bottom:3rem;}
+.books-titlu{font-family:'Fraunces',serif;font-size:2rem;font-weight:700;color:var(--negru);margin-bottom:1rem;}
+.books-subtitlu{font-family:'Fraunces',serif;font-style:italic;font-size:1rem;color:var(--gri);}
+.books-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;}
+.book-card{background:var(--hartie);padding:1.5rem;border-left:3px solid var(--terra);}
+.book-titlu{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:700;color:var(--negru);margin-bottom:.5rem;}
+-book-autor{font-family:'Epilogue',sans-serif;font-size:.7rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--gri);margin-bottom:1rem;}
+-book-text{font-family:'Unna',serif;font-size:.9rem;line-height:1.6;color:var(--cerneala);}
+
+/* FOOTER */
+footer{background:var(--crem-dk);border-top:2px solid var(--linie-bold);}
+.footer-top-bar{background:var(--negru);padding:.6rem 3rem;display:flex;justify-content:space-between;align-items:center;}
+.ftb-text{font-family:'Fraunces',serif;font-style:italic;font-size:.78rem;color:rgba(255,255,255,.35);}
+.ftb-logo{font-family:'Fraunces',serif;font-size:1rem;font-weight:700;letter-spacing:.15em;color:white;text-decoration:none;}
+.ftb-logo span{color:var(--terra-lt);}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;padding:1.2rem 2.5rem;flex-wrap:wrap;gap:.5rem;}
+.footer-copy{font-family:'Epilogue',sans-serif;font-size:.58rem;color:var(--gri-lt);}
+.footer-latin{font-family:'Fraunces',serif;font-style:italic;font-size:.78rem;color:var(--gri-lt);}
+
+/* RESPONSIVE */
+@media(max-width:1100px){
+  .top-bar,.masthead-inner{padding-left:1.5rem;padding-right:1.5rem;}
+  .masthead-stanga,.masthead-dreapta{display:none;}
+  .masthead-inner{grid-template-columns:1fr;justify-items:center;}
+  .page-header,.culture-section,.featured-essay,.books-section{padding:3rem 1.5rem;}
+  .culture-grid{grid-template-columns:1fr;}
+}
+@media(max-width:640px){
+  .logo-text{font-size:2.2rem;}
+  .nav-link{padding:.6rem 1rem;font-size:.6rem;}
+  .page-header{background:var(--crem);padding:4rem 1.5rem 3rem;}
+}
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+  <div class="top-bar-left">nihil.ro · <b>Cultură</b> · România</div>
+  <div class="top-bar-right" id="data-azi">vineri, 27 februarie 2026</div>
+</div>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <div class="masthead-stanga">Curiozitatea<br>ca act de supraviețuire</div>
+    <a href="index.html" class="logo">
+      <div class="logo-text">NIHIL<span>.</span>ro</div>
+      <div class="logo-sub">pentru oameni care vor să rămână treji</div>
+    </a>
+    <div class="masthead-dreapta">Știri ciudate<br>Lucruri de făcut<br>Fapte care contează</div>
+  </div>
+  <nav class="nav-bar">
+    <a href="index.html" class="nav-link">Azi</a>
+    <a href="ciudatenii.html" class="nav-link">Ciudățenii</a>
+    <a href="fa-asta-azi.html" class="nav-link">Fă Asta Azi</a>
+    <a href="fapte.html" class="nav-link">Fapte</a>
+    <a href="lume-larga.html" class="nav-link">Lume Largă</a>
+    <a href="romania-neștiută.html" class="nav-link">România Neștiută</a>
+    <a href="oameni-remarcabili.html" class="nav-link">Oameni Remarcabili</a>
+    <a href="cultura.html" class="nav-link activ">Cultură</a>
+    <a href="opinie.html" class="nav-link">Opinie</a>
+    <a href="arhiva.html" class="nav-link">Arhivă</a>
+  </nav>
+</header>
+
+<section class="page-header">
+  <div class="page-eyebrow">✦ creații umane</div>
+  <h1 class="page-titlu">Cultură & <em>Arte</em></h1>
+  <div class="page-subtitlu">Creații umane care nu au nevoie de justificare. Pentru că arta, la fel ca știința, e un mod de a înțelege lumea.</div>
+</section>
+
+<section class="culture-section">
+  <div class="culture-grid">
+    <article class="culture-card">
+      <div class="culture-content">
+        <h3 class="culture-titlu">Mona Lisa nu avea <em>sprâncene</em> când a fost pictată</h3>
+        <p class="culture-text">În Florența renascentistă, femeile de înaltă societate își radeau sprâncenele și fruntea pentru a arăta mai inteligente și mai nobilă. Era la modă să ai o frunte largă și netedă. Mona Lisa nu e excepția, ci regula.</p>
+        <div class="culture-meta">
+          <a href="#" class="culture-citeste">Citește →</a>
+          <span>2 minute</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="culture-card">
+      <div class="culture-content">
+        <h3 class="culture-titlu">Shakespeare a inventat cuvinte pe care le folosim zilnic</h3>
+        <p class="culture-text">Eyeball, swagger, bedroom, addiction, lonely, manager, fashionable — toate sunt invenții shakespeareiene. A creat sau popularizat peste 1.700 de cuvinte. Limba engleză de azi ar suna foarte diferit fără el.</p>
+        <div class="culture-meta">
+          <a href="#" class="culture-citeste">Citește →</a>
+          <span>3 minute</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="culture-card">
+      <div class="culture-content">
+        <h3 class="culture-titlu">Primul roman scris vreodată a fost de <em>o femeie japoneză</em></h3>
+        <p class="culture-text">"Tale of Genji" de Murasaki Shikibu în 1010. O scriitoare de la curtea imperială din Kyoto a creat literatura modernă cu 900 de ani înaintea Europei. Romanul psihologic? Ea l-a inventat.</p>
+        <div class="culture-meta">
+          <a href="#" class="culture-citeste">Citește →</a>
+          <span>4 minute</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="culture-card">
+      <div class="culture-content">
+        <h3 class="culture-titlu">Van Gogh a vândut <em>un singur tablou</em> în viață</h3>
+        <p class="culture-text">"The Red Vineyard" pentru 400 de franci belgieni în 1888. Fratele său Theo era patronul artistic. Astăzi un Van Gogh costă milioane. Dar în viața lui, era un eșec comercial.</p>
+        <div class="culture-meta">
+          <a href="#" class="culture-citeste">Citește →</a>
+          <span>2 minute</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="culture-card">
+      <div class="culture-content">
+        <h3 class="culture-titlu">Beethoven era <em>surd</em> când a compus a 9-a Simfonie</h3>
+        <p class="culture-text">Nu doar surd, dar complet. Tăia picioarele pianului ca să simtă vibrațiile prin podea. A compus capodopera asta fără să audă niciodată o notă din ea. A dirijat premiera și nu a auzat aplauzele.</p>
+        <div class="culture-meta">
+          <a href="#" class="culture-citeste">Citește →</a>
+          <span>3 minute</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="culture-card">
+      <div class="culture-content">
+        <h3 class="culture-titlu">Cea mai veche fotografie <em>supraviețuitoare</em> e din 1826</h3>
+        <p class="culture-text">Joseph Niépce a necesitat 8 ore expunere pentru o fotografie a acoperișurilor din Le Gras, Franța. Tehnica se numea heliografie. Imaginea e aproape invizibilă, dar e acolo. Prima privire a lumii prin ochi mecanici.</p>
+        <div class="culture-meta">
+          <a href="#" class="culture-citeste">Citește →</a>
+          <span>4 minute</span>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="featured-essay">
+  <div class="featured-content">
+    <div class="featured-eyebrow">ESEU CULTURAL</div>
+    <h2 class="featured-titlu">De ce avem nevoie de <em>artă urâtă</em></h2>
+    <div class="featured-subtitlu">O apărare a esteticii care ne deranjează, ne provoacă și ne fac să ne simțim inconfortabil</div>
+    <p class="featured-text">Există o confuzie modernă între artă și decor. Credem că arta trebuie să fie frumoasă, plăcută, armonioasă. Ceva care se potrivește bine în living, nu contrazice draperiile. Dar asta nu e artă. E design de interior.</p>
+    <p class="featured-text">Adevărata artă nu trebuie să fie frumoasă. Trebuie să fie adevărată. Și adevărul e adesea urât, incomod, greu de privit. Guernica lui Picasso nu e frumoasă. E grotescă, haotică, terifiantă. E și una dintre cele mai mari capodopere ale umanității pentru că surprinde adevărul războiului mai bine decât orice fotografie.</p>
+    <p class="featured-text">Când mergem la un muzeu și vedem o operă care ne displace, prima reacție e să spunem "copilul meu ar putea face asta". Dar nu asta e întrebarea corectă. Întrebarea e: de ce artistul a făcut asta? Ce încerca să comunice? Ce emoție, idee, protest sau revelație se ascunde în acea urâțenie deliberată?</p>
+    <p class="featured-text">Arta urâtă ne obligă să gândim. Nu ne lăsăm să trecem mai departe cu o admirație superficială. Ne forțează să ne confruntăm cu prejudecățile, cu convențiile, cu confortul estetic. Ne amintește că frumusețea nu e singurul scop al creației umane. Uneori, scopul e să zgârie, să provoace, să destabilizeze.</p>
+    <a href="#" class="featured-citeste">Continuă să citești →</a>
+  </div>
+</section>
+
+<section class="books-section">
+  <div class="books-header">
+    <h2 class="books-titlu">Cărți care te schimbă</h2>
+    <div class="books-subtitlu">Lecturi recomandate pentru mintea curioasă</div>
+  </div>
+  <div class="books-grid">
+    <div class="book-card">
+      <h3 class="book-titlu">Sapiens: O scurtă istorie a umanității</h3>
+      <div class="book-autor">Yuval Noah Harari</div>
+      <p class="book-text">Cum am ajuns de primate obscure la stăpânii planetei în doar 70.000 de ani. Răspunsul te va lăsa fără suflare.</p>
+    </div>
+    <div class="book-card">
+      <h3 class="book-titlu">Meditații</h3>
+      <div class="book-autor">Marcus Aurelius</div>
+      <p class="book-text">Jurnalul unui împărat roman. Scris pentru el, nu pentru publicitate. Înțelepciune pură, fără filtre.</p>
+    </div>
+    <div class="book-card">
+      <h3 class="book-titlu">Cosmos</h3>
+      <div class="book-autor">Carl Sagan</div>
+      <p class="book-text">Universul explicat ca o poveste. Pentru că asta e — cea mai mare poveste pe care o putem spune.</p>
+    </div>
+    <div class="book-card">
+      <h3 class="book-titlu">Alchimistul</h3>
+      <div class="book-autor">Paulo Coelho</div>
+      <p class="book-text">O poveste simplă despre un cioban care caută comoară. Dar comoara nu e unde crezi. E niciodată.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top-bar">
+    <div class="ftb-text">nihil: din latină, „nimic" — și totuși, e ceva.</div>
+    <a href="index.html" class="ftb-logo">NIHIL<span>.ro</span></a>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2026 nihil.ro · Toate drepturile rezervate</span>
+    <span class="footer-latin">dum vivimus, vivamus — cât trăim, să trăim</span>
+  </div>
+</footer>
+
+<script>
+const zile=['duminică','luni','marți','miercuri','joi','vineri','sâmbătă'];
+const luni=['ianuarie','februarie','martie','aprilie','mai','iunie','iulie','august','septembrie','octombrie','noiembrie','decembrie'];
+const azi=new Date();
+document.getElementById('data-azi').textContent=`${zile[azi.getDay()]}, ${azi.getDate()} ${luni[azi.getMonth()]} ${azi.getFullYear()}`;
+document.querySelectorAll('.nav-link').forEach(l=>{l.addEventListener('click',e=>{e.preventDefault();document.querySelectorAll('.nav-link').forEach(x=>x.classList.remove('activ'));l.classList.add('activ');});});
+</script>
+</body>
+</html>
