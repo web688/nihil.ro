@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stil & Design — NIHIL.ro</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Unna:ital,wght@0,400;0,700;1,400&family=Epilogue:wght@300;400;500;700;900&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;1,9..144,300;1,9..144,400;1,9..144,700&display=swap" rel="stylesheet">
+<style>
+:root{--crem:#f5f0e0;--crem-dk:#ece5cc;--crem-dkr:#ddd4b5;--hartie:#f9f5e8;--terra:#c4522a;--terra-lt:#d9714e;--terra-dk:#8b3318;--negru:#1a1710;--cerneala:#2c2819;--gri:#6b6454;--gri-lt:#9a9080;--linie:rgba(26,23,16,0.12);--linie-bold:rgba(26,23,16,0.7);}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--hartie);color:var(--negru);font-family:'Epilogue',sans-serif;font-weight:400;overflow-x:hidden;}
+body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9998;opacity:0.25;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E");mix-blend-mode:multiply;}
+
+/* TOP BAR */
+.top-bar{background:var(--negru);padding:.5rem 3rem;display:flex;justify-content:space-between;align-items:center;}
+.top-bar-left{font-family:'Epilogue',sans-serif;font-size:.62rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.7);}
+.top-bar-left b{color:white;}
+.top-bar-right{font-family:'Fraunces',serif;font-style:italic;font-size:.8rem;color:rgba(255,255,255,.6);}
+
+/* MASTHEAD */
+.masthead{background:var(--crem);border-bottom:2px solid var(--linie-bold);position:sticky;top:0;z-index:100;}
+.masthead-inner{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:1.2rem 3rem;border-bottom:1px solid var(--linie);}
+.masthead-stanga{font-family:'Epilogue',sans-serif;font-size:.6rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--gri);line-height:1.6;}
+.logo{text-align:center;text-decoration:none;display:block;}
+.logo-text{font-family:'Fraunces',serif;font-size:3.2rem;font-weight:700;letter-spacing:.25em;color:var(--negru);line-height:1;text-transform:uppercase;}
+.logo-text span{color:var(--terra);}
+.logo-sub{font-family:'Fraunces',serif;font-style:italic;font-size:.72rem;font-weight:300;color:var(--gri);letter-spacing:.08em;margin-top:.2rem;}
+.masthead-dreapta{text-align:right;font-family:'Epilogue',sans-serif;font-size:.6rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--gri);line-height:1.6;}
+.nav-bar{display:flex;justify-content:center;overflow-x:auto;scrollbar-width:none;}
+.nav-bar::-webkit-scrollbar{display:none;}
+.nav-link{font-family:'Epilogue',sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--cerneala);text-decoration:none;padding:.75rem 1.8rem;border-right:1px solid var(--linie);white-space:nowrap;transition:background .2s,color .2s;}
+.nav-link:first-child{border-left:1px solid var(--linie);}
+.nav-link:hover,.nav-link.activ{background:var(--negru);color:white;}
+
+/* PAGE HEADER */
+.page-header{background:var(--negru);color:white;padding:6rem 3rem 4rem;text-align:center;position:relative;overflow:hidden;}
+.page-header::before{content:'◇';font-size:20rem;position:absolute;right:-5rem;top:50%;transform:translateY(-50%);opacity:.05;pointer-events:none;}
+.page-eyebrow{font-family:'Epilogue',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--terra-lt);margin-bottom:1rem;position:relative;z-index:1;}
+.page-titlu{font-family:'Fraunces',serif;font-size:clamp(3rem,6vw,5rem);font-weight:700;line-height:1;color:white;letter-spacing:-.02em;position:relative;z-index:1;}
+.page-titlu em{font-style:italic;font-weight:300;color:var(--terra-lt);}
+.page-subtitlu{font-family:'Fraunces',serif;font-style:italic;font-size:1.2rem;color:rgba(255,255,255,.8);margin-top:1rem;max-width:600px;margin-left:auto;margin-right:auto;position:relative;z-index:1;}
+
+/* DESIGN GRID */
+.design-section{padding:4rem 3rem;}
+.design-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem;}
+.design-card{background:var(--hartie);border:1px solid var(--linie);border-radius:8px;overflow:hidden;transition:transform .3s,box-shadow .3s;cursor:pointer;}
+.design-card:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(0,0,0,.1);}
+.design-content{padding:2.5rem;}
+.design-tag{font-family:'Epilogue',sans-serif;font-size:.55rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--terra);margin-bottom:1rem;}
+.design-titlu{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:700;line-height:1.2;color:var(--negru);margin-bottom:1rem;}
+.design-titlu em{font-style:italic;color:var(--terra);}
+.design-text{font-family:'Unna',serif;font-size:.95rem;line-height:1.7;color:var(--cerneala);margin-bottom:1.5rem;}
+.design-meta{display:flex;justify-content:space-between;align-items:center;font-family:'Epilogue',sans-serif;font-size:.65rem;color:var(--gri);}
+.design-citeste{color:var(--terra);text-decoration:none;font-weight:700;letter-spacing:.1em;text-transform:uppercase;}
+.design-citeste:hover{color:var(--terra-dk);}
+
+/* FEATURED SECTION */
+.featured-design{background:var(--crem-dk);padding:4rem 3rem;margin:4rem 0;}
+.featured-content{max-width:900px;margin:0 auto;display:grid;grid-template-columns:1fr 300px;gap:3rem;align-items:start;}
+.featured-info h2{font-family:'Fraunces',serif;font-size:2.5rem;font-weight:700;color:var(--negru);margin-bottom:1rem;}
+.featured-text{font-family:'Unna',serif;font-size:1.1rem;line-height:1.8;color:var(--cerneala);margin-bottom:1.5rem;}
+.featured-sidebar{background:var(--hartie);padding:2rem;border-left:3px solid var(--terra);}
+.sidebar-titlu{font-family:'Epilogue',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gri);margin-bottom:1rem;}
+.sidebar-fact{font-family:'Unna',serif;font-size:.95rem;line-height:1.6;color:var(--cerneala);margin-bottom:1rem;padding-bottom:1rem;border-bottom:1px solid var(--linie);}
+.sidebar-fact:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0;}
+
+/* FOOTER */
+footer{background:var(--crem-dk);border-top:2px solid var(--linie-bold);}
+.footer-top-bar{background:var(--negru);padding:.6rem 3rem;display:flex;justify-content:space-between;align-items:center;}
+.ftb-text{font-family:'Fraunces',serif;font-style:italic;font-size:.78rem;color:rgba(255,255,255,.35);}
+.ftb-logo{font-family:'Fraunces',serif;font-size:1rem;font-weight:700;letter-spacing:.15em;color:white;text-decoration:none;}
+.ftb-logo span{color:var(--terra-lt);}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;padding:1.2rem 2.5rem;flex-wrap:wrap;gap:.5rem;}
+.footer-copy{font-family:'Epilogue',sans-serif;font-size:.58rem;color:var(--gri-lt);}
+.footer-latin{font-family:'Fraunces',serif;font-style:italic;font-size:.78rem;color:var(--gri-lt);}
+
+/* RESPONSIVE */
+@media(max-width:1100px){
+  .top-bar,.masthead-inner{padding-left:1.5rem;padding-right:1.5rem;}
+  .masthead-stanga,.masthead-dreapta{display:none;}
+  .masthead-inner{grid-template-columns:1fr;justify-items:center;}
+  .page-header,.design-section,.featured-design{padding:3rem 1.5rem;}
+  .design-grid{grid-template-columns:1fr;}
+  .featured-content{grid-template-columns:1fr;}
+  .featured-sidebar{grid-column:1;}
+}
+@media(max-width:640px){
+  .logo-text{font-size:2.2rem;}
+  .nav-link{padding:.6rem 1rem;font-size:.6rem;}
+}
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+  <div class="top-bar-left">nihil.ro · <b>Stil & Design</b> · România</div>
+  <div class="top-bar-right" id="data-azi">vineri, 27 februarie 2026</div>
+</div>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <div class="masthead-stanga">Curiozitatea<br>ca act de supraviețuire</div>
+    <a href="index.html" class="logo">
+      <div class="logo-text">NIHIL<span>.</span>ro</div>
+      <div class="logo-sub">pentru oameni care vor să rămână treji</div>
+    </a>
+    <div class="masthead-dreapta">Știri ciudate<br>Lucruri de făcut<br>Fapte care contează</div>
+  </div>
+  <nav class="nav-bar">
+    <a href="index.html" class="nav-link">Azi</a>
+    <a href="ciudatenii.html" class="nav-link">Ciudățenii</a>
+    <a href="fa-asta-azi.html" class="nav-link">Fă Asta Azi</a>
+    <a href="fapte.html" class="nav-link">Fapte</a>
+    <a href="lume-larga.html" class="nav-link">Lume Largă</a>
+    <a href="romania-neștiută.html" class="nav-link">România Neștiută</a>
+    <a href="oameni-remarcabili.html" class="nav-link">Oameni Remarcabili</a>
+    <a href="cultura.html" class="nav-link">Cultură</a>
+    <a href="stil-design.html" class="nav-link activ">Stil & Design</a>
+    <a href="obsesii.html" class="nav-link">Obsesii</a>
+  </nav>
+</header>
+
+<section class="page-header">
+  <div class="page-eyebrow">✦ estetica cu sens</div>
+  <h1 class="page-titlu">Stil & <em>Design</em></h1>
+  <div class="page-subtitlu">Lucrurile bine făcute care ne schimbă felul de a trăi. Designul nu e despre cum arată ceva, ci despre cum funcționează în viața noastră.</div>
+</section>
+
+<section class="design-section">
+  <div class="design-grid">
+    <article class="design-card">
+      <div class="design-content">
+        <div class="design-tag">MINIMALISM</div>
+        <h3 class="design-titlu">De ce minimalismul a murit și <em>ce a lăsat în urmă</em></h3>
+        <p class="design-text">Minimalismul alb și steril e terminat. Dar filozofia lui — să elimini ce nu contează — e mai vie ca niciodată. Noul minimalism are textură, căldură, personalitate. E despre să știi de ce păstrezi ce păstrezi.</p>
+        <div class="design-meta">
+          <a href="articole/stil-design/minimalism-mai-putin-inseamna-mai-mult.html" class="design-citeste">Citește →</a>
+          <span>6 minute</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="design-card">
+      <div class="design-content">
+        <div class="design-tag">ARHITECTURĂ</div>
+        <h3 class="design-titlu">Casele care ne fac <em>fericiți</em> fără să știm de ce</h3>
+        <p class="design-text">Există un moment în arhitectură numit "genius loci" — spiritul locului. Casele care îl au te fac să respiri mai ușor. Nu poți explica de ce. Dar corpul tău știe. Designul bun vorbește cu inconștientul.</p>
+        <div class="design-meta">
+          <a href="#" class="design-citeste">Citește →</a>
+          <span>5 minute</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="design-card">
+      <div class="design-content">
+        <div class="design-tag">OBIECTE</div>
+        <h3 class="design-titlu">Scaunul care a schimbat cum <em>stăm</em> în lume</h3>
+        <p class="design-text">Scaunul Eames Lounge din 1956 nu e doar un design iconic. E o lecție despre cum un obiect bine gândit poate deveni etern. Încă se produce. Încă e relevant. Încă te face să vrei să te așezi în el.</p>
+        <div class="design-meta">
+          <a href="articole/stil-design/brutalism-frumusetea-in-beton-brut.html" class="design-citeste">Citește →</a>
+          <span>4 minute</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="design-card">
+      <div class="design-content">
+        <div class="design-tag">TIPĂRIRE</div>
+        <h3 class="design-titlu">Ultima carte tipărită va fi <em>cea mai frumoasă</em></h3>
+        <p class="design-text">Cărțile nu mor. Devin obiecte de artă. Editorii care înțeleg asta investesc în hârtie, cotor, copertă. Cartea fizică devine experiență tactilă pe care ecranul nu o poate replica.</p>
+        <div class="design-meta">
+          <a href="#" class="design-citeste">Citește →</a>
+          <span>5 minute</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="design-card">
+      <div class="design-content">
+        <div class="design-tag">SPAȚIU</div>
+        <h3 class="design-titlu">Biroul de acasă: <em>eroarea</em> și soluția</h3>
+        <p class="design-text">Am mutat munca acasă fără să schimbăm spațiul. Rezultatul? Saltele, dureri de spate, oboseală cronică. Designul ergonomic nu e lux. E sănătate mintală și fizică.</p>
+        <div class="design-meta">
+          <a href="#" class="design-citeste">Citește →</a>
+          <span>7 minute</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="design-card">
+      <div class="design-content">
+        <div class="design-tag">CULOARE</div>
+        <h3 class="design-titlu">De ce totul a devenit <em>bej</em> și ce spune asta despre noi</h3>
+        <p class="design-text">Anii 2020 au fost dominați de "greige" — un amestec de gri și bej. E culoarea siguranței. Culoarea care nu deranjează. Dar ce pierdem când totul e sigur? Designul bun ar trebui să provoace, nu doar să liniștească.</p>
+        <div class="design-meta">
+          <a href="#" class="design-citeste">Citește →</a>
+          <span>4 minute</span>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="featured-design">
+  <div class="featured-content">
+    <div class="featured-info">
+      <h2>Japonezii au un cuvânt pentru "spațiul gol care e plin de sens"</h2>
+      <p class="featured-text">Se numește "ma". E spațiul dintre două note muzicale. Pauza dintr-o conversație. Golul dintr-o cameră care te face să respiri. Designul occidental umple totul. Designul japonez lasă spațiu pentru gând.</p>
+      <p class="featured-text">În arhitectura japoneză, ma e la fel de important ca zidurile. Spațiul nu e ceva de umplut, e ceva de onorat. O cameră goală nu e o cameră nefinisată. E o cameră care așteaptă.</p>
+      <p class="featured-text">Occidentul abia acum învață asta. După decenii de minimalism care a golit camerele fără să le dea sens, înțelegem că spațiul gol are nevoie de o justificare. Ma nu e absență. E prezență intenționată.</p>
+      <a href="#" class="design-citeste">Citește articolul complet →</a>
+    </div>
+    <div class="featured-sidebar">
+      <div class="sidebar-titlu">Principii de design</div>
+      <div class="sidebar-fact"><strong>Ma</strong> — Spațiul gol cu sens</div>
+      <div class="sidebar-fact"><strong>Wabi-sabi</strong> — Frumusețea imperfecțiunii</div>
+      <div class="sidebar-fact"><strong>Shibui</strong> — Simplitatea care se dezvăluie în timp</div>
+      <div class="sidebar-fact"><strong>Yūgen</strong> — Profunzimea misterioasă</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top-bar">
+    <div class="ftb-text">nihil: din latină, „nimic" — și totuși, e ceva.</div>
+    <a href="index.html" class="ftb-logo">NIHIL<span>.ro</span></a>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2026 nihil.ro · Toate drepturile rezervate</span>
+    <span class="footer-latin">dum vivimus, vivamus — cât trăim, să trăim</span>
+  </div>
+</footer>
+
+<script>
+const zile=['duminică','luni','marți','miercuri','joi','vineri','sâmbătă'];
+const luni=['ianuarie','februarie','martie','aprilie','mai','iunie','iulie','august','septembrie','octombrie','noiembrie','decembrie'];
+const azi=new Date();
+document.getElementById('data-azi').textContent=`${zile[azi.getDay()]}, ${azi.getDate()} ${luni[azi.getMonth()]} ${azi.getFullYear()}`;
+// Navigation active states handled by CSS hover and page-specific active class
+</script>
+</body>
+</html>

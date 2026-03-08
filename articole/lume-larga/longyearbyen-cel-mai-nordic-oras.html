@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Longyearbyen — Cel Mai Nordic Oraș — NIHIL.ro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Unna:ital,wght@0,400;0,700;1,400&family=Epilogue:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --negru: #1a1710;
+            --cerneala: #2d2822;
+            --terra: #c4522a;
+            --terra-lt: #d6785e;
+            --terra-dk: #a84224;
+            --crem: #f5f0e0;
+            --crem-dk: #ebe4d1;
+            --gri: #6b6258;
+            --gri-lt: #8b837a;
+            --linie: #d4cfc4;
+            --linie-bold: #b8b2a6;
+            --hartie: #faf7f0;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Unna', serif;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--cerneala);
+            background: var(--hartie);
+        }
+        
+        .meta-info {
+            font-family: 'Epilogue', sans-serif;
+            font-size: 0.65rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--terra);
+            padding: 1.5rem 3rem;
+            border-bottom: 1px solid var(--linie);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .meta-left { display: flex; gap: 2rem; }
+        .meta-item { display: flex; align-items: center; gap: 0.5rem; }
+        
+        .breadcrumb {
+            font-family: 'Epilogue', sans-serif;
+            font-size: 0.55rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--gri-lt);
+            padding: 1rem 3rem;
+        }
+        
+        .breadcrumb a { color: var(--terra); text-decoration: none; }
+        
+        .article-container {
+            max-width: 750px;
+            margin: 0 auto;
+            padding: 3rem 3rem 5rem;
+        }
+        
+        .article-header {
+            margin-bottom: 3rem;
+        }
+        
+        .category-tag {
+            font-family: 'Epilogue', sans-serif;
+            font-size: 0.58rem;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--terra);
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        .article-title {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(2.2rem, 4vw, 3.5rem);
+            font-weight: 700;
+            line-height: 1.1;
+            color: var(--negru);
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+        
+        .article-title em {
+            font-style: italic;
+            font-weight: 300;
+            color: var(--terra);
+        }
+        
+        .article-subtitle {
+            font-family: 'Fraunces', serif;
+            font-style: italic;
+            font-size: 1.3rem;
+            font-weight: 300;
+            color: var(--gri);
+            line-height: 1.4;
+        }
+        
+        .author-block {
+            font-family: 'Epilogue', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--gri-lt);
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--linie);
+        }
+        
+        .article-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        
+        .article-content em {
+            font-style: italic;
+            color: var(--terra);
+        }
+        
+        .article-content strong {
+            font-weight: 700;
+        }
+        
+        .nav-footer {
+            border-top: 2px solid var(--linie-bold);
+            padding: 2rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--crem-dk);
+        }
+        
+        .nav-footer a {
+            font-family: 'Epilogue', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--terra);
+            text-decoration: none;
+            transition: color 0.25s;
+        }
+        
+        .nav-footer a:hover { color: var(--terra-lt); }
+    </style>
+</head>
+<body>
+    <div class="meta-info">
+        <div class="meta-left">
+            <div class="meta-item">sâmbătă, 28 februarie 2026</div>
+            <div class="meta-item">11 minute</div>
+        </div>
+        <div class="meta-item">LUME LARGĂ</div>
+    </div>
+    
+    <div class="breadcrumb">
+        <a href="index.html">Azi</a> / <a href="lume-larga.html">Lume Largă</a> / Longyearbyen — Cel Mai Nordic Oraș
+    </div>
+    
+    <div class="article-container">
+        <article>
+            <header class="article-header">
+                <span class="category-tag">LUME LARGĂ</span>
+                <h1 class="article-title">Longyearbyen: Unde <em>Soarele Nu Apune</em> Patru Luni pe An și <em>Nu Ai Voie Să Mori</em></h1>
+                <p class="article-subtitle">Cel mai nordic oraș locuit permanent de pe planetă, la 1.300 km de Polul Nord, unde viața continuă în condiții extrem.</p>
+                <div class="author-block">de Ioana Flondor</div>
+            </header>
+            
+            <div class="article-content">
+                <p>Aterizez pe aeroportul Svalbard și primul lucru pe care îl văd e un urs polar pe semnul care spune "ATENȚIE: URSI POLARI ÎN ZONĂ". E începutul anului și deja e întuneric complet — soarele nu va apune până în aprilie, dar nici nu va răsări până în februarie. Longyearbyen e situat la 78 de grade latitudine nordică, la jumătatea drumului dintre Norvegia continentală și Polul Nord.</p>
+                
+                <p>Acesta nu e un oraș obișnuit. E așezământul cel mai nordic cu o populație de peste 1.000 de locuitori — aproximativ 2.000 de oameni care trăiesc în condiții pe care majoritatea nu le-ar putea nici măcar imagina. Temperatura coboară frecvent la minus 30 de grade iarna, dar oamenii merg la muncă, la școală, la cumpărături, exact ca în orice oraș european.</p>
+                
+                <p>Ceea ce e interesant e că Longyearbyen are o regulă unică în lume: nu ai voie să moară aici. Nu e o glumă — cimitirul local a fost închis în anii '50 pentru că corpurile nu se descompun în permafrost. Dacă cineva e bolnav terminal, este transportat pe continentul norvegian pentru tratament. Chiar și pisicile domestice sunt interzise — nu se vrea să afecteze fauna locală, în special păsările migratoare.</p>
+                
+                <p>Mergi pe străzile orașului și vezi clădiri vopsite în culori vii — roșu, albastru, galben, verde. Nu e pentru estetică — e pentru a putea găsi drumul în timpul nopții polare, când întunericul e absolut timp de patru luni. Există o biserică, un muzeu, o universitate, un hotel, restaurante, chiar și o bibliotecă. Viața continuă, chiar dacă soarele nu.</p>
+                
+                <p>Longyearbyen e fondat în 1906 de John Munroe Longyear, un american care a venit în căutarea cărbunelui. Orașul a crescut în jurul minelor, dar azi cărbunele nu mai e sursa principală a economiei. Turismul, cercetarea științifică și educația au luat locul. Există o universitate care atrage cercetători din întreaga lume, fascinați de condițiile extreme de Arctic.</p>
+                
+                <p>Poate că cel mai surprinzător lucru e că viața continuă în ciuda tuturor restricțiilor. Nu ai voie să naști aici — viitoarele mame trebuie să plece pe continent cu cel puțin patru săptămâni înainte de termen. Nu ai voie să ai arme, decât cu permisiune specială, pentru protecția împotriva urșilor. Dar oamenii rămân. Unii de câțiva ani, alții de zeci.</p>
+                
+                <p>E genul de loc pe care îl înțelegi doar când vezi aurora boreală dansând pe cerul întunecat. Sau când vezi soarele de la miezul nopții în luna iulie, când nu e niciodată întuneric. Longyearbyen e un oraș unde timpul e diferit — unde ziua durează patru luni și noaptea patru luni, unde anotimpurile sunt inversate față de restul lumii.</p>
+                
+                <p>Orașele obișnuite nu arată așa. Longyearbyen nu e despre confort, e despre adaptare. E despre oameni care au găsit să trăiască în cel mai ostil mediu de pe planetă, care au construit o comunitate la marginea lumii, care continuă să existe în ciuda tuturor obstacolelor.</p>
+                
+                <p>Nu trebuie să ajungi acolo ca să înțelegi. Longyearbyen e o demonstrație că civilizația poate exista oriunde — chiar la 1.300 km de Polul Nord, chiar în întuneric absolut, chiar unde soarele nu apune patru luni pe an.</p>
+            </div>
+        </article>
+    </div>
+    
+    <nav class="nav-footer">
+        <a href="lume-larga.html">← Înapoi la Lume Largă</a>
+        <a href="index.html">Spre Azi →</a>
+    </nav>
+</body>
+</html>

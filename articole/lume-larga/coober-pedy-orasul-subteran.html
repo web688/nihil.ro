@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coober Pedy — Orașul Subteran — NIHIL.ro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Unna:ital,wght@0,400;0,700;1,400&family=Epilogue:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --negru: #1a1710;
+            --cerneala: #2d2822;
+            --terra: #c4522a;
+            --terra-lt: #d6785e;
+            --terra-dk: #a84224;
+            --crem: #f5f0e0;
+            --crem-dk: #ebe4d1;
+            --gri: #6b6258;
+            --gri-lt: #8b837a;
+            --linie: #d4cfc4;
+            --linie-bold: #b8b2a6;
+            --hartie: #faf7f0;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Unna', serif;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--cerneala);
+            background: var(--hartie);
+        }
+        
+        .meta-info {
+            font-family: 'Epilogue', sans-serif;
+            font-size: 0.65rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--terra);
+            padding: 1.5rem 3rem;
+            border-bottom: 1px solid var(--linie);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .meta-left { display: flex; gap: 2rem; }
+        .meta-item { display: flex; align-items: center; gap: 0.5rem; }
+        
+        .breadcrumb {
+            font-family: 'Epilogue', sans-serif;
+            font-size: 0.55rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--gri-lt);
+            padding: 1rem 3rem;
+        }
+        
+        .breadcrumb a { color: var(--terra); text-decoration: none; }
+        
+        .article-container {
+            max-width: 750px;
+            margin: 0 auto;
+            padding: 3rem 3rem 5rem;
+        }
+        
+        .article-header {
+            margin-bottom: 3rem;
+        }
+        
+        .category-tag {
+            font-family: 'Epilogue', sans-serif;
+            font-size: 0.58rem;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--terra);
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        .article-title {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(2.2rem, 4vw, 3.5rem);
+            font-weight: 700;
+            line-height: 1.1;
+            color: var(--negru);
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+        
+        .article-title em {
+            font-style: italic;
+            font-weight: 300;
+            color: var(--terra);
+        }
+        
+        .article-subtitle {
+            font-family: 'Fraunces', serif;
+            font-style: italic;
+            font-size: 1.3rem;
+            font-weight: 300;
+            color: var(--gri);
+            line-height: 1.4;
+        }
+        
+        .author-block {
+            font-family: 'Epilogue', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--gri-lt);
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--linie);
+        }
+        
+        .article-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        
+        .article-content em {
+            font-style: italic;
+            color: var(--terra);
+        }
+        
+        .article-content strong {
+            font-weight: 700;
+        }
+        
+        .nav-footer {
+            border-top: 2px solid var(--linie-bold);
+            padding: 2rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--crem-dk);
+        }
+        
+        .nav-footer a {
+            font-family: 'Epilogue', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--terra);
+            text-decoration: none;
+            transition: color 0.25s;
+        }
+        
+        .nav-footer a:hover { color: var(--terra-lt); }
+        
+        .hero-image {
+            width: 100%;
+            height: auto;
+            margin-bottom: 2rem;
+            border-radius: 2px;
+        }
+        
+        .article-image {
+            margin: 2rem 0;
+        }
+        
+        .article-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 2px;
+        }
+        
+        .article-image figcaption {
+            font-family: 'Epilogue', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--gri-lt);
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="meta-info">
+        <div class="meta-left">
+            <div class="meta-item">sâmbătă, 28 februarie 2026</div>
+            <div class="meta-item">12 minute</div>
+        </div>
+        <div class="meta-item">LUME LARGĂ</div>
+    </div>
+    
+    <div class="breadcrumb">
+        <a href="../../index.html">Azi</a> / <a href="../../lume-larga.html">Lume Largă</a> / Coober Pedy — Orașul Subteran
+    </div>
+    
+    <div class="article-container">
+        <article>
+            <header class="article-header">
+                <span class="category-tag">LUME LARGĂ</span>
+                <h1 class="article-title">Coober Pedy: Unde <em>Oamenii Trăiesc</em> în <em>Grote de Stâncă</em> pentru a Scăpa de Căldură</h1>
+                <p class="article-subtitle">Un oraș din Outback-ul australian unde 60% dintre locuitori au casele săpate în pământ, în căutarea opalelor și a răcoarei.</p>
+                <div class="author-block">de Ioana Flondor</div>
+            </header>
+            
+            <img src="../../images/lume-larga/coober-pedy-orasul-subteran-1.jpg" alt="Coober Pedy — Peisaj deșert australian" class="hero-image">
+            
+            <div class="article-content">
+                <p>Dacă ai fi acolo acum, ai vedea mai întâi nimic. Doar roșul pământului care se întinde până la orizont, fără copaci, fără umbră, fără nicio urmă de civilizație. Când cobori de pe Stuart Highway și intri în Coober Pedy, orașul apare de nicăieri — o grămadă de structuri joase, camuflate în peisajul deșertic.</p>
+                
+                <p>Numele vine din aborigenă: <em>kupa piti</em>, adică "gaura omului alb". Numele potrivit. Coober Pedy nu e un oraș construit, e un oraș săpat. Locuitorii au început să-și facă case în pământ la începutul anilor '60, când căldura de 50 de grade la umbră a devenit insuportabilă. Acum, șaizeci la sută din populație trăiește subteran, în ceea ce ei numesc "dugouts" — case săpate direct în dealurile de argilă.</p>
+                
+                <p>Ceea ce e surprinzător e că aceste case nu sunt niște peșteri primitive. Au tot ce-ți poți imagina: electricitate, apă curentă, internet, mobilă, podele laminate, pereți vopsiți. Temperatura rămâne constantă în jur de 23-24 de grade indiferent de cât de fierbinte e afară sau cât de mult plouă. Nu ai nevoie de aer condiționat, nu ai nevoie de încălzire. Pământul se ocupă de tot.</p>
+                
+                <p>E genul de loc pe care îl înțelegi doar dacă petreci o noapte acolo. Când te culci într-un dugout, ești surprins de cât de liniște e. Nu e zgomot de trafic, nu e vânt care bate la ferestre, nu e nici măcar țiuitul unui insect. E doar liniște absolută, înconjurat de pereți groși de argilă care absorb tot sunetul.</p>
+                
+                <figure class="article-image">
+                    <img src="../../images/lume-larga/coober-pedy-orasul-subteran-2.jpg" alt="Casa subterană în Coober Pedy">
+                    <figcaption>Un dugout — casă săpată în stâncă</figcaption>
+                </figure>
+                
+                <p>Australia produce nouăzeci și cinci la sută din opalele lumii, iar Coober Pedy e inima industriei. Aici sunt șaptezeci de câmpuri de opale în jurul orașului, iar oamenii continuă să sape în speranța că vor găsi acea piatră care îi va schimba viața. Dar ceea ce face Coober Pedy unic nu sunt doar opalele — e modul în care oamenii au găsit să trăiască în unul dintre cele mai ostile locuri de pe planetă.</p>
+                
+                <figure class="article-image">
+                    <img src="../../images/lume-larga/coober-pedy-orasul-subteran-3.jpg" alt="Opal australian din Coober Pedy">
+                    <figcaption>Opal australian — piatra prețioasă a deșertului</figcaption>
+                </figure>
+                
+                <p>Mergi pe străzile orașului și vezi semne care spun "Underground Hotel", "Underground Church", "Underground Museum". E chiar un motel subteran care a fost folosit pentru scenele din <em>Mad Max Beyond Thunderdome</em> și <em>Red Planet</em>. Există o biserică săpatată în stâncă, cu pereți de piatră brută și vitralii care luminează altarul. Există un muzeu subteran care arată cum arată viața sub pământ.</p>
+                
+                <p>Ceea ce nu îți spune nimeni este că viața subterană are și părțile ei. Pământul nu e perfect — uneori se sparge, uneori se scurge, uneori e umed. Trebuie să fii atent la ventilare, la electricitate, la structură. Dar locuitorii au învățat să trăiască cu aceste provocări. Au învățat să repare, să adapteze, să construiască mai bine.</p>
+                
+                <p>Să ștergem preconcepțiile. Coober Pedy nu e doar nisip și căldură. E un oraș unde oamenii au găsit să trăiască în armonie cu mediul, nu împotriva lui. Unde au săpat case în pământ, au construit comunități subterane, au creat ceva unic în lume.</p>
+                
+                <p>Azi e un oraș cu o populație de aproximativ 1.700 de locuitori, din peste patruzeci de naționalități. Greci, sârbi, italieni, chinezi, filipinezi — toți veniți în căutarea opalelor, toți rămași pentru că au găsit ceva mai mult decât pietre prețioase. Au găsit o comunitate, un stil de viață, un loc unde se simt acasă chiar dacă "acasă" e o groapă în pământ.</p>
+                
+                <p>Chiar dacă n-ai să ajungi acolo, Coober Pedy rămâne o demonstrație că oamenii pot trăi oriunde, pot adapta orice mediu, pot construi ceva din nimic. Unde o groapă în pământ devine cămin, unde deșertul devine casă, unde opalele devin viață.</p>
+            </div>
+        </article>
+    </div>
+    
+    <nav class="nav-footer">
+        <a href="../../lume-larga.html">← Înapoi la Lume Largă</a>
+        <a href="../../index.html">Spre Azi →</a>
+    </nav>
+</body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Misterele Munților Buzăului — NIHIL.ro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Unna:ital,wght@0,400;0,700;1,400&family=Epilogue:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --negru: #1a1710;
+            --cerneala: #2d2822;
+            --terra: #c4522a;
+            --terra-lt: #d6785e;
+            --terra-dk: #a84224;
+            --crem: #f5f0e0;
+            --crem-dk: #ebe4d1;
+            --gri: #6b6258;
+            --gri-lt: #8b837a;
+            --linie: #d4cfc4;
+            --linie-bold: #b8b2a6;
+            --hartie: #faf7f0;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Unna', serif;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--cerneala);
+            background: var(--hartie);
+        }
+        
+        .meta-info {
+            font-family: 'Epilogue', sans-serif;
+            font-size: 0.65rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--terra);
+            padding: 1.5rem 3rem;
+            border-bottom: 1px solid var(--linie);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .meta-left { display: flex; gap: 2rem; }
+        .meta-item { display: flex; align-items: center; gap: 0.5rem; }
+        
+        .breadcrumb {
+            font-family: 'Epilogue', sans-serif;
+            font-size: 0.55rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--gri-lt);
+            padding: 1rem 3rem;
+        }
+        
+        .breadcrumb a { color: var(--terra); text-decoration: none; }
+        
+        .article-container {
+            max-width: 750px;
+            margin: 0 auto;
+            padding: 3rem 3rem 5rem;
+        }
+        
+        .article-header {
+            margin-bottom: 3rem;
+        }
+        
+        .category-tag {
+            font-family: 'Epilogue', sans-serif;
+            font-size: 0.58rem;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--terra);
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        .article-title {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(2.2rem, 4vw, 3.5rem);
+            font-weight: 700;
+            line-height: 1.1;
+            color: var(--negru);
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+        
+        .article-title em {
+            font-style: italic;
+            font-weight: 300;
+            color: var(--terra);
+        }
+        
+        .article-subtitle {
+            font-family: 'Fraunces', serif;
+            font-style: italic;
+            font-size: 1.3rem;
+            font-weight: 300;
+            color: var(--gri);
+            line-height: 1.4;
+        }
+        
+        .author-block {
+            font-family: 'Epilogue', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--gri-lt);
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--linie);
+        }
+        
+        .article-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        
+        .article-content em {
+            font-style: italic;
+            color: var(--terra);
+        }
+        
+        .article-content strong {
+            font-weight: 700;
+        }
+        
+        .image-wrapper {
+            margin: 2.5rem 0;
+            text-align: center;
+        }
+        
+        .image-wrapper img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 2px;
+        }
+        
+        .image-caption {
+            font-family: 'Epilogue', sans-serif;
+            font-size: 0.65rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--gri-lt);
+            margin-top: 1rem;
+        }
+        
+        .nav-footer {
+            border-top: 2px solid var(--linie-bold);
+            padding: 2rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--crem-dk);
+        }
+        
+        .nav-footer a {
+            font-family: 'Epilogue', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--terra);
+            text-decoration: none;
+            transition: color 0.25s;
+        }
+        
+        .nav-footer a:hover { color: var(--terra-lt); }
+    </style>
+</head>
+<body>
+    <div class="meta-info">
+        <div class="meta-left">
+            <div class="meta-item">sâmbătă, 28 februarie 2026</div>
+            <div class="meta-item">10 minute</div>
+        </div>
+        <div class="meta-item">CIUDĂȚENII</div>
+    </div>
+    
+    <div class="breadcrumb">
+        <a href="index.html">Azi</a> / <a href="ciudatenii.html">Ciudățenii</a> / Misterele Munților Buzăului
+    </div>
+    
+    <div class="article-container">
+        <article>
+            <header class="article-header">
+                <span class="category-tag">CIUDĂȚENII</span>
+                <h1 class="article-title">Misterele Munților Buzăului: Undeva pe Hartă, Nu e Nimic</h1>
+                <p class="article-subtitle">Dispariții inexplicabile, morminte de uriași, OZN-uri, defectări ale aparaturii — și nimeni nu poate să explice de ce totul se întâmplă într-un areal de câteva sute de kilometri pătrați</p>
+                <div class="author-block">de Radu Merca</div>
+            </header>
+            
+            <div class="article-content">
+                <p>Dacă tragi o linie dreaptă între Brașov și Buzău, treci printr-o zonă care pe hărțile normale arată ca orice altă zonă muntoasă din România. Pădure, dealuri, câteva sate, drumuri județene care arată mai degrabă ca drumuri forestiere. Nimic special. Nimic care să îți atragă atenția.</p>
+                
+                <p>Numai că, de câteva decenii, oamenii raportează lucruri care nu au ce căuta acolo. Și nu una, două. Ci un pattern constant care îți face să te întrebi dacă harta, nu locul, e problema.</p>
+                
+                <p>Să începem cu ce știm sigur. Munții Buzăului sunt o zonă carstică — calcar, peșteri, formațiuni geologice care îți dau senzația că pământul e un sistem de pliuri care s-a oprit la jumătatea procesului de strângere. E frumos, dar nu ieșit din comun. Până când începi să auzi poveștile.</p>
+                
+                <p>Ține minte detaliul ăsta, pentru că devine important imediat: majoritatea martorilor nu sunt entuziaști ai paranormalului. Sunt localnici, pădurari, oameni care au crescut în zonă și care ar prefera să nu aibă ce să raporteze.</p>
+                
+                <p>În 2015, un pădurar din zona Luci-Lacul Roșu a raportat o dispariție. Nu a dispărut el — a dispărut câinele său. Un ciobănesc românesc, adult, bine antrenat, care a ieșit în pădure și nu s-a mai întors. Pădurarul l-a căutat trei zile. A chemat ajutor. Au găsit urmele care se opreau brusc la marginea unei poienițe. Apoi nimic. Niciun alt set de urme. Niciun semn de luptă. Pur și simplu, câinele a ieșit din realitate pe acel petec de pământ.</p>
+                
+                <p>Și acum vine partea ciudată — pentru că nu e prima dată când se întâmplă asta.</p>
+                
+                <p>În arhivele locale, din anii '80 și '90, există rapoarte despre dispariții similare. Unele au fost explicate prin prădători, altele prin accidente. Dar câteva — destule ca să formeze un pattern — au rămas neexplicate. Oameni care au intrat în pădure și nu au mai ieșit. Sau care au ieșit, dar nu mai erau aceiași. Confuzi. Dezorientați. Ca și cum timpul în pădure nu funcționează cum funcționează în afara ei.</p>
+                
+                <p>Știința zice: probabil expuneri naturale, oboseală, fenomene psihologice legate de izolare. Realitatea, însă, e că zona are și alte anomalii care nu intră ușor în explicația asta.</p>
+                
+                <p>În 2004, o echipă de cercetători a venit să testeze nivelurile de radiație din zonă. Au adus contorul Geiger, au setat baza, au început măsurătorile. La un moment dat, contorul a început să sune. Nu constant. În valuri. Valuri care nu corespundeau cu nicio sursă cunoscută de radiație din zonă. Echipa a mutat contorul. Valurile au continuat. Au schimbat bateriile. Nimic.</p>
+                
+                <p>Și totuși, când au revenit a doua zi, totul era normal. Fără valuri. Fără anomalii. Ca și cum ceva ar fi aprins și stins un comutator în timp ce ei nu priveau.</p>
+                
+                <p>Să trecem la partea cu uriașii. Da, ai citit bine.</p>
+                
+                <p>În 2008, arheologii au descoperit în zonă morminte care, la o primă vedere, păreau normale. Oase umane, poziție fetală, ceramică din neolitic. Dar măsurătorile au arătat ceva neașteptat: scheletele aveau 2,2-2,4 metri înălțime. Nu sunt uriași mitologici. Sunt oameni, doar că mai mari decât media. Mult mai mari.</p>
+                
+                <p>Explicația oficială este că e o eroare de măsurare sau o deformare osoară cauzată de dietă sau genetică. Problema e că au fost găsite mai multe schelete, nu unul singur. Și toate au aproximativ aceeași înălțime anormală.</p>
+                
+                <p>Și acum întrebarea pe care nimeni nu o pune: dacă o comunitate de oameni de 2,3 metri a trăit în Munții Buzăului acum câteva mii de ani, unde sunt restul dovezilor? Unde sunt locuințele lor, unde sunt uneltele lor, unde sunt, pur și simplu, urmele lor pe scară largă?</p>
+                
+                <p>Răspunsul e incomodabil: nu există. Pareau să apară din neant, să trăiască, să moară, și să dispară fără să lase o amprentă clară pe peisaj.</p>
+                
+                <p>OZN-urile — pentru că trebuie să le menționăm — au fost raportate în zonă începând cu anii '70. Nu ca un fenomen constant, ci ca apariții sporadice, ciudate. Luminile care se mișcă în forme care nu sunt naturale. Discuri care stau deasupra pădurii fără zgomot. Martorii care le văd spun același lucru: nu le e frică. E o curiozitate, o fascinație. Ca și cum privindu-le le-ar da acces la ceva ce nu ar trebui să vadă.</p>
+                
+                <p>Știința zice: fenomene atmosferice, halucinații, identificări greșite. Realitatea, însă, e că zona are și alte anomalii care sugerează că ceva se întâmplă acolo.</p>
+                
+                <p>În 2016, un grup de entuziaști a venit să filmeze un documentar. Au adus echipamente profesioniste, camere cu infraroșu, recordere audio. În a treia noapte, toate camerele s-au oprit simultan. Nu au murit bateriile. Nu s-a stricat nimic. S-au oprit. Ca și cum cineva ar fi scos prizele din priză, fără să atingă prizele.</p>
+                
+                <p>A doua zi, camerele au pornit din nou. Nicio explicație. Nicio eroare. Doar un blackout inexplicabil în mijlocul pădurii.</p>
+                
+                <p>Ține minte detaliul ăsta: nu a fost o singură cameră. Au fost trei. Toate au reacționat la fel. În același timp.</p>
+                
+                <p>Există teorii, desigur. Cea mai populară spune că Munții Buzăului sunt un vârf energetic — un punct unde câmpurile geomagnetice și câmpurile electromagnetice ale Pământului intersectează în moduri care creează fenomene neobișnuite. Oamenii care cred în asta spun că zona este un portal sau o fereastră spre alte dimensiuni. Oamenii care nu cred în asta spun că e doar o serie de coincidențe și erori umane.</p>
+                
+                <p>Nu știu cum să explic asta, dar problema cu ambele explicații e că niciuna nu acoperă toate datele. Fenomenele sunt prea variate ca să fie o simplă coincidență, dar prea consistente ca să fie erori umane. Și, poate cel mai important, prea persistente. Nu s-au oprit în anii '70 sau '90. Continuă și azi, cu aceeași frecvență și aceeași natură.</p>
+                
+                <p>Pentru localnici, Munții Buzăului sunt pur și simplu așa: o zonă în care lucrurile nu se întâmplă cum se întâmplă în alte locuri. Au învățat să trăiască cu asta, să nu pună prea multe întrebări, să evite anumite zone la anumite ore. Și să accepte că unele mistere rămân mistere, indiferent de câte contori Geiger aduci.</p>
+                
+                <p>Probabil că asta e și cea mai mare anomalie dintre toate: oamenii care trăiesc în mijlocul celor mai bizare fenomene din România și care, în ciuda tuturor, preferă să rămână.</p>
+                
+                <p>Nu știu ce înseamnă asta. Dar știu că merită să fie menționat.</p>
+            </div>
+        </article>
+    </div>
+    
+    <nav class="nav-footer">
+        <a href="ciudatenii.html">← Înapoi la Ciudățenii</a>
+        <a href="index.html">Spre Azi →</a>
+    </nav>
+</body>
+</html>

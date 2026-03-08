@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Tomatina — Festivalul Luptei cu Roșiile — NIHIL.ro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Unna:ital,wght@0,400;0,700;1,400&family=Epilogue:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --negru: #1a1710;
+            --cerneala: #2d2822;
+            --terra: #c4522a;
+            --terra-lt: #d6785e;
+            --terra-dk: #a84224;
+            --crem: #f5f0e0;
+            --crem-dk: #ebe4d1;
+            --gri: #6b6258;
+            --gri-lt: #8b837a;
+            --linie: #d4cfc4;
+            --linie-bold: #b8b2a6;
+            --hartie: #faf7f0;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Unna', serif;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--cerneala);
+            background: var(--hartie);
+        }
+        
+        .meta-info {
+            font-family: 'Epilogue', sans-serif;
+            font-size: 0.65rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--terra);
+            padding: 1.5rem 3rem;
+            border-bottom: 1px solid var(--linie);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .meta-left { display: flex; gap: 2rem; }
+        .meta-item { display: flex; align-items: center; gap: 0.5rem; }
+        
+        .breadcrumb {
+            font-family: 'Epilogue', sans-serif;
+            font-size: 0.55rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--gri-lt);
+            padding: 1rem 3rem;
+        }
+        
+        .breadcrumb a { color: var(--terra); text-decoration: none; }
+        
+        .article-container {
+            max-width: 750px;
+            margin: 0 auto;
+            padding: 3rem 3rem 5rem;
+        }
+        
+        .article-header {
+            margin-bottom: 3rem;
+        }
+        
+        .category-tag {
+            font-family: 'Epilogue', sans-serif;
+            font-size: 0.58rem;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--terra);
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        .article-title {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(2.2rem, 4vw, 3.5rem);
+            font-weight: 700;
+            line-height: 1.1;
+            color: var(--negru);
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+        
+        .article-title em {
+            font-style: italic;
+            font-weight: 300;
+            color: var(--terra);
+        }
+        
+        .article-subtitle {
+            font-family: 'Fraunces', serif;
+            font-style: italic;
+            font-size: 1.3rem;
+            font-weight: 300;
+            color: var(--gri);
+            line-height: 1.4;
+        }
+        
+        .author-block {
+            font-family: 'Epilogue', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--gri-lt);
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--linie);
+        }
+        
+        .article-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        
+        .article-content em {
+            font-style: italic;
+            color: var(--terra);
+        }
+        
+        .article-content strong {
+            font-weight: 700;
+        }
+        
+        .nav-footer {
+            border-top: 2px solid var(--linie-bold);
+            padding: 2rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--crem-dk);
+        }
+        
+        .nav-footer a {
+            font-family: 'Epilogue', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--terra);
+            text-decoration: none;
+            transition: color 0.25s;
+        }
+        
+        .nav-footer a:hover { color: var(--terra-lt); }
+    </style>
+</head>
+<body>
+    <div class="meta-info">
+        <div class="meta-left">
+            <div class="meta-item">sâmbătă, 28 februarie 2026</div>
+            <div class="meta-item">9 minute</div>
+        </div>
+        <div class="meta-item">LUME LARGĂ</div>
+    </div>
+    
+    <div class="breadcrumb">
+        <a href="index.html">Azi</a> / <a href="lume-larga.html">Lume Largă</a> / La Tomatina — Festivalul Luptei cu Roșiile
+    </div>
+    
+    <div class="article-container">
+        <article>
+            <header class="article-header">
+                <span class="category-tag">LUME LARGĂ</span>
+                <h1 class="article-title">La Tomatina: Unde <em>120 de Tone de Roșii</em> Transformă Un <em>Oraș Spaniol</em> în <em>Tomaterapia</em></h1>
+                <p class="article-subtitle">Un festival în Buñol, Spania, unde 22.000 de oameni se luptă cu roșii o oră pe an, în cel mai mare luptă cu mâncare din lume.</p>
+                <div class="author-block">de Ioana Flondor</div>
+            </header>
+            
+            <div class="article-content">
+                <p>Dacă ai fi acolo acum, la ultima miercuri din august, ai vedea străzile Buñolului acoperite de roșii. Nu metaforic — literal. 120 de tone de roșii împrăștiate pe asfalt, 22.000 de oameni acoperiți de pulpă de roșii, o oră de haos organizat care transformă acest oraș spaniol de 9.000 de locuitori în capitala mondială a luptelor cu mâncare.</p>
+                
+                <p>Festivalul începe în 1945, când un grup de tineri s-a luptat spontan cu roșii în timpul unei parade. Nu era plănuit, nu era aprobat, s-a întâmplat pur și simplu. Autoritățile au încercat să-l oprească de câteva ori, dar oamenii au continuat să vină. În 1957, festivalul a fost interzis, iar locuitorii au protestat organizând o înmormântare simbolică cu o coșciug mare de roșii. Autoritățile au cedat, iar La Tomatina a devenit oficial.</p>
+                
+                <p>Ceea ce e interesant e că roșiile nu sunt de pe piață. Sunt roșii speciale — ieftine, excesive, nu tocmai bune pentru consum. Vin din Extremadura, o regiune cunoscută pentru producția de roșii, și sunt aduse special pentru festival. Nu sunt organice, nu sunt de înaltă calitate, sunt perfecte pentru a fi aruncate.</p>
+                
+                <p>Mergi la Buñol în ziua festivalului și vezi oameni din toate colțurile lumii — spanioli, americani, japonezi, australieni, brazilieni. Toți veniți pentru același motiv: să fie acoperiți de roșii. Unii poartă ochelari de protecție, alții își lasă hainele acasă, alții poartă costume de baie. Totul e acceptabil, totul e parte din experiență.</p>
+                
+                <p>Festivalul începe la ora 11, când cineva urcă pe un stâlp de lemn de două etale și încearcă să ia un șuncă de la vârf. Când șunca cade, începe lupta. Camioanele cu roșii intră în oraș, oamenii încep să arunce, și pentru o oră, Buñol devine un ocean roșu.</p>
+                
+                <p>Există reguli, desigur. Nu poți arunce roșii întregi — trebuie să le strivești înainte. Nu poți arunce alte obiecte — doar roșii. Nu poți rupe tricouri. Dar în afara acestor reguli, e libertate totală. Oamenii aruncă roșii la vecini, la străini, la prieteni, la necunoscuți. Nu contează cine e — toți sunt ținte.</p>
+                
+                <p>E genul de loc pe care îl înțelegi doar când ești acolo, când simți pulpă de roșii pe fața ta, când vezi străzile transformate în râu roșu, când auzi strigătele și râsetele a mii de oameni. La Tomatina nu e despre violență — e despre pură distracție, despre eliberare, despre a lăsa totul deoparte și a fi copil din nou.</p>
+                
+                <p>Festivalurile convenționale arată altfel. La Tomatina nu e despre tradiție, e despre exces. E despre oameni care au găsit să se distreze în cel mai neconvențional mod posibil, care au creat ceva unic în lume, care continuă să atracă mii de oameni de optzeci de ani.</p>
+                
+                <p>În 2025, sloganul festivalului a fost "Tomaterapia" — o metaforă pentru puterea de a te elibera prin absurd. Poate că nu e o terapie convențională, dar pentru o oră, 22.000 de oameni uită de problemele lor și se luptă cu roșii.</p>
+                
+                <p>Chiar dacă n-ai să fii niciodată acolo, La Tomatina rămâne o demonstrație că oamenii pot găsi bucurie în cele mai neașteptate locuri — chiar într-un ocean de roșii în mijlocul Spaniei.</p>
+            </div>
+        </article>
+    </div>
+    
+    <nav class="nav-footer">
+        <a href="lume-larga.html">← Înapoi la Lume Largă</a>
+        <a href="index.html">Spre Azi →</a>
+    </nav>
+</body>
+</html>

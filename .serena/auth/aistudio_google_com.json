@@ -1,0 +1,25 @@
+{
+  "cookies": [
+    {"name": "SOCS", "value": "CAISHAgBEhJnd3NfMjAyNjAyMjQtMF9SQzEaAmVuIAEaBgiA4IjNBg", "domain": ".google.com"},
+    {"name": "APISID", "value": "9T1Tiorx9OAKt9_b/AwaCN9Q8paOOF8pgm", "domain": ".google.com"},
+    {"name": "SAPISID", "value": "0X501_ioa3PqVB-b/Ae11lFQW_yUKH3l0I", "domain": ".google.com"},
+    {"name": "__Secure-1PAPISID", "value": "0X501_ioa3PqVB-b/Ae11lFQW_yUKH3l0I", "domain": ".google.com"},
+    {"name": "__Secure-3PAPISID", "value": "0X501_ioa3PqVB-b/Ae11lFQW_yUKH3l0I", "domain": ".google.com"},
+    {"name": "SID", "value": "g.a0007gjSfOJE29pQCsVKv2MOUFym-55zJB7R1Tvr77rwkZSLDiuIx7bWScuhq5Gp_25iUe-y6QACgYKAfQSARESFQHGX2MiDX4ClM5OnwyURd7UCqA-tBoVAUF8yKq4xoK_8n_Ibx9Jb_eIRh3q0076", "domain": ".google.com"},
+    {"name": "SIDCC", "value": "AKEyXzVTBFoy1W1zKsob0r87W2fjHA49LWlcmhfIWs_bE9rvTxeH9B43n8dSaacOY67gpTlumw", "domain": ".google.com"}
+  ],
+  "localStorage": {
+    "aiStudioUserPreference": "{\"promptModel\":\"models/gemini-2.5-flash-image\",\"isAdvancedOpen\":false,\"isSafetySettingsOpen\":false,\"areToolsOpen\":true,\"autosaveEnabled\":true,\"theme\":\"system\"}"
+  },
+  "origins": [
+    {
+      "origin": "https://aistudio.google.com",
+      "localStorage": [
+        {"name": "aiStudioUserPreference", "value": "{\"promptModel\":\"models/gemini-2.5-flash-image\",\"isAdvancedOpen\":false,\"isSafetySettingsOpen\":false,\"areToolsOpen\":true,\"autosaveEnabled\":true,\"theme\":\"system\"}"}
+      ]
+    }
+  ],
+  "note": "Playwright storageState format. Use with browser.newContext({ storageState: path })",
+  "expires": "Google session cookies - typically valid for 2 weeks",
+  "created": "2026-03-08"
+}

@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "image-optimizer": {
+      "command": "npx",
+      "args": ["mcp-image-optimizer"],
+      "cwd": "X:\\Website\\Utils\\nihil.ro"
+    },
+    "gemini-watermark": {
+      "command": "python",
+      "args": ["X:\\Website\\ClaudeCode\\Remove gemini logo\\server.py"]
+    }
+  }
+}

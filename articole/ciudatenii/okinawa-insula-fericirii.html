@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Okinawa — Insula Fericirii — NIHIL.ro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Unna:ital,wght@0,400;0,700;1,400&family=Epilogue:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --negru: #1a1710;
+            --cerneala: #2d2822;
+            --terra: #c4522a;
+            --terra-lt: #d6785e;
+            --terra-dk: #a84224;
+            --crem: #f5f0e0;
+            --crem-dk: #ebe4d1;
+            --gri: #6b6258;
+            --gri-lt: #8b837a;
+            --linie: #d4cfc4;
+            --linie-bold: #b8b2a6;
+            --hartie: #faf7f0;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Unna', serif;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--cerneala);
+            background: var(--hartie);
+        }
+        
+        .meta-info {
+            font-family: 'Epilogue', sans-serif;
+            font-size: 0.65rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--terra);
+            padding: 1.5rem 3rem;
+            border-bottom: 1px solid var(--linie);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .meta-left { display: flex; gap: 2rem; }
+        .meta-item { display: flex; align-items: center; gap: 0.5rem; }
+        
+        .breadcrumb {
+            font-family: 'Epilogue', sans-serif;
+            font-size: 0.55rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--gri-lt);
+            padding: 1rem 3rem;
+        }
+        
+        .breadcrumb a { color: var(--terra); text-decoration: none; }
+        
+        .article-container {
+            max-width: 750px;
+            margin: 0 auto;
+            padding: 3rem 3rem 5rem;
+        }
+        
+        .article-header {
+            margin-bottom: 3rem;
+        }
+        
+        .category-tag {
+            font-family: 'Epilogue', sans-serif;
+            font-size: 0.58rem;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--terra);
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        .article-title {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(2.2rem, 4vw, 3.5rem);
+            font-weight: 700;
+            line-height: 1.1;
+            color: var(--negru);
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+        
+        .article-title em {
+            font-style: italic;
+            font-weight: 300;
+            color: var(--terra);
+        }
+        
+        .article-subtitle {
+            font-family: 'Fraunces', serif;
+            font-style: italic;
+            font-size: 1.3rem;
+            font-weight: 300;
+            color: var(--gri);
+            line-height: 1.4;
+        }
+        
+        .author-block {
+            font-family: 'Epilogue', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--gri-lt);
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--linie);
+        }
+        
+        .article-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        
+        .article-content em {
+            font-style: italic;
+            color: var(--terra);
+        }
+        
+        .article-content strong {
+            font-weight: 700;
+        }
+        
+        .nav-footer {
+            border-top: 2px solid var(--linie-bold);
+            padding: 2rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--crem-dk);
+        }
+        
+        .nav-footer a {
+            font-family: 'Epilogue', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--terra);
+            text-decoration: none;
+            transition: color 0.25s;
+        }
+        
+        .nav-footer a:hover { color: var(--terra-lt); }
+    </style>
+</head>
+<body>
+    <div class="meta-info">
+        <div class="meta-left">
+            <div class="meta-item">sâmbătă, 28 februarie 2026</div>
+            <div class="meta-item">10 minute</div>
+        </div>
+        <div class="meta-item">CIUDĂȚENII</div>
+    </div>
+    
+    <div class="breadcrumb">
+        <a href="index.html">Azi</a> / <a href="ciudatenii.html">Ciudățenii</a> / Okinawa — Insula Fericirii
+    </div>
+    
+    <div class="article-container">
+        <article>
+            <header class="article-header">
+                <span class="category-tag">CIUDĂȚENII</span>
+                <h1 class="article-title">Okinawa: Insula Unde Oamenii Trăiesc 100 de Ani și <em>Zâmbesc</em> În Continuare</h1>
+                <p class="article-subtitle">Fermierii din Okinawa au 100 de ani și cultivă legume. Nu e un mit. Nu e o legendă. E doar realitatea zilnică pe o insulă mică din sudul Japoniei.</p>
+                <div class="author-block">de Radu Merca</div>
+            </header>
+            
+            <div class="article-content">
+                <p>Dacă te-ai duce în Okinawa și ai cere unui localnic câți ani are, s-ar putea să răspundă cu 85 sau 90. Dacă ai întreba de ce arată atât de tânăr, ar zâmbi și ar spune că are doar 40 de ani. Nu e o glumă. Oamenii din Okinawa au o viziune diferită despre vârstă. Și, mai important, o viziune diferită despre viață.</p>
+                
+                <p>Reține asta: Okinawa are cea mai mare concentrație de centenari din lume. Nu doar câțiva. Mii. Și nu doar oameni care trăiesc 100 de ani. Oameni care trăiesc 100 de ani, fac sport, cultivă legume, petrec timp cu familia și râd la poveștile bătrânilor din sat.</p>
+                
+                <p>Să începem cu ce știm. Okinawa e o insulă mică din sudul Japoniei. Are 106 km lungime și o populație de aproximativ 1,4 milioane de oameni. E un loc frumos — plaje albastre, dealuri verzi, apă caldă tot anul. Dar nu asta o face specială. O face faptul că oamenii de acolo trăiesc mai mult decât oriunde altundeva.</p>
+                
+                <p>Și nu doar trăiesc mai mult. Trăiesc mai bine.</p>
+                
+                <p>Știința zice: e genetica. E dieta. E stilul de viață. Realitatea, însă, e mai complicată. Cercetătorii au venit în Okinawa de zeci de ani. Au analizat sângele, au măsurat nivelurile de colesterol, au interogat localnicii despre obiceiurile lor. Au găsit câteva reguli simple, dar puternice.</p>
+                
+                <p>Prima: okinawanii au un ikigai. E un cuvânt japonez care nu se traduce direct. Înseamnă ceva gen "motivul pentru care te trezești dimineața". Oamenii din Okinawa au un motiv clar pentru a trăi. E cultivarea legumelor. E îngrijirea nepoților. E participarea la evenimentele comunitare. Orice ar fi, are sens.</p>
+                
+                <p>Și iată partea interesantă — pentru că studiile arată că oamenii care au un ikigai trăiesc mai mult. Nu e un efect placebo. E real. Când ai un motiv pentru a trăi, corpul tău răspunde.</p>
+                
+                <p>A doua: dieta. Okinawanii mănâncă mult tofu și legume. Nu multă carne. Nu mult lactate. Nu mult zahăr. O dietă simplă, echilibrată, bazată pe ce crește în grădină. Problema e că dieta e doar o parte din ecuație. Partea mai interesantă e cum mănâncă.</p>
+                
+                <p>Okinawanii mănâncă încet. Nu se grăbesc. Se bucură de mâncare. Se opresc când sunt sătui, nu când plăcile sunt goale. O regulă simplă, dar greu de respectat într-o lume care îți spune să mănânci repede și mult.</p>
+                
+                <p>Și uite ce e interesant: okinawanii au o regulă numită "hara hachi bu". Înseamnă "mănâncă până când ești 80% plin". Nu 100%. 80%. Restul îl lași pentru data viitoare. E o regulă care sună restrictivă, dar în realitate e o regulă de libertate. Când nu mănânci până la saturație completă, te simți mai bine. Ai mai multă energie. Te simți mai puțin greoi.</p>
+                
+                <p>A treia: conexiunea socială. Okinawanii nu sunt singuri. Au moai — grupuri de prieteni din copilărie care se întâlnesc regulat. Vorbesc. Râd. Se sprijină reciproc. Nu e doar o întâlnire socială. E o rețea de suport care îți dă un motiv pentru a trăi.</p>
+                
+                <p>Știința zice: e doar cultura. Realitatea, însă, e că conexiunea socială are efecte fizice. Studiile arată că oamenii cu conexiuni sociale puternice trăiesc mai mult, au imunitate mai bună, sunt mai fericiți. Nu e doar o impresie. E măsurabil.</p>
+                
+                <p>Există și alte reguli. Okinawanii fac sport zilnic. Nu neapărat la sală. Cultivă grădina. Merg pe jos. Dansează în grupuri. Orice mișcare, atâta timp cât e constantă. Problema e că sportul e doar o parte. Partea mai importantă e că sportul e integrat în viața zilnică. Nu e o sarcină. E un mod de viață.</p>
+                
+                <p>Și totuși, problema cu Okinawa nu e că oamenii trăiesc 100 de ani. Problema e că sunt fericiți să o facă. Nu e o viață lungă și plictisitoare. E o viață lungă și plină de sens.</p>
+                
+                <p>E complicat, dar când vezi un fermier de 95 de ani care râde cu nepoții lui, înțelegi că secretul nu e în ce mănâncă sau ce exerciții face. Secretul e în cum percepe viața. Ca pe o bucurie, nu ca pe o obligație.</p>
+                
+                <p>Pentru okinawani, vârsta nu e un număr. E o etapă. Când ai 80 de ani, ești în etapa "senior". Când ai 90 de ani, ești în etapa "bătrân". Când ai 100 de ani, ești în etapa "înțelept". Și în fiecare etapă, ai un rol. Ai o responsabilitate. Ai un motiv pentru a continua.</p>
+                
+                <p>Probabil că nu putem reproduce Okinawa în alte locuri. Nu putem clona cultura, dieta, stilul de viață. Dar putem învăța ceva. Putem învăța că viața lungă nu e doar despre ani. E despre cum trăiești acei ani. E despre conexiune, despre sens, despre bucurie.</p>
+                
+                <p>Okinawa e un exemplu. Un model de cum ar trebui să fie viața. Nu perfectă, dar aproape. O viață lungă, fericită, plină de sens. Și, poate cel mai important, o viață pe care o trăiești cu zâmbetul pe buze.</p>
+                
+                <p>Nu știu ce înseamnă asta pentru restul lumii. Dar știu că, când te uiți la un fermier de 100 de ani care cultivă grădina lui cu dragoste, îți dai seama că așteptarea nu e la moarte. E la următoarea zi.</p>
+            </div>
+        </article>
+    </div>
+    
+    <nav class="nav-footer">
+        <a href="ciudatenii.html">← Înapoi la Ciudățenii</a>
+        <a href="index.html">Spre Azi →</a>
+    </nav>
+</body>
+</html>

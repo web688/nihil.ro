@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monhegan — Refugiul Artiștilor — NIHIL.ro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Unna:ital,wght@0,400;0,700;1,400&family=Epilogue:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --negru: #1a1710;
+            --cerneala: #2d2822;
+            --terra: #c4522a;
+            --terra-lt: #d6785e;
+            --terra-dk: #a84224;
+            --crem: #f5f0e0;
+            --crem-dk: #ebe4d1;
+            --gri: #6b6258;
+            --gri-lt: #8b837a;
+            --linie: #d4cfc4;
+            --linie-bold: #b8b2a6;
+            --hartie: #faf7f0;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Unna', serif;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--cerneala);
+            background: var(--hartie);
+        }
+        
+        .meta-info {
+            font-family: 'Epilogue', sans-serif;
+            font-size: 0.65rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--terra);
+            padding: 1.5rem 3rem;
+            border-bottom: 1px solid var(--linie);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .meta-left { display: flex; gap: 2rem; }
+        .meta-item { display: flex; align-items: center; gap: 0.5rem; }
+        
+        .breadcrumb {
+            font-family: 'Epilogue', sans-serif;
+            font-size: 0.55rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--gri-lt);
+            padding: 1rem 3rem;
+        }
+        
+        .breadcrumb a { color: var(--terra); text-decoration: none; }
+        
+        .article-container {
+            max-width: 750px;
+            margin: 0 auto;
+            padding: 3rem 3rem 5rem;
+        }
+        
+        .article-header {
+            margin-bottom: 3rem;
+        }
+        
+        .category-tag {
+            font-family: 'Epilogue', sans-serif;
+            font-size: 0.58rem;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--terra);
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        .article-title {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(2.2rem, 4vw, 3.5rem);
+            font-weight: 700;
+            line-height: 1.1;
+            color: var(--negru);
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+        
+        .article-title em {
+            font-style: italic;
+            font-weight: 300;
+            color: var(--terra);
+        }
+        
+        .article-subtitle {
+            font-family: 'Fraunces', serif;
+            font-style: italic;
+            font-size: 1.3rem;
+            font-weight: 300;
+            color: var(--gri);
+            line-height: 1.4;
+        }
+        
+        .author-block {
+            font-family: 'Epilogue', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--gri-lt);
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--linie);
+        }
+        
+        .article-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        
+        .article-content em {
+            font-style: italic;
+            color: var(--terra);
+        }
+        
+        .article-content strong {
+            font-weight: 700;
+        }
+        
+        .nav-footer {
+            border-top: 2px solid var(--linie-bold);
+            padding: 2rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--crem-dk);
+        }
+        
+        .nav-footer a {
+            font-family: 'Epilogue', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--terra);
+            text-decoration: none;
+            transition: color 0.25s;
+        }
+        
+        .nav-footer a:hover { color: var(--terra-lt); }
+    </style>
+</head>
+<body>
+    <div class="meta-info">
+        <div class="meta-left">
+            <div class="meta-item">sâmbătă, 28 februarie 2026</div>
+            <div class="meta-item">11 minute</div>
+        </div>
+        <div class="meta-item">LUME LARGĂ</div>
+    </div>
+    
+    <div class="breadcrumb">
+        <a href="index.html">Azi</a> / <a href="lume-larga.html">Lume Largă</a> / Monhegan — Refugiul Artiștilor
+    </div>
+    
+    <div class="article-container">
+        <article>
+            <header class="article-header">
+                <span class="category-tag">LUME LARGĂ</span>
+                <h1 class="article-title">Monhegan: Unde <em>Artiștii Au Găsit</em> <em>Inspirație</em> și <em>Liniste</em> pe O Insulă din Maine</h1>
+                <p class="article-subtitle">O insulă izolată în Atlantic care a devenit refugiu pentru artiști de peste un secol, unde natura și creativitatea se întâlnesc.</p>
+                <div class="author-block">de Ioana Flondor</div>
+            </header>
+            
+            <div class="article-content">
+                <p>Când am coborât de pe feribot în Monhegan, primul lucru pe care l-am simțit a fost liniștea. Nu o liniște completă — marea sună, păsările cântă, vântul șuieră — dar o liniște care nu există în orașe. Monhegan Island, situată la 18 km de coasta Maine, este o insulă de 11 km pătrați cu aproximativ 70 de locuitori permanenți.</p>
+                
+                <p>În timpul verii, populația crește la 600-800 de oameni, majoritatea turiști și artiști veniți să găsească inspirație. Monhegan e cunoscută ca "insula artiștilor" de peste un secol — pictori, scriitori, sculptori, poeți — toți veniți să scape de zgomotul și să se conecteze cu natura.</p>
+                
+                <p>Ceea ce e interesant e că insula nu e doar un loc de creație — e și o comunitate care trăiește, care funcționează, care are o identitate proprie. Există o școală, o biserică, un magazin, un restaurant, chiar și un mic muzeu. Nu e un muzeu în aer liber — e o comunitate vie.</p>
+                
+                <p>Mergi pe insulă și vezi casele de lemn, grădinile cu flori, atelierele de artă. E un loc care pare rupt dintr-o altă epocă — unde oamenii salută pe stradă, unde se cunosc pe nume, unde timpul pare să curgă mai încet.</p>
+                
+                <p>Monhegan are o istorie lungă. Pescarii au trăit aici de secole, iar insula a fost un important centru de pescat în secolele XIX și XX. Primii artiști au ajuns la începutul secolului XX, atrași de peisajul dramatic — stânci abrupte, oceanul neliniștit, păduri dense.</p>
+                
+                <p>E genul de loc pe care îl înțelegi doar când vezi un artist stând pe o stâncă, pictând oceanul, când vezi un scriitor stând pe o bancă, scriind în caiet, când simți energia creativă care pare să pulseze din fiecare colț. Monhegan nu e doar o insulă — e o comunitate creativă.</p>
+                
+                <p>Plajele nu definesc orice insulă. Monhegan nu e despre plaje și cocktail-uri — e despre natură, despre creativitate, despre oameni care au găsit să trăiască și să creeze într-un ritmul lor. Unde pescarii și artiștii coexistă, unde natura și cultura se întâlnesc, unde inspirația pare să vină din fiecare privire.</p>
+                
+                <p>Poate că nu vei fi niciodată artist. Poate că nu vei fi niciodată în Monhegan. Dar merită să știi că există. Monhegan e un argument că creativitatea poate găsi un loc chiar în cele mai izolate locuri de pe planetă, că natura poate inspira, că liniștea poate fi un catalizator pentru artă.</p>
+            </div>
+        </article>
+    </div>
+    
+    <nav class="nav-footer">
+        <a href="lume-larga.html">← Înapoi la Lume Largă</a>
+        <a href="index.html">Spre Azi →</a>
+    </nav>
+</body>
+</html>

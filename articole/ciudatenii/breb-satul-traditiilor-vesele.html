@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breb — Satul Tradițiilor Vesele — NIHIL.ro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Unna:ital,wght@0,400;0,700;1,400&family=Epilogue:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --negru: #1a1710;
+            --cerneala: #2d2822;
+            --terra: #c4522a;
+            --terra-lt: #d6785e;
+            --terra-dk: #a84224;
+            --crem: #f5f0e0;
+            --crem-dk: #ebe4d1;
+            --gri: #6b6258;
+            --gri-lt: #8b837a;
+            --linie: #d4cfc4;
+            --linie-bold: #b8b2a6;
+            --hartie: #faf7f0;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Unna', serif;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--cerneala);
+            background: var(--hartie);
+        }
+        
+        .meta-info {
+            font-family: 'Epilogue', sans-serif;
+            font-size: 0.65rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--terra);
+            padding: 1.5rem 3rem;
+            border-bottom: 1px solid var(--linie);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .meta-left { display: flex; gap: 2rem; }
+        .meta-item { display: flex; align-items: center; gap: 0.5rem; }
+        
+        .breadcrumb {
+            font-family: 'Epilogue', sans-serif;
+            font-size: 0.55rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--gri-lt);
+            padding: 1rem 3rem;
+        }
+        
+        .breadcrumb a { color: var(--terra); text-decoration: none; }
+        
+        .article-container {
+            max-width: 750px;
+            margin: 0 auto;
+            padding: 3rem 3rem 5rem;
+        }
+        
+        .article-header {
+            margin-bottom: 3rem;
+        }
+        
+        .category-tag {
+            font-family: 'Epilogue', sans-serif;
+            font-size: 0.58rem;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--terra);
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        .article-title {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(2.2rem, 4vw, 3.5rem);
+            font-weight: 700;
+            line-height: 1.1;
+            color: var(--negru);
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+        
+        .article-title em {
+            font-style: italic;
+            font-weight: 300;
+            color: var(--terra);
+        }
+        
+        .article-subtitle {
+            font-family: 'Fraunces', serif;
+            font-style: italic;
+            font-size: 1.3rem;
+            font-weight: 300;
+            color: var(--gri);
+            line-height: 1.4;
+        }
+        
+        .author-block {
+            font-family: 'Epilogue', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--gri-lt);
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--linie);
+        }
+        
+        .article-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        
+        .article-content em {
+            font-style: italic;
+            color: var(--terra);
+        }
+        
+        .article-content strong {
+            font-weight: 700;
+        }
+        
+        .nav-footer {
+            border-top: 2px solid var(--linie-bold);
+            padding: 2rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--crem-dk);
+        }
+        
+        .nav-footer a {
+            font-family: 'Epilogue', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--terra);
+            text-decoration: none;
+            transition: color 0.25s;
+        }
+        
+        .nav-footer a:hover { color: var(--terra-lt); }
+    </style>
+</head>
+<body>
+    <div class="meta-info">
+        <div class="meta-left">
+            <div class="meta-item">sâmbătă, 28 februarie 2026</div>
+            <div class="meta-item">10 minute</div>
+        </div>
+        <div class="meta-item">CIUDĂȚENII</div>
+    </div>
+    
+    <div class="breadcrumb">
+        <a href="index.html">Azi</a> / <a href="ciudatenii.html">Ciudățenii</a> / Breb — Satul Tradițiilor Vesele
+    </div>
+    
+    <div class="article-container">
+        <article>
+            <header class="article-header">
+                <span class="category-tag">CIUDĂȚENII</span>
+                <h1 class="article-title">Breb: Satul Unde Tradițiile Sunt Vesele — și <em>Nimeni nu Le Uită</em></h1>
+                <p class="article-subtitle">Un sat mic în Maramureș unde obiceiurile străvechi sunt păstrate cu zâmbet, unde oamenii sărbătoresc împreună, unde trecutul e viu.</p>
+                <div class="author-block">de Radu Merca</div>
+            </header>
+            
+            <div class="article-content">
+                <p>Dacă te-ai duce în Breb în iarnă și ai vedea oameni purtați costume tradiționale, nu te întreba dacă e spectacol. E viața zilnică. Nu e muzeu. Nu e spectacol pentru turiști. E pur și simplu felul în care oamenii trăiesc.</p>
+                
+                <p>Breb e un sat în Maramureș. Are câteva sute de locuitori. Arată ca o carte de basm — case din lemn, biserici vechi, peisaje montane. Numai că nu e un muzeu în aer liber. E o comunitate vie, unde oamenii păstrează tradițiile strămoșilor.</p>
+                
+                <p>Interesant e că în Breb, tradițiile nu sunt obligatorii. Sunt naturale. Oamenii nu fac pentru că trebuie. Fac pentru că vor. Pentru că le place. Pentru că e parte din cine sunt.</p>
+                
+                <p>Și iată ce e fascinant: în Breb, trecutul nu e trecut. E prezent în fiecare zi, în fiecare gest, în fiecare sărbătoare. Copiii învață dansuri străvechi, muzică populară, meșteșuguri tradiționale. Nu la școală. De la părinți, de la bunici.</p>
+                
+                <p>Detaliul care contează: în Breb, comunitatea e strânsă. Oamenii se cunosc, se ajută, se sărbătoresc împreună. Nu există izolare. Există doar conexiune.</p>
+                
+                <p>Și totuși, problema cu Breb nu e că tradițiile sunt vechi. Problema e că sunt vii. Nu sunt relicte. Sunt practice. Oamenii le folosesc în viața zilnică, nu doar în spectacole.</p>
+                
+                <p>Există și alte efecte. Cultura e păstrată. Identitatea e clară. Oamenii știu de unde vin. Știu ce înseamnă să fie din Breb.</p>
+                
+                <p>E complicat, dar când vezi un copil învățând să danseze traditional, înțelegi că nu e doar despre dans. E despre identitate. E despre moștenire. E despre oameni care păstrează ceva valoros.</p>
+                
+                <p>Pentru localnici, Breb nu e doar un sat. E acasă. E locul unde trăiesc, unde cresc, unde vor crește copiii lor. Nu pentru că nu pot pleca. Pentru că nu vor.</p>
+                
+                <p>Probabil că nu putem reproduce Breb în alte locuri. Nu putem clona cultura, oamenii. Dar putem învăța ceva. Putem învăța că tradițiile sunt valoroase. Putem învăța că identitatea e importantă. Putem învăța că, uneori, cele mai vechi lucruri sunt cele mai bune.</p>
+                
+                <p>Breb e un exemplu. Un model de cum ar trebui să fie o comunitate. Nu perfect, dar aproape. Un sat unde tradițiile sunt vesele, unde oamenii zâmbesc, unde nimeni nu le uită.</p>
+                
+                <p>Nu știu ce înseamnă asta pentru restul lumii. Dar știu că, când te uiți la un copil învățând să danseze, îți dai seama că așteptarea nu e la modernitate. E la autenticitate. Și că autenticitatea e mai bogată.</p>
+            </div>
+        </article>
+    </div>
+    
+    <nav class="nav-footer">
+        <a href="ciudatenii.html">← Înapoi la Ciudățenii</a>
+        <a href="index.html">Spre Azi →</a>
+    </nav>
+</body>
+</html>

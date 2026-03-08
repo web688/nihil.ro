@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frida Kahlo — Artistă Care a Ales Durerea în Locul Anonimatului — NIHIL.ro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Unna:ital,wght@0,400;0,700;1,400&family=Epilogue:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --negru: #1a1710;
+            --cerneala: #2d2822;
+            --terra: #c4522a;
+            --terra-lt: #d6785e;
+            --terra-dk: #a84224;
+            --crem: #f5f0e0;
+            --crem-dk: #ebe4d1;
+            --gri: #6b6258;
+            --gri-lt: #8b837a;
+            --linie: #d4cfc4;
+            --linie-bold: #b8b2a6;
+            --hartie: #faf7f0;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Unna', serif;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--cerneala);
+            background: var(--hartie);
+        }
+        
+        .meta-info {
+            font-family: 'Epilogue', sans-serif;
+            font-size: 0.65rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--terra);
+            padding: 1.5rem 3rem;
+            border-bottom: 1px solid var(--linie);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .meta-left { display: flex; gap: 2rem; }
+        .meta-item { display: flex; align-items: center; gap: 0.5rem; }
+        
+        .breadcrumb {
+            font-family: 'Epilogue', sans-serif;
+            font-size: 0.55rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--gri-lt);
+            padding: 1rem 3rem;
+        }
+        
+        .breadcrumb a { color: var(--terra); text-decoration: none; }
+        
+        .article-container {
+            max-width: 750px;
+            margin: 0 auto;
+            padding: 3rem 3rem 5rem;
+        }
+        
+        .article-header {
+            margin-bottom: 3rem;
+        }
+        
+        .category-tag {
+            font-family: 'Epilogue', sans-serif;
+            font-size: 0.58rem;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--terra);
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        .article-title {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(2.2rem, 4vw, 3.5rem);
+            font-weight: 700;
+            line-height: 1.1;
+            color: var(--negru);
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+        
+        .article-title em {
+            font-style: italic;
+            font-weight: 300;
+            color: var(--terra);
+        }
+        
+        .article-subtitle {
+            font-family: 'Fraunces', serif;
+            font-style: italic;
+            font-size: 1.3rem;
+            font-weight: 300;
+            color: var(--gri);
+            line-height: 1.4;
+        }
+        
+        .author-block {
+            font-family: 'Epilogue', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--gri-lt);
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--linie);
+        }
+        
+        .article-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        
+        .article-content em {
+            font-style: italic;
+            color: var(--terra);
+        }
+        
+        .article-content strong {
+            font-weight: 700;
+        }
+        
+        .nav-footer {
+            border-top: 2px solid var(--linie-bold);
+            padding: 2rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--crem-dk);
+        }
+        
+        .nav-footer a {
+            font-family: 'Epilogue', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--terra);
+            text-decoration: none;
+            transition: color 0.25s;
+        }
+        
+        .nav-footer a:hover { color: var(--terra-lt); }
+    </style>
+</head>
+<body>
+    <div class="meta-info">
+        <div class="meta-left">
+            <div class="meta-item">sâmbătă, 28 februarie 2026</div>
+            <div class="meta-item">12 minute</div>
+        </div>
+        <div class="meta-item">OAMENI REMARCABILI</div>
+    </div>
+    
+    <div class="breadcrumb">
+        <a href="index.html">Azi</a> / <a href="oameni-remarcabili.html">Oameni Remarcabili</a> / Frida Kahlo — Artistă Care a Ales Durerea în Locul Anonimatului
+    </div>
+    
+    <div class="article-container">
+        <article>
+            <header class="article-header">
+                <span class="category-tag">OAMENI REMARCABILI</span>
+                <h1 class="article-title">Frida Kahlo: Cum <em>Durerea</em> a Ales <em>O Pânză</em> în Locul <em>Dispariției</em></h1>
+                <p class="article-subtitle">O artistă mexicană care și-a transformat suferința în artă, care a refuzat să fie invizibilă, care a creat un stil vizual care a inspirat milioane.</p>
+                <div class="author-block">de Cristina Dobre</div>
+            </header>
+            
+            <div class="article-content">
+                <p>În 1925, o tânără mexicană a supraviețuit unui accident de autobuz devastator. Și-a rupt coloana, pelvisul, picioarele. Nu se aștepta să mai meargă, să mai picteze, să mai trăiască.</p>
+                
+                <p>Dar a decis să nu dispară.</p>
+                
+                <p>Tensiunea centrală a vieții lui Frida Kahlo a fost transformarea durerii în artă. Nu a putut să elimine durerea, așa că a decis să o exprime. A început să picteze din patul de spital, folosind un șevalet special, folosind oglinda pentru a se vedea, folosind culoarea pentru a exprima emoția.</p>
+                
+                <p>A creat autoportrete care au surprins lumea. Nu era doar o femeie frumoasă, era o femeie cu cicatrici, cu dureri, cu traume. Nu ascundea nimic, ci arăta totul — spini pe inimă, sânge pe haine, lacrimi pe față.</p>
+                
+                <p>A întâlnit pe Diego Rivera, un muralist faimos. S-au căsătorit, au divorțat, s-au recăsătorit. A fost o relație turbulentă, plină de infidelități, plină de dramă, plină de durere.</p>
+                
+                <p>Dacă ar fi să alegi un singur lucru care definește totul: Frida a continuat să picteze, chiar când corpul ei o trăda. Opera ei e o cronică a durerii, o mărturie a suferinței, o dovadă că arta poate vindeca, măcar parțial.</p>
+                
+                <p>A murit în 1954, la 47 de ani, de embolie pulmonară. Opera ei a fost uitată timp de decenii, apoi redescoperită, apoi celebrată.</p>
+                
+                <p>Moștenirea ei? Curajul, vulnerabilitatea, puterea. O femeie care a refuzat să fie invizibilă, care a refuzat să ascundă durerea, care a refuzat să dispară. O femeie care a demonstrat că suferința poate fi transformată în artă, că vulnerabilitatea poate fi puternică, că durerea poate frumoasă.</p>
+                
+                <p>Frida Kahlo nu a fost doar o artistă, a fost o femeie care a demonstrat că identitatea e complexă, că durerea e universală, că arta e un limbaj pentru cei care nu au cuvinte. A demonstrat că puterea vine din vulnerabilitate, că frumusețea vine din autenticitate, că arta e vindecătoare.</p>
+            </div>
+        </article>
+    </div>
+    
+    <nav class="nav-footer">
+        <a href="oameni-remarcabili.html">← Înapoi la Oameni Remarcabili</a>
+        <a href="index.html">Spre Azi →</a>
+    </nav>
+</body>
+</html>

@@ -112,11 +112,9 @@ footer{background:var(--crem-dk);border-top:2px solid var(--linie-bold);}
     <a href="fa-asta-azi.html" class="nav-link activ">Fă Asta Azi</a>
     <a href="fapte.html" class="nav-link">Fapte</a>
     <a href="lume-larga.html" class="nav-link">Lume Largă</a>
-    <a href="romania-neștiută.html" class="nav-link">România Neștiută</a>
     <a href="oameni-remarcabili.html" class="nav-link">Oameni Remarcabili</a>
     <a href="cultura.html" class="nav-link">Cultură</a>
-    <a href="opinie.html" class="nav-link">Opinie</a>
-    <a href="arhiva.html" class="nav-link">Arhivă</a>
+    <a href="obsesii.html" class="nav-link">Obsesii</a>
   </nav>
 </header>
 
@@ -219,7 +217,7 @@ const zile=['duminică','luni','marți','miercuri','joi','vineri','sâmbătă'];
 const luni=['ianuarie','februarie','martie','aprilie','mai','iunie','iulie','august','septembrie','octombrie','noiembrie','decembrie'];
 const azi=new Date();
 document.getElementById('data-azi').textContent=`${zile[azi.getDay()]}, ${azi.getDate()} ${luni[azi.getMonth()]} ${azi.getFullYear()}`;
-document.querySelectorAll('.nav-link').forEach(l=>{l.addEventListener('click',e=>{e.preventDefault();document.querySelectorAll('.nav-link').forEach(x=>x.classList.remove('activ'));l.classList.add('activ');});});
+// Navigation active states handled by CSS hover and page-specific active class
 </script>
 </body>
 </html>

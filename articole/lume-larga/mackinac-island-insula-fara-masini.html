@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mackinac Island — Insula Fără Mașini — NIHIL.ro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Unna:ital,wght@0,400;0,700;1,400&family=Epilogue:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --negru: #1a1710;
+            --cerneala: #2d2822;
+            --terra: #c4522a;
+            --terra-lt: #d6785e;
+            --terra-dk: #a84224;
+            --crem: #f5f0e0;
+            --crem-dk: #ebe4d1;
+            --gri: #6b6258;
+            --gri-lt: #8b837a;
+            --linie: #d4cfc4;
+            --linie-bold: #b8b2a6;
+            --hartie: #faf7f0;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Unna', serif;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--cerneala);
+            background: var(--hartie);
+        }
+        
+        .meta-info {
+            font-family: 'Epilogue', sans-serif;
+            font-size: 0.65rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--terra);
+            padding: 1.5rem 3rem;
+            border-bottom: 1px solid var(--linie);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .meta-left { display: flex; gap: 2rem; }
+        .meta-item { display: flex; align-items: center; gap: 0.5rem; }
+        
+        .breadcrumb {
+            font-family: 'Epilogue', sans-serif;
+            font-size: 0.55rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--gri-lt);
+            padding: 1rem 3rem;
+        }
+        
+        .breadcrumb a { color: var(--terra); text-decoration: none; }
+        
+        .article-container {
+            max-width: 750px;
+            margin: 0 auto;
+            padding: 3rem 3rem 5rem;
+        }
+        
+        .article-header {
+            margin-bottom: 3rem;
+        }
+        
+        .category-tag {
+            font-family: 'Epilogue', sans-serif;
+            font-size: 0.58rem;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--terra);
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        .article-title {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(2.2rem, 4vw, 3.5rem);
+            font-weight: 700;
+            line-height: 1.1;
+            color: var(--negru);
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+        
+        .article-title em {
+            font-style: italic;
+            font-weight: 300;
+            color: var(--terra);
+        }
+        
+        .article-subtitle {
+            font-family: 'Fraunces', serif;
+            font-style: italic;
+            font-size: 1.3rem;
+            font-weight: 300;
+            color: var(--gri);
+            line-height: 1.4;
+        }
+        
+        .author-block {
+            font-family: 'Epilogue', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--gri-lt);
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--linie);
+        }
+        
+        .article-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        
+        .article-content em {
+            font-style: italic;
+            color: var(--terra);
+        }
+        
+        .article-content strong {
+            font-weight: 700;
+        }
+        
+        .nav-footer {
+            border-top: 2px solid var(--linie-bold);
+            padding: 2rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--crem-dk);
+        }
+        
+        .nav-footer a {
+            font-family: 'Epilogue', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--terra);
+            text-decoration: none;
+            transition: color 0.25s;
+        }
+        
+        .nav-footer a:hover { color: var(--terra-lt); }
+    </style>
+</head>
+<body>
+    <div class="meta-info">
+        <div class="meta-left">
+            <div class="meta-item">sâmbătă, 28 februarie 2026</div>
+            <div class="meta-item">10 minute</div>
+        </div>
+        <div class="meta-item">LUME LARGĂ</div>
+    </div>
+    
+    <div class="breadcrumb">
+        <a href="index.html">Azi</a> / <a href="lume-larga.html">Lume Largă</a> / Mackinac Island — Insula Fără Mașini
+    </div>
+    
+    <div class="article-container">
+        <article>
+            <header class="article-header">
+                <span class="category-tag">LUME LARGĂ</span>
+                <h1 class="article-title">Mackinac Island: Unde <em>Căruțele cu Cai</em> Înlocuiesc <em>Mașinile</em> din 1898</h1>
+                <p class="article-subtitle">O insulă în lacul Michigan unde automobilele sunt interzise din 1898 și căruțele cu cai sunt principalul mijloc de transport.</p>
+                <div class="author-block">de Ioana Flondor</div>
+            </header>
+            
+            <div class="article-content">
+                <p>Când am coborât de pe feribot în Mackinac Island, primul lucru pe care l-am auzit au fost copitele pe piatră. Nu motoare, nu claxoane — doar cai. Mackinac Island, situată în Lacul Michigan între Upper și Lower Peninsula din Michigan, este o insulă de 10 km pătrați unde automobilele sunt interzise din 1898.</p>
+                
+                <p>Legenda spune că primul automobil a ajuns pe insulă în 1898, iar locuitorii au fost atât de enervați de zgomot și de miros încât au interzis automobilele complet. De atunci, căruțele cu cai sunt principalul mijloc de transport, iar insula a devenit faimosă pentru această tradiție.</p>
+                
+                <p>Ceea ce e interesant e că insula nu e doar un muzeu în aer liber — e o comunitate vie. Există aproximativ 500 de locuitori permanenți, care trăiesc, muncesc, merg la școală, totul fără mașini. Există un spital, o școală, un hotel, restaurante — toate accesibile doar pe jos sau cu căruțe.</p>
+                
+                <p>Mergi pe străzile din orașul Mackinac și vezi casele victoriene, hotelurile istorice, magazinele cu suveniruri. E un loc care pare rupt dintr-o altă epocă — unde viteză e irelevantă, unde zgomotul e minim, unde timpul pare să curgă mai încet.</p>
+                
+                <p>Mackinac Island are o istorie lungă. A fost un important centru comercial în secolele XVIII și XIX, un punct strategic în războaiele dintre britanici și americani, o destinație turistică populară încă de la sfârșitul secolului XIX.</p>
+                
+                <p>E genul de loc pe care îl înțelegi doar când mergi pe stradă și vezi un copil mergând la școală pe bicicletă, când vezi o livrare făcându-se cu o căruță, când auzi liniștea care înlocuiește zgomotul orașului. Mackinac Island nu e doar o destinație turistică — e un alt mod de viață.</p>
+                
+                <p>Uită ce știați despre orașe moderne. Mackinac Island nu e despre progres și development — e despre conservare, despre tradiție, despre oameni care au ales să trăiască într-un ritmul lor. Unde automobilele sunt amintire, unde căruțele cu cai domnesc, unde 1898 pare să fie ieri.</p>
+                
+                <p>Poate că nu vei locui niciodată pe o insulă fără mașini. Poate că nu vei avea niciodată o căruță cu cai. Dar merită să știi că există. Mackinac Island e un argument că există alternative la modernitate, că tradițiile pot supraviețui, că liniștea poate fi găsită chiar în mijlocul lacului Michigan.</p>
+            </div>
+        </article>
+    </div>
+    
+    <nav class="nav-footer">
+        <a href="lume-larga.html">← Înapoi la Lume Largă</a>
+        <a href="index.html">Spre Azi →</a>
+    </nav>
+</body>
+</html>
