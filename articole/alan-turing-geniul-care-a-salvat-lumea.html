@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alan Turing — Geniul Care a Salvat Lumea, Dar Nu S-a Salvat pe Sine — NIHIL.ro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Unna:ital,wght@0,400;0,700;1,400&family=Epilogue:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --negru: #1a1710;
+            --cerneala: #2d2822;
+            --terra: #c4522a;
+            --terra-lt: #d6785e;
+            --terra-dk: #a84224;
+            --crem: #f5f0e0;
+            --crem-dk: #ebe4d1;
+            --gri: #6b6258;
+            --gri-lt: #8b837a;
+            --linie: #d4cfc4;
+            --linie-bold: #b8b2a6;
+            --hartie: #faf7f0;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Unna', serif;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--cerneala);
+            background: var(--hartie);
+        }
+        
+        .meta-info {
+            font-family: 'Epilogue', sans-serif;
+            font-size: 0.65rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--terra);
+            padding: 1.5rem 3rem;
+            border-bottom: 1px solid var(--linie);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .meta-left { display: flex; gap: 2rem; }
+        .meta-item { display: flex; align-items: center; gap: 0.5rem; }
+        
+        .breadcrumb {
+            font-family: 'Epilogue', sans-serif;
+            font-size: 0.55rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--gri-lt);
+            padding: 1rem 3rem;
+        }
+        
+        .breadcrumb a { color: var(--terra); text-decoration: none; }
+        
+        .article-container {
+            max-width: 750px;
+            margin: 0 auto;
+            padding: 3rem 3rem 5rem;
+        }
+        
+        .article-header {
+            margin-bottom: 3rem;
+        }
+        
+        .category-tag {
+            font-family: 'Epilogue', sans-serif;
+            font-size: 0.58rem;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--terra);
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        .article-title {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(2.2rem, 4vw, 3.5rem);
+            font-weight: 700;
+            line-height: 1.1;
+            color: var(--negru);
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+        
+        .article-title em {
+            font-style: italic;
+            font-weight: 300;
+            color: var(--terra);
+        }
+        
+        .article-subtitle {
+            font-family: 'Fraunces', serif;
+            font-style: italic;
+            font-size: 1.3rem;
+            font-weight: 300;
+            color: var(--gri);
+            line-height: 1.4;
+        }
+        
+        .author-block {
+            font-family: 'Epilogue', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--gri-lt);
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--linie);
+        }
+        
+        .article-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+        
+        .article-content em {
+            font-style: italic;
+            color: var(--terra);
+        }
+        
+        .article-content strong {
+            font-weight: 700;
+        }
+        
+        .nav-footer {
+            border-top: 2px solid var(--linie-bold);
+            padding: 2rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--crem-dk);
+        }
+        
+        .nav-footer a {
+            font-family: 'Epilogue', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--terra);
+            text-decoration: none;
+            transition: color 0.25s;
+        }
+        
+        .nav-footer a:hover { color: var(--terra-lt); }
+        
+        .hero-image {
+            width: 100%;
+            height: auto;
+            margin-bottom: 2rem;
+            border-radius: 2px;
+        }
+        
+        .article-image {
+            margin: 2rem 0;
+        }
+        
+        .article-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 2px;
+        }
+        
+        .article-image figcaption {
+            font-family: 'Epilogue', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--gri-lt);
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="meta-info">
+        <div class="meta-left">
+            <div class="meta-item">sâmbătă, 28 februarie 2026</div>
+            <div class="meta-item">13 minute</div>
+        </div>
+        <div class="meta-item">OAMENI REMARCABILI</div>
+    </div>
+    
+    <div class="breadcrumb">
+        <a href="../index.html">Azi</a> / <a href="../oameni-remarcabili.html">Oameni Remarcabili</a> / Alan Turing — Geniul Care a Salvat Lumea, Dar Nu S-a Salvat pe Sine
+    </div>
+    
+    <div class="article-container">
+        <article>
+            <header class="article-header">
+                <span class="category-tag">OAMENI REMARCABILI</span>
+                <h1 class="article-title">Alan Turing: Unde <em>Enigma</em> a Ales <em>Un Om</em> în Locul <em>O Lume</em></h1>
+                <p class="article-subtitle">Un matematician britanic care a descifrat codurile naziste și a creat conceptul de computer, dar care a fost persecutat pentru cine era și a murit singur.</p>
+                <div class="author-block">de Cristina Dobre</div>
+            </header>
+            
+            <img src="../images/alan-turing-geniul-care-a-salvat-lumea-1.jpg" alt="Alan Turing — Portret" class="hero-image">
+            
+            <div class="article-content">
+                <p>În 1939, un tânăr matematician britanic a fost chemat la Bletchley Park. Nu era soldat, nu era diplomat, dar avea o minte care putea învinge cel mai complex cod de criptare din lume. Se numea Alan Turing.</p>
+                
+                <p>Tensiunea centrală a vieții lui a fost lupta între genialitate și persecuție. A creat mașina care a descifrat Enigma, codul nazist, scurtând cel de-Al Doilea Război Mondial cu cel puțin doi ani și salvând milioane de vieți.</p>
+                
+                <figure class="article-image">
+                    <img src="../images/alan-turing-geniul-care-a-salvat-lumea-2.jpg" alt="Mașina Enigma">
+                    <figcaption>Mașina Enigma — codul nazist descifrat de Turing</figcaption>
+                </figure>
+                
+                <p>Dar nu a fost recunoscut. Lucrul său a fost clasificat, a devenit secret de stat. Nimeni nu a știut ce a făcut, nimeni nu a știut cât de important a fost.</p>
+                
+                <p>Apoi a venit persecuția. Era homosexual, ceva ilegal în Marea Britanie anilor 1950. A fost arestat, judecat, condamnat. I s-a dat alegerea: închisoare sau tratament cu estrogeni pentru a reduce libidoul. A ales tratamentul.</p>
+                
+                <p>Un detaliu pe care biografiile îl trec cu vederea: Alan a continuat să lucreze, să inoveze, să creeze, chiar dacă tratamentul îi distrugea corpul. A creat conceptul de computer, a propus un test pentru inteligența artificială, a imaginat viitorul.</p>
+                
+                <figure class="article-image">
+                    <img src="../images/alan-turing-geniul-care-a-salvat-lumea-3.jpg" alt="Bletchley Park">
+                    <figcaption>Bletchley Park — unde Turing a schimbat istoria</figcaption>
+                </figure>
+                
+                <p>A murit în 1954, la 41 de ani, de otrăvire cu cianură. Poate a fost accident. Poate a fost sinucidere. Nimeni nu știe sigur. Nimeni nu a vrut să știe.</p>
+                
+                <p>Ce moștenim de la el? Geniul, curajul, tragedia. Un om care a salvat lumea, dar nu s-a putut salva pe sine. Un om care a fost persecutat pentru cine era, nu pentru ce a făcut.</p>
+                
+                <p>Alan Turing nu a fost doar un matematician, a fost un om care a demonstrat că geniul vine cu un preț, că societatea nu acceptă mereu ce e diferit, că persecuția poate distruge orice, chiar și cea mai strălucitoare minte.</p>
+            </div>
+        </article>
+    </div>
+    
+    <nav class="nav-footer">
+        <a href="../oameni-remarcabili.html">← Înapoi la Oameni Remarcabili</a>
+        <a href="../index.html">Spre Azi →</a>
+    </nav>
+</body>
+</html>
