@@ -1,0 +1,11 @@
+GIT_Token.txt
+.iflow/
+.playwright-mcp/
+.serena/
+AGENTS.md
+images/temp/
+gemini.md
+gemini-page-check.png
+image32-check.png
+searchimages.md
+*.zip
