@@ -212,7 +212,42 @@ footer{background:var(--crem-dk);border-top:2px solid var(--linie-bold);}
 }
 </style>
 <style>
-/* UNIFIED FULL-IMAGE STYLING (100% COMPLETE PHOTO, NO CROP, NO STRETCH, FLUSH TEXT ALIGNMENT) */
+
+/* MODERATE COMPACT FULL-IMAGE STYLING (100% COMPLETE PHOTO, COMPACT CONTROLLED HEIGHT, NO STRETCH, NO CROP) */
+.hero-sub-img-wrap {
+  width: 100% !important;
+  height: 140px !important;
+  border-radius: 6px !important;
+  overflow: hidden !important;
+  margin-bottom: 0.8rem !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: transparent !important;
+}
+.hero-sub-img-wrap img {
+  max-width: 100% !important;
+  max-height: 140px !important;
+  width: auto !important;
+  height: auto !important;
+  object-fit: contain !important;
+  display: block !important;
+  margin: 0 auto !important;
+  border-radius: 6px !important;
+  transition: transform 0.4s ease !important;
+}
+.article-card img, .bizar-card img, .article-image {
+  max-width: 100% !important;
+  max-height: 180px !important;
+  width: auto !important;
+  height: auto !important;
+  object-fit: contain !important;
+  display: block !important;
+  margin: 0 auto 1rem auto !important;
+  border-radius: 6px !important;
+  box-shadow: none !important;
+}
+
 .article-card img, .bizar-card img, .article-image, .hero-sub-img-wrap img {
   width: 100% !important;
   height: auto !important;
