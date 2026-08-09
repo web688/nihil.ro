@@ -49,16 +49,18 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9998;o
 .hero-citeste:hover{gap:1rem;color:var(--terra-dk);}
 .hero-timp{font-family:'Fraunces',serif;font-style:italic;font-size:.82rem;color:var(--gri);}
 .hero-dreapta{display:flex;flex-direction:column;}
-.hero-sub{flex:1;padding:2rem 2.5rem;border-bottom:1px solid var(--linie);cursor:default;transition:background .25s;position:relative;overflow:visible;}
+.hero-sub{flex:1;padding:1.6rem 2.2rem;border-bottom:1px solid var(--linie);cursor:pointer;transition:background .25s;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:center;}
 .hero-sub:last-child{border-bottom:none;}
 .hero-sub:hover{background:var(--crem-dk);}
 .hero-sub::after{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--terra);transform:scaleY(0);transform-origin:bottom;transition:transform .35s ease;}
 .hero-sub:hover::after{transform:scaleY(1);}
-.sub-emoji{font-size:1.6rem;margin-bottom:.6rem;display:block;}
-.sub-cat{font-family:'Epilogue',sans-serif;font-size:.55rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--terra);margin-bottom:.5rem;}
-.sub-titlu{font-family:'Fraunces',serif;font-size:1.2rem;font-weight:700;line-height:1.15;color:var(--negru);margin-bottom:.5rem;}
+.hero-sub-img-wrap{width:100%;height:165px;overflow:hidden;border-radius:6px;margin-bottom:.9rem;box-shadow:0 3px 10px rgba(0,0,0,0.06);background:var(--crem-dkr);}
+.hero-sub-img-wrap img{width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .4s ease;}
+.hero-sub:hover .hero-sub-img-wrap img{transform:scale(1.04);}
+.sub-cat{font-family:'Epilogue',sans-serif;font-size:.55rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--terra);margin-bottom:.4rem;}
+.sub-titlu{font-family:'Fraunces',serif;font-size:1.25rem;font-weight:700;line-height:1.2;color:var(--negru);margin-bottom:.4rem;}
 .sub-titlu em{font-style:italic;font-weight:300;}
-.sub-desc{font-family:'Unna',serif;font-size:.85rem;line-height:1.65;color:var(--gri);}
+.sub-desc{font-family:'Unna',serif;font-size:.88rem;line-height:1.6;color:var(--gri);}
 
 /* FA ASTA AZI */
 .fa-asta-section{background:var(--terra);border-bottom:2px solid var(--terra-dk);padding:3.5rem 3rem;position:relative;overflow:hidden;}
@@ -256,20 +258,26 @@ footer{background:var(--crem-dk);border-top:2px solid var(--linie-bold);}
   </div>
   <div class="hero-separator"></div>
   <div class="hero-dreapta">
-    <div class="hero-sub" onclick="location.href='articole/lume-larga/lamu-insula-magarilor.html'" style="cursor: pointer;">
-      <div style="margin-bottom: .8rem;"><img src="images/lume-larga/lamu-insula-magarilor-1.jpg" alt="Lamu Island Kenya" style="width: 100%; height: 100px; object-fit: cover; border-radius: 4px;"></div>
+    <div class="hero-sub" onclick="location.href='articole/lume-larga/lamu-insula-magarilor.html'">
+      <div class="hero-sub-img-wrap">
+        <img src="images/lume-larga/lamu-insula-magarilor-1.jpg" alt="Lamu Island Kenya">
+      </div>
       <div class="sub-cat">Lume Largă</div>
       <div class="sub-titlu">Lamu: Unde Un Om Fără <em>Măgar</em> e Un Măgar</div>
       <div class="sub-desc">O insulă de pe coasta Keniei unde mașinile sunt interzise și măgarile sunt principalul mijloc de transport. 3.000 de măgari, 24.000 de oameni, zero benzinării.</div>
     </div>
-    <div class="hero-sub" onclick="location.href='articole/lume-larga/idyllwild-orasul-cainilor.html'" style="cursor: pointer;">
-      <div style="margin-bottom: .8rem;"><img src="images/lume-larga/idyllwild-orasul-cainilor-1.jpg" alt="Idyllwild California" style="width: 100%; height: 100px; object-fit: cover; border-radius: 4px;"></div>
+    <div class="hero-sub" onclick="location.href='articole/lume-larga/idyllwild-orasul-cainilor.html'">
+      <div class="hero-sub-img-wrap">
+        <img src="images/lume-larga/idyllwild-orasul-cainilor-1.jpg" alt="Idyllwild California">
+      </div>
       <div class="sub-cat">Lume Largă</div>
       <div class="sub-titlu">Idyllwild: Unde <em>Câinii Domnesc</em> și Locuitorii Aleg Regina</div>
       <div class="sub-desc">Singurul oraș din lume cu primar câine. Maximus Mighty-Dog Mueller III conduce din 2014. Banii merg la adăposturi. Democrația la nivelul ei cel mai pur.</div>
     </div>
-    <div class="hero-sub" onclick="location.href='articole/oameni-remarcabili/marie-curie-femeia-care-a-ales-radiatia.html'" style="cursor: pointer;">
-      <div style="margin-bottom: .8rem;"><img src="images/oameni-remarcabili/marie-curie-femeia-care-a-ales-radiatia-1.jpg" alt="Marie Curie" style="width: 100%; height: 100px; object-fit: cover; border-radius: 4px;"></div>
+    <div class="hero-sub" onclick="location.href='articole/oameni-remarcabili/marie-curie-femeia-care-a-ales-radiatia.html'">
+      <div class="hero-sub-img-wrap">
+        <img src="images/oameni-remarcabili/marie-curie-femeia-care-a-ales-radiatia-1.jpg" alt="Marie Curie">
+      </div>
       <div class="sub-cat">Oameni Remarcabili</div>
       <div class="sub-titlu">Marie Curie: femeia care a ales <em>radiația</em></div>
       <div class="sub-desc">A descoperit radioactivitatea, a câștigat două premii Nobel, a murit de iradiere. Laboratorul ei e și azi prea radioactiv pentru a fi vizitat.</div>
