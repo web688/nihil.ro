@@ -48,14 +48,14 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9998;o
 .hero-citeste{font-family:'Epilogue',sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--terra);text-decoration:none;display:flex;align-items:center;gap:.6rem;border-bottom:1px solid var(--terra);padding-bottom:.1rem;transition:gap .25s,color .25s;}
 .hero-citeste:hover{gap:1rem;color:var(--terra-dk);}
 .hero-timp{font-family:'Fraunces',serif;font-style:italic;font-size:.82rem;color:var(--gri);}
-.hero-dreapta{display:flex;flex-direction:column;justify-content:flex-start;}
-.hero-sub{padding:1.4rem 2rem;border-bottom:1px solid var(--linie);cursor:pointer;transition:background .25s;position:relative;overflow:hidden;}
+.hero-dreapta{display:flex;flex-direction:column;}
+.hero-sub{flex:1;padding:1.8rem 2.2rem;border-bottom:1px solid var(--linie);cursor:pointer;transition:background .25s;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:center;}
 .hero-sub:last-child{border-bottom:none;}
 .hero-sub:hover{background:var(--crem-dk);}
 .hero-sub::after{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--terra);transform:scaleY(0);transform-origin:bottom;transition:transform .35s ease;}
 .hero-sub:hover::after{transform:scaleY(1);}
-.hero-sub-img-wrap{width:100%;border-radius:6px;overflow:hidden;margin-bottom:.7rem;display:block;}
-.hero-sub-img-wrap img{width:100% !important;height:auto !important;max-height:none !important;object-fit:contain !important;display:block !important;border-radius:6px;transition:transform .4s ease;}
+.hero-sub-img-wrap{width:100%;height:160px;border-radius:6px;overflow:hidden;margin-bottom:.8rem;}
+.hero-sub-img-wrap img{width:100%;height:100%;object-fit:cover;object-position:center;border-radius:6px;transition:transform .4s ease;display:block;}
 .hero-sub:hover .hero-sub-img-wrap img{transform:scale(1.03);}
 .sub-cat{font-family:'Epilogue',sans-serif;font-size:.55rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--terra);margin-bottom:.4rem;}
 .sub-titlu{font-family:'Fraunces',serif;font-size:1.25rem;font-weight:700;line-height:1.2;color:var(--negru);margin-bottom:.4rem;}
@@ -309,7 +309,7 @@ footer{background:var(--crem-dk);border-top:2px solid var(--linie-bold);}
       </div>
       <h1 class="hero-titlu">Longyearbyen: Unde <em>Soarele Nu Apune</em> Patru Luni pe An și <em>Nu Ai Voie Să Mori</em></h1>
       <div style="margin-bottom: 1.5rem; border-radius: 8px; overflow: hidden;">
-        <img src="images/lume-larga/longyearbyen-cel-mai-nordic-oras-1.jpg" alt="Longyearbyen — Arctic settlement" style="width: 100%; height: auto; display: block; border-radius: 6px;">
+        <img src="images/lume-larga/longyearbyen-cel-mai-nordic-oras-1.jpg" alt="Longyearbyen — Arctic settlement" style="width: 100%; height: 300px; object-fit: cover; border-radius: 8px;">
       </div>
       <p class="hero-intro">În Longyearbyen, cel mai nordic oraș din lume, înmormântările sunt interzise de 70 de ani. Permafrostul conservă corpurile în loc să le descompună. Cine moare aici e transportat pe continent. O colonie de 2.400 de suflete între gheață, urși polari și un cod penal care interzice naturii să-și facă treaba.</p>
       <div class="hero-meta">
@@ -326,7 +326,7 @@ footer{background:var(--crem-dk);border-top:2px solid var(--linie-bold);}
       </div>
       <h2 class="hero-titlu" style="font-size:clamp(1.8rem, 3vw, 2.8rem);">Pădurea Hoia-Baciu: <em>Triunghiul Bermudelor</em> din Inima Transilvaniei</h2>
       <div style="margin-bottom: 1.5rem; border-radius: 8px; overflow: hidden;">
-        <img src="images/romania-nestiuta/hoia-baciu-padurea-misterioasa-1.png" alt="Pădurea Hoia-Baciu" style="width: 100%; height: auto; display: block; border-radius: 6px;">
+        <img src="images/romania-nestiuta/hoia-baciu-padurea-misterioasa-1.png" alt="Pădurea Hoia-Baciu" style="width: 100%; height: 300px; object-fit: cover; border-radius: 8px;">
       </div>
       <p class="hero-intro">Punctul zero al fenomenelor inexplicabile din România — copaci contorsionați în unghiuri imposibile, poieni unde vegetația refuză să crească și o istorie de mistere documentate de biologi și cercetători din întreaga lume.</p>
       <div class="hero-meta">
@@ -360,14 +360,6 @@ footer{background:var(--crem-dk);border-top:2px solid var(--linie-bold);}
       <div class="sub-cat">Oameni Remarcabili</div>
       <div class="sub-titlu">Marie Curie: femeia care a ales <em>radiația</em></div>
       <div class="sub-desc">A descoperit radioactivitatea, a câștigat două premii Nobel, a murit de iradiere. Laboratorul ei e și azi prea radioactiv pentru a fi vizitat.</div>
-    </div>
-    <div class="hero-sub" onclick="location.href='articole/lume-larga/coober-pedy-orasul-subteran.html'">
-      <div class="hero-sub-img-wrap">
-        <img src="images/lume-larga/coober-pedy-orasul-subteran-1.jpg" alt="Coober Pedy Australia">
-      </div>
-      <div class="sub-cat">Ciudățenie</div>
-      <div class="sub-titlu">Orașul <em>subteran</em> din deșertul australian</div>
-      <div class="sub-desc">În Coober Pedy, oamenii trăiesc underground pentru a scăpa de căldura de 50°C. Fără poliție, fără adrese poștale, toată lumea caută opale.</div>
     </div>
   </div>
 </section>
