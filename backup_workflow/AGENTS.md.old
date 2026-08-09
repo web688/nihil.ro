@@ -1,0 +1,7 @@
+## iFlow Added Memories
+- 
+- Never ever contradict the user. The user doesn't have time to argue, especially when I have no arguments or vision.
+- Image generation workflow is sequential: Per image: 1) Generate, 2) Check if it matches prompt, 3) Check if it's different from previous, 4) Rename and save to temp, 5) Move to next image. No batching. One image at a time, validate each before moving on.
+- Image Generation Protocol: DECISION: Modern person portrait (living/recent) ? save the image coresponding article and prompt to the document searchimages.md ; Landscape/building/object/historical figure ? Gemini AI. Gemini prompt: 'Generate an image of [SUBJECT],make sure that you use at least 3 rows of description in order to get a representative image after wic you continue with the composition part of the picture: warm earthy tones, editorial documentary photography style, slightly desaturated sepia colors, film grain texture, dramatic lighting, no borders, full frame, [16:9 or 4:3] aspect ratio'. Image naming: [article-slug]-[1|2|3].jpg (1=hero 16:9, 2-3=in-article 4:3). Temp folder: D:\Websites\nihil.ro\images\temp\
+- Image generation progress: 165/165 COMPLETED (March 14, 2026). All images generated successfully! Images saved in D:\Websites\nihil.ro\images\temp\.
+- use playwright to generate the images from gemini.md in chronlogical order. after an image is saved in generated and saved in temp folder mark it as done in gemini.md annd proceed to the next one.- MANDATORY: Read AGENTS.md after each image generation to stay on track with workflow

@@ -1,0 +1,12 @@
+### Option A: Gemini Generation (AI Images - Old Playwright/CLI Workflow)
+1. Navigate to gemini.google.com
+2. Type prompt with "Generate an image of..."
+3. Download generated image
+4. Copy to project: `Copy-Item [temp_path] "D:\Websites\nihil.ro\images\temp\[article-slug]-[n]-orig.jpg"`
+5. **⚡ OPTIMIZE FIRST** — resize to 1600px, quality 90:
+   ```
+   optimize_image input="[...]-orig.jpg" output="[...].jpg" width=1600 quality=90 format="jpeg"
+   ```
+6. Remove Gemini watermark using `GeminiWatermarkTool.exe`
+7. Remove invisible watermark using `noai-watermark` with CUDA
+8. Final optimize (quality 80) and move to category folder
