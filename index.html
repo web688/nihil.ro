@@ -303,6 +303,12 @@ footer{background:var(--crem-dk);border-top:2px solid var(--linie-bold);}
   display: block;
 }
 </style>
+
+<style>
+/* Homepage Cultura & Arta: complete 16:9 images, no crop. */
+.cultura-home-section .fapt-img-wrap{width:100%;height:auto;aspect-ratio:16/9;overflow:hidden;background:var(--negru);}
+.cultura-home-section .fapt-img-wrap img{width:100%;height:100%;object-fit:contain;object-position:center;display:block;}
+</style>
 </head>
 <body>
 
@@ -666,11 +672,11 @@ footer{background:var(--crem-dk);border-top:2px solid var(--linie-bold);}
   <div class="sh-rule"></div>
 </div>
 
-<section class="fapte-section">
+<section class="fapte-section cultura-home-section">
   <div class="fapte-grid">
     <div class="fapt reveal">
       <div class="fapt-img-wrap">
-        <img src="images/cultura/cultura-mona-lisa-hd-v3.jpg" alt="Mona Lisa da Vinci">
+        <img src="images/cultura/cultura-mona-lisa-hd-v3.jpg?v=7" alt="Mona Lisa da Vinci">
       </div>
       <div class="fapt-body">
         <div class="fapt-nr">01</div>
@@ -680,7 +686,7 @@ footer{background:var(--crem-dk);border-top:2px solid var(--linie-bold);}
     </div>
     <div class="fapt reveal rd1">
       <div class="fapt-img-wrap">
-        <img src="images/cultura/cultura-shakespeare-hd-v3.jpg" alt="Shakespeare cuvinte">
+        <img src="images/cultura/cultura-shakespeare-hd-v3.jpg?v=7" alt="Shakespeare cuvinte">
       </div>
       <div class="fapt-body">
         <div class="fapt-nr">02</div>
@@ -690,7 +696,7 @@ footer{background:var(--crem-dk);border-top:2px solid var(--linie-bold);}
     </div>
     <div class="fapt reveal rd2">
       <div class="fapt-img-wrap">
-        <img src="images/cultura/cultura-tale-of-genji-hd-v4.jpg" alt="Tale of Genji Murasaki">
+        <img src="images/cultura/cultura-tale-of-genji-hd-v4.jpg?v=7" alt="Tale of Genji Murasaki">
       </div>
       <div class="fapt-body">
         <div class="fapt-nr">03</div>
@@ -700,7 +706,7 @@ footer{background:var(--crem-dk);border-top:2px solid var(--linie-bold);}
     </div>
     <div class="fapt reveal rd3">
       <div class="fapt-img-wrap">
-        <img src="images/cultura/cultura-van-gogh-hd-v3.jpg" alt="Van Gogh Red Vineyard">
+        <img src="images/cultura/cultura-van-gogh-hd-v3.jpg?v=7" alt="Van Gogh Red Vineyard">
       </div>
       <div class="fapt-body">
         <div class="fapt-nr">04</div>
