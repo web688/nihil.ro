@@ -62,9 +62,40 @@ Cald, inteligent, ușor ironic. Nu moralizator. Vorbește ca un prieten bine cit
 - `obsesii.html` — Comportamente obsesive
 
 ### Content
-- Articles: `/articole/*.html` (68 total)
-- Images: `/images/`
-- Writers: `personas.md`
+- Articles: `/articole/[category]/*.html` (62 total)
+- Images: `/images/[category]/*.jpg`
+- Personas: `/articole/[category]/persona.md`
+- Stubs: `/Unpublished/Articles/[category]/*.md`
+
+---
+
+## Folder Structure
+
+```
+/articole/
+  /ciudatenii/          (10 articles + persona.md)
+  /lume-larga/          (12 articles + persona.md)
+  /oameni-remarcabili/  (10 articles + persona.md)
+  /cultura/             (10 articles + persona.md)
+  /obsesii/             (5 articles + persona.md)
+  /stil-design/         (5 articles + persona.md)
+  /romania-nesțiuta/    (10 articles + persona.md)
+
+/images/
+  /ciudatenii/
+  /lume-larga/          (3 images - Coober Pedy)
+  /oameni-remarcabili/  (3 images - Alan Turing)
+  /cultura/
+  /obsesii/
+  /stil-design/
+  /romania-nesțiuta/
+  /temp/                (processing folder)
+
+/Unpublished/
+  /Articles/[category]/ (article stubs as .md)
+  /Images/[category]/
+  /Images/temp/
+```
 
 ---
 
@@ -72,11 +103,12 @@ Cald, inteligent, ușor ironic. Nu moralizator. Vorbește ca un prieten bine cit
 
 | Metric | Count |
 |--------|-------|
-| Total articles | 68 |
-| Categories | 8 |
+| Total articles | 62 |
+| Categories | 7 |
 | Writers/Personas | 7 |
-| Images needed | ~200+ |
-| Duplicate pairs | 5 |
+| Images done | 6 |
+| Images needed | ~180 |
+| Article stubs | 14 |
 
 ---
 

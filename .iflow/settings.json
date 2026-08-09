@@ -3,11 +3,22 @@
     "image-optimizer": {
       "command": "npx",
       "args": ["mcp-image-optimizer"],
-      "cwd": "X:\\Website\\Utils\\nihil.ro"
+      "cwd": "D:\\Websites\\nihil.ro"
     },
     "gemini-watermark": {
       "command": "python",
-      "args": ["X:\\Website\\ClaudeCode\\Remove gemini logo\\server.py"]
+      "args": ["D:\\Websites\\MCP\\Images\\gemini-watermark\\server.py"]
+    },
+    "watermark-remover": {
+      "command": "D:\\Websites\\MCP\\Images\\watermark-remover\\watermark_remover\\venv\\Scripts\\python.exe",
+      "args": ["D:\\Websites\\MCP\\Images\\watermark-remover\\jferments_server.py"],
+      "env": {
+        "WATERMARK_REMOVER_DIR": "D:\\Websites\\MCP\\Images\\watermark-remover\\watermark_remover"
+      }
+    },
+    "noai-watermark": {
+      "command": "D:\\Websites\\MCP\\Images\\watermark-remover\\watermark_remover\\venv\\Scripts\\python.exe",
+      "args": ["D:\\Websites\\MCP\\Images\\noai-watermark\\noai_server.py"]
     }
   }
 }

@@ -27,20 +27,39 @@
 
 ---
 
-## Image Audit ⚠️ IN PROGRESS
+## Image Audit ✅ MOSTLY COMPLETE
 
 | Metric | Status |
 |--------|--------|
 | Total articles | 68 |
-| Images needed | ~200 (3-4 per article) |
-| Current images | 6 |
+| Images needed | ~200 (3 per article) |
+| Current images | 157 |
+| Articles with 3 images | 48 |
+| Articles with incomplete sets | 4 |
+| Articles with 0 images | 8 (5 duplicates + 3 originals) |
 
-### Completed
-- Coober Pedy: 3 images ✅
-- Alan Turing: 3 images ✅
+### Complete (48 articles)
+All articles in: stil-design (5), obsesii (4 of 5), cultura (9 of 10), ciudatenii (6 of 10), lume-larga (12 of 12), oameni-remarcabili (7 of 10), romania-nesțiuta (9 of 10)
 
-### Remaining
-- 62 articles × 3 images = ~186 images
+### Incomplete (4 articles)
+- algoritm-si-recomandare-ai-ul-a-schimbat-ce-consumam — missing image 1
+- alun-satul-de-marmura — missing image 1
+- fomo-frica-de-a-nu-rata-nimic — missing image 1
+- rosalind-franklin-femeia-care-a-descoperit-adn-ul — missing images 1, 2
+
+### No images (8 articles)
+- legenda-orfelinatului-din-centrul-vechi (ciudatenii)
+- malala-yousafzai-activista-care-a-ales-educatia (oameni-remarcabili)
+- stephen-hawking-geniul-care-a-ales-viata (oameni-remarcabili)
+- 5 duplicate articles (holi-sarbatoarea, lamu-island, insula-pastelui, toronto-islands-comunitate, william-sidis)
+
+### Orphan
+- castelul-medieval-forta-pe-coasta-1.jpg (no matching article)
+
+### Category page thumbnails
+- ✅ lume-larga.html — 8 of 9 card images fixed (haida-gwaii has no image)
+- ✅ ciudatenii.html — 8 of 9 card images fixed (crop-circles placeholder card)
+- ℹ️ Other category pages (oameni-remarcabili, cultura, obsesii, stil-design, romania-nesțiuta) use emoji/icons, no img tags
 
 ---
 

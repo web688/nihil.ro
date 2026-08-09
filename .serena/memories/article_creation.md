@@ -121,10 +121,27 @@ Example: coober-pedy-orasul-subteran.html
 
 ### 4.2 Save Location
 ```
-X:\Website\Utils\nihil.ro\articole\[filename].html
+D:\Websites\nihil.ro\articole\[category]\[filename].html
 ```
 
-### 4.3 Copy CSS from existing article template
+**Category folder names:**
+| Category | Folder |
+|----------|--------|
+| CIUDĂȚENII | `ciudatenii` |
+| LUME LARGĂ | `lume-larga` |
+| OAMENI REMARCABILI | `oameni-remarcabili` |
+| CULTURĂ | `cultura` |
+| OBSESII | `obsesii` |
+| STIL & DESIGN | `stil-design` |
+| ROMÂNIA NEȘTIUTĂ | `romania-nesțiuta` |
+
+### 4.3 Check Persona File
+Each category folder has a `persona.md` file with the writer's style:
+```
+D:\Websites\nihil.ro\articole\[category]\persona.md
+```
+
+### 4.4 Copy CSS from existing article template
 
 ---
 
@@ -170,14 +187,27 @@ X:\Website\Utils\nihil.ro\articole\[filename].html
 | 3 | In-article | 4:3 | After paragraph 6-7 |
 | 4 | Optional | 4:3 | Near the end |
 
-### 5.3 Naming Convention
+### 5.3 Naming & Location
 ```
-[article-slug]-1.jpg
-[article-slug]-2.jpg
-[article-slug]-3.jpg
+D:\Websites\nihil.ro\images\[category]\[article-slug]-1.jpg
+D:\Websites\nihil.ro\images\[category]\[article-slug]-2.jpg
+D:\Websites\nihil.ro\images\[category]\[article-slug]-3.jpg
 ```
 
-### 5.3 Prompt Template
+**Image folder structure:**
+```
+/images/
+  /ciudatenii/
+  /lume-larga/
+  /oameni-remarcabili/
+  /cultura/
+  /obsesii/
+  /stil-design/
+  /romania-nesțiuta/
+  /temp/          ← processing folder (watermark removal, resize)
+```
+
+### 5.4 Prompt Template
 **CRITICAL: Use proper names from the article**
 
 ```
@@ -202,33 +232,45 @@ Generate [image description] in the style of [ARTICLE SUBJECT], warm earthy tone
 
 **Why this works:** Using the article's subject as a style reference helps the AI generate accurate, relevant imagery that matches the topic.
 
-### 5.4 Workflow
+### 5.4 Workflow — OPTIMIZE FIRST for Speed
+
+**Key principle:** Resize images BEFORE de-watermarking for 8x faster processing.
+
+| Resolution | De-watermark Time | Speedup |
+|------------|-------------------|---------|
+| 4000x3000 (original) | ~120s | 1x |
+| 1600x1200 (optimized) | ~15s | **8x faster** |
+
+**Workflow Steps:**
+
 1. Navigate to gemini.google.com
 2. Generate with prompt using proper names
-3. Download
-4. Copy to `images/` folder
-5. Remove watermark using `remove_watermark` tool from gemini-watermark MCP
+3. Download to temp folder
+4. **⚡ OPTIMIZE FIRST** — resize to web size (1600px, quality 90)
+5. Remove Gemini watermark using `remove_watermark` tool
+6. Remove invisible watermark using `noai-watermark` tool
+7. Final optimize (quality 80) and move to category folder
 
 ### 5.5 Image Optimization
-**ALWAYS optimize before upload:**
 
-| Target | Value |
-|--------|-------|
-| Max file size | 150-300KB |
-| Max dimensions | 1920px width (hero), 1200px (in-article) |
-| Format | JPG (quality 80-85%) |
+**Two optimization passes:**
 
-**Optimization via MCP image-optimizer:**
+| Pass | When | Settings | Purpose |
+|------|------|----------|---------|
+| **Pass 1** | BEFORE de-watermark | width=1600, quality=90 | Shrink for faster processing |
+| **Pass 2** | AFTER de-watermark | quality=80 | Final compression for web |
 
-Once configured in MCP settings, use:
-- `optimize_image` — single image with width, quality, format
+**MCP Tools:**
+- `optimize_image` — single image
 - `batch_optimize` — multiple images at once
-- `auto_crop` — remove borders/whitespace
 
-**Example:**
-```
-optimize_image input="images/article-1.jpg" output="images/article-1.jpg" width=1600 quality=80 format="jpeg"
-```
+**Batch Processing (recommended):**
+
+1. Generate all 3 images for an article
+2. Optimize all at once (Pass 1)
+3. Run Gemini watermark removal on all
+4. Run invisible watermark removal on all
+5. Final optimize (Pass 2) and move to category folder
 
 **MCP Config:**
 ```json
@@ -237,19 +279,23 @@ optimize_image input="images/article-1.jpg" output="images/article-1.jpg" width=
     "image-optimizer": {
       "command": "npx",
       "args": ["mcp-image-optimizer"]
-    },
-    "gemini-watermark": {
-      "command": "python",
-      "args": ["X:\\Website\\ClaudeCode\\Remove gemini logo\\server.py"]
     }
   }
 }
 ```
 
-**Watermark removal tools:**
-- `check_binary` — verify binary is available
-- `remove_watermark` — remove watermark from single image
-- `batch_remove_watermarks` — remove from all images in directory
+**Watermark removal (CLI with CUDA):**
+```powershell
+# Gemini watermark
+& "D:\Websites\nihil.ro\GeminiWatermarkTool.exe" -input [file] -output [file-clean]
+
+# Invisible watermark (noai)
+& "D:\Websites\MCP\Images\watermark-remover\watermark_remover\venv\Scripts\noai-watermark.exe" [file] -o [output] --strength 0.04 --device cuda
+```
+
+**MCP watermark tools:**
+- `gemini-watermark` → `remove_watermark`, `batch_remove_watermarks`
+- `noai-watermark` → `remove_invisible_watermark`, `batch_remove_invisible_watermarks`
 
 ---
 
@@ -257,7 +303,7 @@ optimize_image input="images/article-1.jpg" output="images/article-1.jpg" width=
 
 ### 6.1 Hero Image (after subtitle, before content)
 ```html
-<img src="../images/[article-slug]-1.jpg" alt="[Description]" class="hero-image">
+<img src="../../images/[category]/[article-slug]-1.jpg" alt="[Description]" class="hero-image">
 ```
 
 ### 6.2 In-Article Images (between paragraphs)
@@ -265,11 +311,16 @@ optimize_image input="images/article-1.jpg" output="images/article-1.jpg" width=
 <p>[paragraph text]</p>
 
 <figure class="article-image">
-    <img src="../images/[article-slug]-2.jpg" alt="[Description]">
+    <img src="../../images/[category]/[article-slug]-2.jpg" alt="[Description]">
 </figure>
 
 <p>[next paragraph]</p>
 ```
+
+**Path explanation:**
+- Article is in `/articole/[category]/`
+- Image is in `/images/[category]/`
+- So path from article to image: `../../images/[category]/`
 
 ### 6.3 CSS for Images (add to article style)
 ```css
@@ -297,7 +348,7 @@ optimize_image input="images/article-1.jpg" output="images/article-1.jpg" width=
 
 ### 7.1 Open Category File
 ```
-X:\Website\Utils\nihil.ro\[category].html
+D:\Websites\nihil.ro\[category].html
 ```
 
 ### 7.2 Add Article Card
@@ -331,7 +382,7 @@ git push
 ```
 
 ### 9.4 Verify
-Check https://nihil.ro/articole/[filename].html
+Check https://nihil.ro/articole/[category]/[filename].html
 
 ---
 
@@ -344,11 +395,15 @@ Check https://nihil.ro/articole/[filename].html
 - [ ] Article follows persona tone
 - [ ] No repetitive phrases
 - [ ] 8-10 paragraphs with specific numbers/facts
-- [ ] HTML file created in `/articole/`
+- [ ] HTML file created in `/articole/[category]/`
 - [ ] 3-4 images generated using proper names + "in the style of..."
-- [ ] Images optimized (150-300KB, max 1920px)
-- [ ] Images inserted in article HTML
-- [ ] Watermarks removed from images
+- [ ] Images saved to `/images/temp/`
+- [ ] **⚡ OPTIMIZE FIRST** — resize to 1600px (quality 90)
+- [ ] Gemini watermarks removed
+- [ ] Invisible watermarks removed (noai-watermark with CUDA)
+- [ ] Final optimize (quality 80)
+- [ ] Images moved to `/images/[category]/`
+- [ ] Images inserted in article HTML with correct paths `../../images/[category]/`
 - [ ] Article linked from category page
 - [ ] `inventory` memory updated
 - [ ] Committed and pushed to git

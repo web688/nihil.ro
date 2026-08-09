@@ -71,13 +71,89 @@ Examples:
 
 ---
 
-## Workflow (Gemini via Browser)
+## Workflow Options
 
-1. Navigate to gemini.google.com
-2. Type prompt with "Generate an image of..."
-3. Download generated image
-4. Copy to project: `Copy-Item [temp_path] "X:\Website\Utils\nihil.ro\images\[article-slug]-[n].jpg"`
-5. Remove watermark using GeminiWatermarkTool
+### ⚡ KEY PRINCIPLE: Optimize FIRST for 8x Speed
+
+| Resolution | De-watermark Time | Speedup |
+|------------|-------------------|---------|
+| 4000x3000 (original) | ~120s | 1x |
+| 1600x1200 (optimized) | ~15s | **8x faster** |
+
+**Always resize to web size BEFORE de-watermarking!**
+
+---
+
+### Option A: Gemini Google Pro Generation (AI Images)
+1. Navigate to `https://gemini.google.com/` and select the **Images** tab.
+2. Enter prompt using standard format: `"Generate an image of [SUBJECT], warm earthy tones, editorial documentary photography style, slightly desaturated sepia colors, film grain texture, dramatic lighting, no borders, full frame, [16:9 or 4:3] aspect ratio"`.
+3. Download generated image.
+4. Copy to project: `Copy-Item [temp_path] "D:\Work\Websites\nihil.ro\images\temp\[article-slug]-[n]-orig.jpg"`
+5. **⚡ OPTIMIZE FIRST** — resize to 1600px, quality 90:
+   ```
+   optimize_image input="[...]-orig.jpg" output="[...].jpg" width=1600 quality=90 format="jpeg"
+   ```
+6. Remove Gemini watermark using `GeminiWatermarkTool.exe` (if needed)
+7. Final optimize (quality 80) and move to target category folder: `D:\Work\Websites\nihil.ro\images\[category]\[article-slug]-[n].jpg`
+
+
+### Option B: Stock Images (Alamy, etc.)
+1. Download stock image to `images/temp/[article-slug]-[n]-orig.jpg`
+2. **Crop black banner** if present (typically 50-100px from bottom):
+   ```powershell
+   python -c "from PIL import Image; img = Image.open(r'path/to/image.jpg'); cropped = img.crop((0, 0, img.width, img.height - 100)); cropped.save(r'path/to/image-cropped.jpg')"
+   ```
+3. **⚡ OPTIMIZE FIRST** — resize to 1600px, quality 90
+4. **Remove visible watermarks** using YOLO+LaMa:
+   - Put optimized image in `images/temp/input/`
+   - Run watermark-remover with `--conf 0.1 --dilate 15`
+   - Output in `images/temp/result/`
+5. Remove invisible watermark using `noai-watermark` with CUDA
+6. Final optimize (quality 80) and move to category folder
+
+---
+
+### Batch Processing (Recommended)
+
+Process all 3 images for an article at once:
+
+```powershell
+# 1. Generate all 3 images and save to temp
+
+# 2. Batch optimize all images (Pass 1)
+batch_optimize inputs=["path1-orig.jpg","path2-orig.jpg","path3-orig.jpg"] outputDir="D:\Websites\nihil.ro\images\temp" width=1600 quality=90
+
+# 3. Batch Gemini watermark removal
+Get-ChildItem "D:\Websites\nihil.ro\images\temp\[article-slug]-*.jpg" -Exclude "*-orig*" | ForEach-Object {
+    $output = $_.FullName -replace "\.jpg", "-clean.jpg"
+    & "D:\Websites\nihil.ro\GeminiWatermarkTool.exe" -input $_.FullName -output $output
+}
+
+# 4. Batch invisible watermark removal (noai)
+New-Item -ItemType Directory -Force -Path "D:\Websites\nihil.ro\images\temp\input"
+Move-Item "D:\Websites\nihil.ro\images\temp\*-clean.jpg" "D:\Websites\nihil.ro\images\temp\input\"
+# Use batch_remove_invisible_watermarks MCP tool or noai CLI
+
+# 5. Final optimize (Pass 2) and move
+batch_optimize inputs=["input/*.jpg"] outputDir="D:\Websites\nihil.ro\images\[category]" width=1600 quality=80
+```
+
+---
+
+### Watermark Remover Notes
+- **Model**: fancyfeast's YOLOv11 (general watermark detection)
+- **Limitations**: False negatives/positives possible; adjust `--conf` for sensitivity
+- **Tip**: Lower `--conf` = more detected (but more false positives)
+- **CUDA Required**: Use venv at `D:\Websites\MCP\Images\watermark-remover\watermark_remover\venv`
+
+### Cleanup After Processing
+Always clean temp folder after image generation:
+```powershell
+Get-ChildItem "D:\Websites\nihil.ro\images\temp" -Directory | Remove-Item -Recurse -Force
+Get-ChildItem "D:\Websites\nihil.ro\images\temp" -Filter "*-orig*" | Remove-Item -Force
+Get-ChildItem "D:\Websites\nihil.ro\images\temp" -Filter "*-clean*" | Remove-Item -Force
+Get-ChildItem "D:\Websites\nihil.ro\images\temp" -Filter "*-crop*" | Remove-Item -Force
+```
 
 ---
 
