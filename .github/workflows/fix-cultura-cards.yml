@@ -1,0 +1,80 @@
+name: Fix homepage Cultura cards
+
+on:
+  push:
+    paths:
+      - '.github/workflows/fix-cultura-cards.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Remove unrelated links and refresh Genji image
+        shell: bash
+        run: |
+          python <<'PY'
+          from pathlib import Path
+          import shutil
+
+          index = Path('index.html')
+          html = index.read_text(encoding='utf-8')
+
+          replacements = [
+              (
+                  '''<div class="fapt reveal" onclick="location.href='articole/cultura/instagram-si-estetica-filtrele-au-redefinit-realitatea.html'" style="cursor: pointer;">''',
+                  '''<div class="fapt reveal">''',
+              ),
+              (
+                  '''<div class="fapt reveal rd1" onclick="location.href='articole/cultura/twitter-si-conversatia-280-caractere-au-schimbat-discursul.html'" style="cursor: pointer;">''',
+                  '''<div class="fapt reveal rd1">''',
+              ),
+              (
+                  '''<div class="fapt reveal rd2" onclick="location.href='articole/ciudatenii/okinawa-insula-fericirii.html'" style="cursor: pointer;">''',
+                  '''<div class="fapt reveal rd2">''',
+              ),
+              (
+                  '''<div class="fapt reveal rd3" onclick="location.href='articole/cultura/meme-uri-si-cultura-o-imagine-poate-schimba-lumea.html'" style="cursor: pointer;">''',
+                  '''<div class="fapt reveal rd3">''',
+              ),
+          ]
+
+          for old, new in replacements:
+              if old not in html:
+                  raise SystemExit(f'Expected homepage card markup not found: {old}')
+              html = html.replace(old, new, 1)
+
+          old_image = 'images/cultura/cultura-tale-of-genji-hd-v3.jpg'
+          new_image = 'images/cultura/cultura-tale-of-genji-hd-v4.jpg'
+          if old_image not in html:
+              raise SystemExit('Genji image reference not found in index.html')
+          html = html.replace(old_image, new_image, 1)
+
+          source = Path(old_image)
+          target = Path(new_image)
+          if not source.is_file():
+              raise SystemExit(f'Missing source image: {source}')
+          shutil.copyfile(source, target)
+
+          index.write_text(html, encoding='utf-8')
+          PY
+
+      - name: Commit homepage correction
+        shell: bash
+        run: |
+          if git diff --quiet && git diff --cached --quiet; then
+            echo "No changes required."
+            exit 0
+          fi
+          git config user.name "NIHIL.ro Webmaster"
+          git config user.email "webmaster@nihil.ro"
+          git add index.html images/cultura/cultura-tale-of-genji-hd-v4.jpg
+          git commit -m "Fix Cultura card links and refresh Genji image"
+          git push
