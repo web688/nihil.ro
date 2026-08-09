@@ -42,18 +42,21 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9998;o
 .page-subtitlu{font-family:'Fraunces',serif;font-style:italic;font-size:1.2rem;color:rgba(255,255,255,.7);margin-top:1rem;max-width:600px;margin-left:auto;margin-right:auto;position:relative;z-index:1;}
 
 /* ACTIONS GRID */
-.actions-section{padding:4rem 3rem;}
-.actions-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;}
-.action-card{background:var(--crem-dk);border:1px solid var(--linie);border-radius:8px;padding:3rem 2rem;text-align:center;transition:transform .3s,box-shadow .3s;cursor:pointer;position:relative;overflow:hidden;}
+.actions-section{padding:3rem 3rem;}
+.actions-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1.8rem;}
+.action-card{background:var(--crem-dk);border:1px solid var(--linie);border-radius:8px;overflow:hidden;transition:transform .3s,box-shadow .3s;cursor:pointer;position:relative;display:flex;flex-direction:column;}
 .action-card:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(0,0,0,.1);background:var(--crem);}
 .action-card::after{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--terra);transform:scaleY(0);transform-origin:bottom;transition:transform .35s ease;}
 .action-card:hover::after{transform:scaleY(1);}
-.action-nr{font-family:'Fraunces',serif;font-size:3.5rem;font-weight:700;color:rgba(196,82,42,.15);line-height:1;margin-bottom:1rem;}
-.action-icon{font-size:2.5rem;margin-bottom:1.5rem;display:block;}
-.action-titlu{font-family:'Fraunces',serif;font-size:1.3rem;font-weight:700;color:var(--negru);line-height:1.2;margin-bottom:1rem;}
+.action-card-img-wrap{width:100%;height:180px;overflow:hidden;position:relative;}
+.action-card-img-wrap img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;transition:transform .4s ease;}
+.action-card:hover .action-card-img-wrap img{transform:scale(1.05);}
+.action-card-body{padding:1.6rem 2rem;display:flex;flex-direction:column;flex:1;}
+.action-nr{font-family:'Fraunces',serif;font-size:2.2rem;font-weight:700;color:rgba(196,82,42,.25);line-height:1;margin-bottom:.5rem;}
+.action-titlu{font-family:'Fraunces',serif;font-size:1.2rem;font-weight:700;color:var(--negru);line-height:1.3;margin-bottom:.8rem;}
 .action-titlu em{font-style:italic;color:var(--terra);}
-.action-text{font-family:'Unna',serif;font-size:1rem;line-height:1.7;color:var(--cerneala);margin-bottom:1.5rem;}
-.action-dificultate{font-family:'Epilogue',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--gri-lt);margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--linie);}
+.action-text{font-family:'Unna',serif;font-size:1rem;line-height:1.65;color:var(--cerneala);flex:1;}
+.action-dificultate{font-family:'Epilogue',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--gri-lt);margin-top:1.2rem;padding-top:1.2rem;border-top:1px solid var(--linie);}
 
 /* ARCHIVE SECTION */
 .archive-section{background:var(--crem);padding:4rem 3rem;border-top:2px solid var(--linie-bold);}
@@ -210,51 +213,75 @@ footer{background:var(--crem-dk);border-top:2px solid var(--linie-bold);}
 <section class="actions-section">
   <div class="actions-grid">
     <article class="action-card">
-      <div class="action-nr">01</div>
-      <div class="action-icon-wrap"><img src="images/fa-asta-azi/icon-phone.png" alt="Telefon" class="action-icon-img"></div>
-      <h3 class="action-titlu">Sună pe cineva pe care nu l-ai sunat de mai bine de un an</h3>
-      <p class="action-text">Nu trimite mesaj. Sună. Primele 10 secunde vor fi ciudate. Restul conversației nu va fi. Veți vorbi despre lucruri pe care le știți deja, dar de data asta le veți asculta cu adevărat.</p>
-      <div class="action-dificultate">Dificultate: emoțională ↑↑</div>
+      <div class="action-card-img-wrap">
+        <img src="images/fa-asta-azi/icon-phone.png" alt="Telefon">
+      </div>
+      <div class="action-card-body">
+        <div class="action-nr">01</div>
+        <h3 class="action-titlu">Sună pe cineva pe care nu l-ai sunat de mai bine de un an</h3>
+        <p class="action-text">Nu trimite mesaj. Sună. Primele 10 secunde vor fi ciudate. Restul conversației nu va fi. Veți vorbi despre lucruri pe care le știți deja, dar de data asta le veți asculta cu adevărat.</p>
+        <div class="action-dificultate">Dificultate: emoțională ↑↑</div>
+      </div>
     </article>
 
     <article class="action-card">
-      <div class="action-nr">02</div>
-      <div class="action-icon-wrap"><img src="images/fa-asta-azi/icon-road.png" alt="Drum" class="action-icon-img"></div>
-      <h3 class="action-titlu">Mergi pe un drum pe care nu l-ai luat niciodată spre casă</h3>
-      <p class="action-text">Oricare drum nou activează același sistem cerebral ca o aventură. Creierul nu face diferența dintre explorare reală și explorare urbană. O stradă nouă e o lume nouă.</p>
-      <div class="action-dificultate">Dificultate: logistică ↑</div>
+      <div class="action-card-img-wrap">
+        <img src="images/fa-asta-azi/icon-road.png" alt="Drum">
+      </div>
+      <div class="action-card-body">
+        <div class="action-nr">02</div>
+        <h3 class="action-titlu">Mergi pe un drum pe care nu l-ai luat niciodată spre casă</h3>
+        <p class="action-text">Oricare drum nou activează același sistem cerebral ca o aventură. Creierul nu face diferența dintre explorare reală și explorare urbană. O stradă nouă e o lume nouă.</p>
+        <div class="action-dificultate">Dificultate: logistică ↑</div>
+      </div>
     </article>
 
     <article class="action-card">
-      <div class="action-nr">03</div>
-      <div class="action-icon-wrap"><img src="images/fa-asta-azi/icon-book.png" alt="Carte" class="action-icon-img"></div>
-      <h3 class="action-titlu">Citește primul capitol dintr-o carte pe care o ai de un an</h3>
-      <p class="action-text">Numai primul. Dacă după primul capitol vrei să continui, a meritat să o cumperi. Dacă nu, ai rezolvat problema vinovăției. Fără compromisuri.</p>
-      <div class="action-dificultate">Dificultate: atenție ↑↑</div>
+      <div class="action-card-img-wrap">
+        <img src="images/fa-asta-azi/icon-book.png" alt="Carte">
+      </div>
+      <div class="action-card-body">
+        <div class="action-nr">03</div>
+        <h3 class="action-titlu">Citește primul capitol dintr-o carte pe care o ai de un an</h3>
+        <p class="action-text">Numai primul. Dacă după primul capitol vrei să continui, a meritat să o cumperi. Dacă nu, ai rezolvat problema vinovăției. Fără compromisuri.</p>
+        <div class="action-dificultate">Dificultate: atenție ↑↑</div>
+      </div>
     </article>
 
     <article class="action-card">
-      <div class="action-nr">04</div>
-      <div class="action-icon-wrap"><img src="images/fa-asta-azi/icon-sunrise.png" alt="Răsărit" class="action-icon-img"></div>
-      <h3 class="action-titlu">Stabilește o zi fără planuri pentru săptămâna viitoare</h3>
-      <p class="action-text">Nu weekend-ul. O zi de miercuri. Blochează-o în calendar. Scrie „ocupat". Nu spune nimănui ce faci cu ea. Adevărata libertate e planificată.</p>
-      <div class="action-dificultate">Dificultate: vinovăție ↑↑↑</div>
+      <div class="action-card-img-wrap">
+        <img src="images/fa-asta-azi/icon-sunrise.png" alt="Răsărit">
+      </div>
+      <div class="action-card-body">
+        <div class="action-nr">04</div>
+        <h3 class="action-titlu">Stabilește o zi fără planuri pentru săptămâna viitoare</h3>
+        <p class="action-text">Nu weekend-ul. O zi de miercuri. Blochează-o în calendar. Scrie „ocupat". Nu spune nimănui ce faci cu ea. Adevărata libertate e planificată.</p>
+        <div class="action-dificultate">Dificultate: vinovăție ↑↑↑</div>
+      </div>
     </article>
 
     <article class="action-card">
-      <div class="action-nr">05</div>
-      <div class="action-icon-wrap"><img src="images/fa-asta-azi/icon-letter.png" alt="Scrisoare" class="action-icon-img"></div>
-      <h3 class="action-titlu">Scrie o scrisoare către tine însuți peste 10 ani</h3>
-      <p class="action-text">Nu fii politicos. Fii sincer. întreabă-l ce a reușit și ce nu. întreabă-l dacă ești mândru de el. Pune-o într-un plic. Deschide-o în 2036.</p>
-      <div class="action-dificultate">Dificultate: vulnerabilitate ↑↑</div>
+      <div class="action-card-img-wrap">
+        <img src="images/fa-asta-azi/icon-letter.png" alt="Scrisoare">
+      </div>
+      <div class="action-card-body">
+        <div class="action-nr">05</div>
+        <h3 class="action-titlu">Scrie o scrisoare către tine însuți peste 10 ani</h3>
+        <p class="action-text">Nu fii politicos. Fii sincer. întreabă-l ce a reușit și ce nu. întreabă-l dacă ești mândru de el. Pune-o într-un plic. Deschide-o în 2036.</p>
+        <div class="action-dificultate">Dificultate: vulnerabilitate ↑↑</div>
+      </div>
     </article>
 
     <article class="action-card">
-      <div class="action-nr">06</div>
-      <div class="action-icon-wrap"><img src="images/fa-asta-azi/icon-food.png" alt="Mâncare" class="action-icon-img"></div>
-      <h3 class="action-titlu">Mănâncă ceva ce nu ai mâncat niciodată fără să cauți pe Google</h3>
-      <p class="action-text">La restaurant sau la piață. Alege ceva la întâmplare. Gustă fără prejudecăți. Descoperă ceva nou sau confirmă că nu-ți place. Ambele sunt victorii.</p>
-      <div class="action-dificultate">Dificultate: control ↑</div>
+      <div class="action-card-img-wrap">
+        <img src="images/fa-asta-azi/icon-food.png" alt="Mâncare">
+      </div>
+      <div class="action-card-body">
+        <div class="action-nr">06</div>
+        <h3 class="action-titlu">Mănâncă ceva ce nu ai mâncat niciodată fără să cauți pe Google</h3>
+        <p class="action-text">La restaurant sau la piață. Alege ceva la întâmplare. Gustă fără prejudecăți. Descoperă ceva nou sau confirmă că nu-ți place. Ambele sunt victorii.</p>
+        <div class="action-dificultate">Dificultate: control ↑</div>
+      </div>
     </article>
   </div>
 </section>
