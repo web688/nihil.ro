@@ -134,8 +134,11 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9998;o
 .eseu-text:first-of-type::first-letter{font-family:'Fraunces',serif;font-size:4.5rem;font-weight:700;float:left;line-height:.75;margin-right:.1em;margin-top:.1em;color:var(--terra);}
 .eseu-sidebar{padding:3rem 2rem;background:var(--crem);}
 .sidebar-titlu{font-family:'Epilogue',sans-serif;font-size:.58rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gri);margin-bottom:1.5rem;padding-bottom:.8rem;border-bottom:1px solid var(--linie);}
-.sidebar-item{padding:1.2rem 0;border-bottom:1px solid var(--linie);cursor:default;transition:padding-left .2s;}
-.sidebar-item:hover{padding-left:.5rem;}
+.sidebar-item{padding:1rem 0;border-bottom:1px solid var(--linie);cursor:pointer;display:flex;gap:1rem;align-items:center;transition:background .2s;}
+.sidebar-item:hover{background:var(--crem-dk-light);}
+.sidebar-item:last-child{border-bottom:none;}
+.si-thumb{width:75px;height:75px;border-radius:6px;object-fit:cover;flex-shrink:0;display:block;}
+.si-content{flex:1;display:flex;flex-direction:column;justify-content:center;}
 .si-cat{font-family:'Epilogue',sans-serif;font-size:.52rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--terra);margin-bottom:.3rem;}
 .si-titlu{font-family:'Fraunces',serif;font-size:.98rem;font-weight:700;line-height:1.25;color:var(--negru);}
 .si-titlu em{font-style:italic;font-weight:300;}
@@ -548,7 +551,10 @@ footer{background:var(--crem-dk);border-top:2px solid var(--linie-bold);}
 </div>
 
 <section class="eseu-section">
-  <div class="eseu-main">
+  <div class="eseu-main" onclick="location.href='articole/obsesii/fomo-frica-de-a-nu-rata-nimic.html'" style="cursor: pointer;">
+    <div style="margin-bottom: 1.5rem; border-radius: 8px; overflow: hidden; height: 260px;">
+      <img src="images/obsesii/fomo-frica-de-a-nu-rata-nimic-2.jpg" alt="De ce ne plictisim mai greu" style="width: 100%; height: 100%; object-fit: cover;">
+    </div>
     <div class="eseu-kicker">Eseu · Timp & Viață</div>
     <h2 class="eseu-titlu">De ce ne plictisim<br><em>mai greu</em> ca oricând —<br>și ce pierdem din asta</h2>
     <div class="eseu-subtitlu">Despre arta de a nu face nimic și de ce creierul tău are nevoie de ea ca de aer</div>
@@ -559,11 +565,46 @@ footer{background:var(--crem-dk);border-top:2px solid var(--linie-bold);}
   </div>
   <div class="eseu-sidebar">
     <div class="sidebar-titlu">Mai citește</div>
-    <div class="sidebar-item" onclick="location.href='articole/lume-larga/coober-pedy-orasul-subteran.html'" style="cursor: pointer;"><div class="si-cat">Ciudățenie</div><div class="si-titlu">Orașul <em>subteran</em> din deșertul australian</div><div class="si-timp">7 minute</div></div>
-    <div class="sidebar-item" onclick="location.href='articole/obsesii/procrastinare-de-ce-amanam-totul-pentru-maine.html'" style="cursor: pointer;"><div class="si-cat">Obsesii</div><div class="si-titlu">Procrastinare: de ce <em>amânăm totul</em> pentru mâine</div><div class="si-timp">8 minute</div></div>
-    <div class="sidebar-item" onclick="location.href='articole/lume-larga/longyearbyen-cel-mai-nordic-oras.html'" style="cursor: pointer;"><div class="si-cat">Lume</div><div class="si-titlu">Orașul unde e <em>ilegal să mori</em></div><div class="si-timp">6 minute</div></div>
-    <div class="sidebar-item" onclick="location.href='articole/cultura/gaming-si-esports-jocurile-au-devenit-cultura-principala.html'" style="cursor: pointer;"><div class="si-cat">Cultură</div><div class="si-titlu">Gaming-ul a devenit <em>cultură principală</em></div><div class="si-timp">11 minute</div></div>
-    <div class="sidebar-item" onclick="location.href='articole/obsesii/fomo-frica-de-a-nu-rata-nimic.html'" style="cursor: pointer;"><div class="si-cat">Eseu</div><div class="si-titlu">FOMO: cum social media a creat <em>frica</em></div><div class="si-timp">10 minute</div></div>
+    <div class="sidebar-item" onclick="location.href='articole/lume-larga/coober-pedy-orasul-subteran.html'" style="cursor: pointer;">
+      <img src="images/lume-larga/coober-pedy-orasul-subteran-1.jpg" alt="Coober Pedy" class="si-thumb">
+      <div class="si-content">
+        <div class="si-cat">Ciudățenie</div>
+        <div class="si-titlu">Orașul <em>subteran</em> din deșertul australian</div>
+        <div class="si-timp">7 minute</div>
+      </div>
+    </div>
+    <div class="sidebar-item" onclick="location.href='articole/obsesii/procrastinare-de-ce-amanam-totul-pentru-maine.html'" style="cursor: pointer;">
+      <img src="images/obsesii/procrastinare-de-ce-amanam-totul-pentru-maine-1.jpg" alt="Procrastinare" class="si-thumb">
+      <div class="si-content">
+        <div class="si-cat">Obsesii</div>
+        <div class="si-titlu">Procrastinare: de ce <em>amânăm totul</em> pentru mâine</div>
+        <div class="si-timp">8 minute</div>
+      </div>
+    </div>
+    <div class="sidebar-item" onclick="location.href='articole/lume-larga/longyearbyen-cel-mai-nordic-oras.html'" style="cursor: pointer;">
+      <img src="images/lume-larga/longyearbyen-cel-mai-nordic-oras-1.jpg" alt="Longyearbyen" class="si-thumb">
+      <div class="si-content">
+        <div class="si-cat">Lume</div>
+        <div class="si-titlu">Orașul unde e <em>ilegal să mori</em></div>
+        <div class="si-timp">6 minute</div>
+      </div>
+    </div>
+    <div class="sidebar-item" onclick="location.href='articole/cultura/gaming-si-esports-jocurile-au-devenit-cultura-principala.html'" style="cursor: pointer;">
+      <img src="images/cultura/gaming-si-esports-jocurile-au-devenit-cultura-principala-1.jpg" alt="Gaming" class="si-thumb">
+      <div class="si-content">
+        <div class="si-cat">Cultură</div>
+        <div class="si-titlu">Gaming-ul a devenit <em>cultură principală</em></div>
+        <div class="si-timp">11 minute</div>
+      </div>
+    </div>
+    <div class="sidebar-item" onclick="location.href='articole/obsesii/fomo-frica-de-a-nu-rata-nimic.html'" style="cursor: pointer;">
+      <img src="images/obsesii/fomo-frica-de-a-nu-rata-nimic-3.jpg" alt="FOMO" class="si-thumb">
+      <div class="si-content">
+        <div class="si-cat">Eseu</div>
+        <div class="si-titlu">FOMO: cum social media a creat <em>frica</em></div>
+        <div class="si-timp">10 minute</div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -581,16 +622,16 @@ footer{background:var(--crem-dk);border-top:2px solid var(--linie-bold);}
     </div>
     <h3 class="bizar-titlu">Orașul <em>fără reguli</em> din deșertul australian</h3>
     <p class="bizar-text">În Coober Pedy, oamenii trăiesc underground pentru a scăpa de căldura de 50°C. Nu există adrese poștale, nu există poliție și toată lumea săpe după opale. Funcționează de 100 de ani.</p>
-    <div class="bizar-sursa">Sursa: <a href="#">Australian Geographic, 2024</a></div>
+    <div class="bizar-sursa">Sursa: <a href="articole/lume-larga/coober-pedy-orasul-subteran.html">Australian Geographic, 2024</a></div>
   </div>
-  <div class="bizar-card reveal rd2" onclick="location.href='articole/lume-larga/holi-festivalul-culorilor.html'" style="cursor: pointer;">
+  <div class="bizar-card reveal rd2" onclick="location.href='articole/lume-larga/la-tomatina-festivalul-luptei-cu-rosiile.html'" style="cursor: pointer;">
     <div class="bizar-tara">🇮🇳 India</div>
     <div style="margin-bottom: 1rem;">
       <img src="images/lume-larga/holi-festivalul-culorilor-1.jpg" alt="Holi festival colors" style="width: 100%; height: auto; display: block; border-radius: 6px;">
     </div>
     <h3 class="bizar-titlu">Holi: festivalul unde <em>culoarea e limbaj</em></h3>
     <p class="bizar-text">La Grishneshwar Temple, bebelușii sunt aruncați de la o înălțime de 15 metri într-o pânză ținută de bărbați. Tradiția de 500 de ani spune că aduce sănătate și prosperitate.</p>
-    <div class="bizar-sursa">Sursa: <a href="#">The Times of India, 2023</a></div>
+    <div class="bizar-sursa">Sursa: <a href="articole/lume-larga/la-tomatina-festivalul-luptei-cu-rosiile.html">The Times of India, 2023</a></div>
   </div>
   <div class="bizar-card reveal rd3" onclick="location.href='articole/lume-larga/longyearbyen-cel-mai-nordic-oras.html'" style="cursor: pointer;">
     <div class="bizar-tara">🇳🇴 Norvegia</div>
@@ -599,7 +640,7 @@ footer{background:var(--crem-dk);border-top:2px solid var(--linie-bold);}
     </div>
     <h3 class="bizar-titlu">Longyearbyen: orașul unde <em>e ilegal să mori</em></h3>
     <p class="bizar-text">Orice cetățean al celor 46 de țări semnatare poate trăi și munci în Svalbard fără viză. Nu există taxe, nu există restricții. Doar urși polari și întuneric 6 luni pe an.</p>
-    <div class="bizar-sursa">Sursa: <a href="#">Svalbard Treaty Commission</a></div>
+    <div class="bizar-sursa">Sursa: <a href="articole/lume-larga/longyearbyen-cel-mai-nordic-oras.html">Svalbard Treaty Commission</a></div>
   </div>
 </section>
 
@@ -611,30 +652,42 @@ footer{background:var(--crem-dk);border-top:2px solid var(--linie-bold);}
 
 <section class="fapte-section">
   <div class="fapte-grid">
-    <div class="fapt reveal">
-      <div class="fapt-nr">1</div>
-      <div>
+    <div class="fapt reveal" onclick="location.href='articole/cultura/instagram-si-estetica-filtrele-au-redefinit-realitatea.html'" style="cursor: pointer;">
+      <div class="fapt-img-wrap">
+        <img src="images/cultura/instagram-si-estetica-filtrele-au-redefinit-realitatea-1.jpg" alt="Mona Lisa da Vinci">
+      </div>
+      <div class="fapt-body">
+        <div class="fapt-nr">01</div>
         <div class="fapt-text">Mona Lisa nu avea <em>sprâncene</em> când a fost pictată. Era la modă să le razi în Florența renascentistă.</div>
         <div class="fapt-sursa">Leonardo da Vinci · 1503-1519 · Analiză microscopică 2022</div>
       </div>
     </div>
-    <div class="fapt reveal rd1">
-      <div class="fapt-nr">2</div>
-      <div>
+    <div class="fapt reveal rd1" onclick="location.href='articole/cultura/twitter-si-conversatia-280-caractere-au-schimbat-discursul.html'" style="cursor: pointer;">
+      <div class="fapt-img-wrap">
+        <img src="images/cultura/twitter-si-conversatia-280-caractere-au-schimbat-discursul-1.jpg" alt="Shakespeare cuvinte">
+      </div>
+      <div class="fapt-body">
+        <div class="fapt-nr">02</div>
         <div class="fapt-text">Shakespeare a inventat cuvinte pe care le folosim zilnic: <em>eyeball, swagger, bedroom, addiction</em>.</div>
         <div class="fapt-sursa">Oxford English Dictionary · 1.700 de cuvinte noi</div>
       </div>
     </div>
-    <div class="fapt reveal rd2">
-      <div class="fapt-nr">3</div>
-      <div>
+    <div class="fapt reveal rd2" onclick="location.href='articole/ciudatenii/okinawa-insula-fericirii.html'" style="cursor: pointer;">
+      <div class="fapt-img-wrap">
+        <img src="images/ciudatenii/okinawa-insula-fericirii-1.jpg" alt="Tale of Genji">
+      </div>
+      <div class="fapt-body">
+        <div class="fapt-nr">03</div>
         <div class="fapt-text">Primul roman scris vreodată, <em>Tale of Genji</em>, a fost scris de o femeie japoneză în 1010.</div>
         <div class="fapt-sursa">Murasaki Shikibu · Curtea imperială din Kyoto</div>
       </div>
     </div>
-    <div class="fapt reveal rd3">
-      <div class="fapt-nr">4</div>
-      <div>
+    <div class="fapt reveal rd3" onclick="location.href='articole/cultura/meme-uri-si-cultura-o-imagine-poate-schimba-lumea.html'" style="cursor: pointer;">
+      <div class="fapt-img-wrap">
+        <img src="images/cultura/meme-uri-si-cultura-o-imagine-poate-schimba-lumea-1.jpg" alt="Van Gogh Red Vineyard">
+      </div>
+      <div class="fapt-body">
+        <div class="fapt-nr">04</div>
         <div class="fapt-text">Van Gogh a vândut <em>un singur tablou</em> în viață. Fratele său era patronul artistic.</div>
         <div class="fapt-sursa">The Red Vineyard · 400 de franci belgieni · 1888</div>
       </div>
