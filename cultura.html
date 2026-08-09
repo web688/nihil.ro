@@ -90,6 +90,30 @@ footer{background:var(--crem-dk);border-top:2px solid var(--linie-bold);}
   .page-header{background:var(--crem);padding:4rem 1.5rem 3rem;}
 }
 </style>
+<style>
+/* UNIFIED FULL-IMAGE STYLING (100% COMPLETE PHOTO, NO CROP, NO STRETCH, FLUSH TEXT ALIGNMENT) */
+.article-card img, .bizar-card img, .article-image, .hero-sub-img-wrap img {
+  width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  display: block !important;
+  border-radius: 6px !important;
+  margin-bottom: 1rem !important;
+  box-shadow: none !important;
+}
+.article-card, .bizar-card {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+}
+.article-card-img-wrap, .bizar-img-wrap {
+  width: 100% !important;
+  border-radius: 6px !important;
+  overflow: hidden !important;
+  margin-bottom: 1rem !important;
+}
+</style>
 </head>
 <body>
 

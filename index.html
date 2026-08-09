@@ -211,6 +211,30 @@ footer{background:var(--crem-dk);border-top:2px solid var(--linie-bold);}
   .logo-text{font-size:2.2rem;}
 }
 </style>
+<style>
+/* UNIFIED FULL-IMAGE STYLING (100% COMPLETE PHOTO, NO CROP, NO STRETCH, FLUSH TEXT ALIGNMENT) */
+.article-card img, .bizar-card img, .article-image, .hero-sub-img-wrap img {
+  width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  display: block !important;
+  border-radius: 6px !important;
+  margin-bottom: 1rem !important;
+  box-shadow: none !important;
+}
+.article-card, .bizar-card {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+}
+.article-card-img-wrap, .bizar-img-wrap {
+  width: 100% !important;
+  border-radius: 6px !important;
+  overflow: hidden !important;
+  margin-bottom: 1rem !important;
+}
+</style>
 </head>
 <body>
 
@@ -250,7 +274,7 @@ footer{background:var(--crem-dk);border-top:2px solid var(--linie-bold);}
       </div>
       <h1 class="hero-titlu">Longyearbyen: Unde <em>Soarele Nu Apune</em> Patru Luni pe An și <em>Nu Ai Voie Să Mori</em></h1>
       <div style="margin-bottom: 1.5rem; border-radius: 8px; overflow: hidden;">
-        <img src="images/lume-larga/longyearbyen-cel-mai-nordic-oras-1.jpg" alt="Longyearbyen — Arctic settlement" style="width: 100%; height: 300px; object-fit: cover; border-radius: 8px;">
+        <img src="images/lume-larga/longyearbyen-cel-mai-nordic-oras-1.jpg" alt="Longyearbyen — Arctic settlement" style="width: 100%; height: auto; display: block; border-radius: 6px;">
       </div>
       <p class="hero-intro">În Longyearbyen, cel mai nordic oraș din lume, înmormântările sunt interzise de 70 de ani. Permafrostul conservă corpurile în loc să le descompună. Cine moare aici e transportat pe continent. O colonie de 2.400 de suflete între gheață, urși polari și un cod penal care interzice naturii să-și facă treaba.</p>
       <div class="hero-meta">
@@ -267,7 +291,7 @@ footer{background:var(--crem-dk);border-top:2px solid var(--linie-bold);}
       </div>
       <h2 class="hero-titlu" style="font-size:clamp(1.8rem, 3vw, 2.8rem);">Pădurea Hoia-Baciu: <em>Triunghiul Bermudelor</em> din Inima Transilvaniei</h2>
       <div style="margin-bottom: 1.5rem; border-radius: 8px; overflow: hidden;">
-        <img src="images/romania-nestiuta/hoia-baciu-padurea-misterioasa-1.png" alt="Pădurea Hoia-Baciu" style="width: 100%; height: 260px; object-fit: cover; border-radius: 8px;">
+        <img src="images/romania-nestiuta/hoia-baciu-padurea-misterioasa-1.png" alt="Pădurea Hoia-Baciu" style="width: 100%; height: auto; display: block; border-radius: 6px;">
       </div>
       <p class="hero-intro">Punctul zero al fenomenelor inexplicabile din România — copaci contorsionați în unghiuri imposibile, poieni unde vegetația refuză să crească și o istorie de mistere documentate de biologi și cercetători din întreaga lume.</p>
       <div class="hero-meta">
@@ -353,7 +377,7 @@ footer{background:var(--crem-dk);border-top:2px solid var(--linie-bold);}
   <div class="bizar-card reveal rd1" onclick="location.href='articole/lume-larga/hikikomori-retragerea-sociala-din-japonia.html'" style="cursor: pointer;">
     <div class="bizar-tara">🇯🇵 Japonia</div>
     <div style="margin-bottom: 1rem;">
-      <img src="images/lume-larga/hikikomori-retragerea-sociala-din-japonia-1.jpg" alt="Japanese apartment building" style="width: 100%; height: 120px; object-fit: cover; border-radius: 6px;">
+      <img src="images/lume-larga/hikikomori-retragerea-sociala-din-japonia-1.jpg" alt="Japanese apartment building" style="width: 100%; height: auto; display: block; border-radius: 6px;">
     </div>
     <h3 class="bizar-titlu">Hikikomori: <em>1,5 milioane</em> de japonezi care nu au ieșit din casă de ani de zile</h3>
     <p class="bizar-text">Nu sunt bolnavi. Nu sunt în pericol. Au ales, cu tot confortul dat de o societate care funcționează, să se retragă complet din ea. Guvernul japonez a creat un minister special pentru a-i convinge să iasă afară.</p>
@@ -362,7 +386,7 @@ footer{background:var(--crem-dk);border-top:2px solid var(--linie-bold);}
   <div class="bizar-card reveal rd2" onclick="location.href='articole/lume-larga/la-tomatina-festivalul-luptei-cu-rosiile.html'" style="cursor: pointer;">
     <div class="bizar-tara">🇪🇸 Spania</div>
     <div style="margin-bottom: 1rem;">
-      <img src="images/lume-larga/la-tomatina-festivalul-luptei-cu-rosiile-1.jpg" alt="La Tomatina festival" style="width: 100%; height: 120px; object-fit: cover; border-radius: 6px;">
+      <img src="images/lume-larga/la-tomatina-festivalul-luptei-cu-rosiile-1.jpg" alt="La Tomatina festival" style="width: 100%; height: auto; display: block; border-radius: 6px;">
     </div>
     <h3 class="bizar-titlu">La Tomatina: <em>20.000 de oameni</em> aruncă roșii unul în altul timp de o oră</h3>
     <p class="bizar-text">A început în 1945 când un grup de tineri s-a bătut cu roșii la un festival. S-au simțit atât de bine că au venit și anul următor. Acum e patrimoniu cultural imaterial. Primăria cumpără 40 de tone de roșii special pentru asta.</p>
@@ -371,7 +395,7 @@ footer{background:var(--crem-dk);border-top:2px solid var(--linie-bold);}
   <div class="bizar-card reveal rd3" onclick="location.href='articole/lume-larga/savonlinna-campionatul-mondial-de-aruncat-telefoane.html'" style="cursor: pointer;">
     <div class="bizar-tara">🇫🇮 Finlanda</div>
     <div style="margin-bottom: 1rem;">
-      <img src="images/lume-larga/savonlinna-campionatul-mondial-de-aruncat-telefoane-1.jpg" alt="Mobile phone" style="width: 100%; height: 120px; object-fit: cover; border-radius: 6px;">
+      <img src="images/lume-larga/savonlinna-campionatul-mondial-de-aruncat-telefoane-1.jpg" alt="Mobile phone" style="width: 100%; height: auto; display: block; border-radius: 6px;">
     </div>
     <h3 class="bizar-titlu">Campionatul Mondial de <em>Aruncat Telefoane</em> se ține în Finlanda din 2000</h3>
     <p class="bizar-text">Există categorii pe distanță, pe stil și pe originalitate. Recordul mondial este de 110 metri. Organizatorii colectează telefoanele și le reciclează. A început ca protest la adresa tehnologiei. A devenit cel mai mare eveniment de reciclare din țară.</p>
@@ -460,7 +484,7 @@ footer{background:var(--crem-dk);border-top:2px solid var(--linie-bold);}
   <div class="bizar-card reveal rd1" onclick="location.href='articole/lume-larga/coober-pedy-orasul-subteran.html'" style="cursor: pointer;">
     <div class="bizar-tara">🇦🇺 Australia</div>
     <div style="margin-bottom: 1rem;">
-      <img src="images/lume-larga/coober-pedy-orasul-subteran-1.jpg" alt="Australian outback" style="width: 100%; height: 120px; object-fit: cover; border-radius: 6px;">
+      <img src="images/lume-larga/coober-pedy-orasul-subteran-1.jpg" alt="Australian outback" style="width: 100%; height: auto; display: block; border-radius: 6px;">
     </div>
     <h3 class="bizar-titlu">Orașul <em>fără reguli</em> din deșertul australian</h3>
     <p class="bizar-text">În Coober Pedy, oamenii trăiesc underground pentru a scăpa de căldura de 50°C. Nu există adrese poștale, nu există poliție și toată lumea săpe după opale. Funcționează de 100 de ani.</p>
@@ -469,7 +493,7 @@ footer{background:var(--crem-dk);border-top:2px solid var(--linie-bold);}
   <div class="bizar-card reveal rd2" onclick="location.href='articole/lume-larga/holi-festivalul-culorilor.html'" style="cursor: pointer;">
     <div class="bizar-tara">🇮🇳 India</div>
     <div style="margin-bottom: 1rem;">
-      <img src="images/lume-larga/holi-festivalul-culorilor-1.jpg" alt="Holi festival colors" style="width: 100%; height: 120px; object-fit: cover; border-radius: 6px;">
+      <img src="images/lume-larga/holi-festivalul-culorilor-1.jpg" alt="Holi festival colors" style="width: 100%; height: auto; display: block; border-radius: 6px;">
     </div>
     <h3 class="bizar-titlu">Holi: festivalul unde <em>culoarea e limbaj</em></h3>
     <p class="bizar-text">La Grishneshwar Temple, bebelușii sunt aruncați de la o înălțime de 15 metri într-o pânză ținută de bărbați. Tradiția de 500 de ani spune că aduce sănătate și prosperitate.</p>
@@ -478,7 +502,7 @@ footer{background:var(--crem-dk);border-top:2px solid var(--linie-bold);}
   <div class="bizar-card reveal rd3" onclick="location.href='articole/lume-larga/longyearbyen-cel-mai-nordic-oras.html'" style="cursor: pointer;">
     <div class="bizar-tara">🇳🇴 Norvegia</div>
     <div style="margin-bottom: 1rem;">
-      <img src="images/lume-larga/longyearbyen-cel-mai-nordic-oras-1.jpg" alt="Longyearbyen Svalbard" style="width: 100%; height: 120px; object-fit: cover; border-radius: 6px;">
+      <img src="images/lume-larga/longyearbyen-cel-mai-nordic-oras-1.jpg" alt="Longyearbyen Svalbard" style="width: 100%; height: auto; display: block; border-radius: 6px;">
     </div>
     <h3 class="bizar-titlu">Longyearbyen: orașul unde <em>e ilegal să mori</em></h3>
     <p class="bizar-text">Orice cetățean al celor 46 de țări semnatare poate trăi și munci în Svalbard fără viză. Nu există taxe, nu există restricții. Doar urși polari și întuneric 6 luni pe an.</p>
