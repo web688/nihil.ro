@@ -270,6 +270,29 @@ footer{background:var(--crem-dk);border-top:2px solid var(--linie-bold);}
   margin-bottom: 1rem !important;
 }
 </style>
+<style>
+/* IMAGE ICON STYLING FOR FA ASTA AZI SECTION */
+.fa-icon-wrap, .action-icon-wrap {
+  width: 72px;
+  height: 72px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 1.2rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  transition: transform 0.3s ease;
+  display: block;
+}
+.fa-card:hover .fa-icon-wrap, .action-card:hover .action-icon-wrap {
+  transform: scale(1.06);
+}
+.fa-icon-img, .action-icon-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+</style>
 </head>
 <body>
 
@@ -372,28 +395,28 @@ footer{background:var(--crem-dk);border-top:2px solid var(--linie-bold);}
   <div class="fa-grid">
     <div class="fa-card reveal rd1">
       <div class="fa-nr">01</div>
-      <span class="fa-icon">📞</span>
+      <div class="fa-icon-wrap"><img src="images/fa-asta-azi/icon-phone.png" alt="Telefon" class="fa-icon-img"></div>
       <div class="fa-card-titlu">Sună pe cineva pe care nu l-ai sunat de mai bine de un an</div>
       <div class="fa-card-desc">Nu trimite mesaj. Sună. Primele 10 secunde vor fi ciudate. Restul conversației nu va fi.</div>
       <div class="fa-dificultate">Dificultate: emoțională ↑↑</div>
     </div>
     <div class="fa-card reveal rd2">
       <div class="fa-nr">02</div>
-      <span class="fa-icon">🗺️</span>
+      <div class="fa-icon-wrap"><img src="images/fa-asta-azi/icon-road.png" alt="Drum" class="fa-icon-img"></div>
       <div class="fa-card-titlu">Mergi pe un drum pe care nu l-ai luat niciodată spre casă</div>
       <div class="fa-card-desc">Oricare drum nou activează același sistem cerebral ca o aventură. Creierul nu face diferența.</div>
       <div class="fa-dificultate">Dificultate: logistică ↑</div>
     </div>
     <div class="fa-card reveal rd3">
       <div class="fa-nr">03</div>
-      <span class="fa-icon">📖</span>
+      <div class="fa-icon-wrap"><img src="images/fa-asta-azi/icon-book.png" alt="Carte" class="fa-icon-img"></div>
       <div class="fa-card-titlu">Citește primul capitol dintr-o carte pe care o ai de un an</div>
       <div class="fa-card-desc">Numai primul. Dacă după primul capitol vrei să continui, a meritat să o cumperi. Dacă nu, ai rezolvat problema vinovăției.</div>
       <div class="fa-dificultate">Dificultate: atenție ↑↑</div>
     </div>
     <div class="fa-card reveal rd4">
       <div class="fa-nr">04</div>
-      <span class="fa-icon">🌅</span>
+      <div class="fa-icon-wrap"><img src="images/fa-asta-azi/icon-sunrise.png" alt="Răsărit" class="fa-icon-img"></div>
       <div class="fa-card-titlu">Stabilește o zi fără planuri pentru săptămâna viitoare</div>
       <div class="fa-card-desc">Nu weekend-ul. O zi de miercuri. Blochează-o în calendar. Scrie „ocupat". Nu spune nimănui ce faci cu ea.</div>
       <div class="fa-dificultate">Dificultate: vinovăție ↑↑↑</div>
