@@ -89,16 +89,18 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9998;o
 .sh-data{font-family:'Epilogue',sans-serif;font-size:.58rem;font-weight:500;letter-spacing:.1em;color:var(--gri-lt);padding:.8rem 2rem;border-left:1px solid var(--linie);white-space:nowrap;}
 
 /* BIZARE GRID */
-.bizare-grid{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:2px solid var(--linie-bold);}
-.bizar-card{padding:3rem 2.5rem;border-right:1px solid var(--linie);cursor:default;transition:background .25s;overflow:hidden;}
-.bizar-card:last-child{border-right:none;}
-.bizar-card:hover{background:var(--crem);}
-.bizar-tara{font-family:'Epilogue',sans-serif;font-size:.55rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gri-lt);margin-bottom:.5rem;}
-.bizar-emoji{font-size:2.5rem;display:block;margin-bottom:1rem;}
-.bizar-titlu{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:700;line-height:1.1;color:var(--negru);margin-bottom:1rem;}
+.bizare-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;padding:2.5rem;background:var(--crem-dk-light);border-bottom:2px solid var(--linie-bold);}
+.bizar-card{background:var(--hartie);border:1px solid var(--linie);border-radius:8px;overflow:hidden;cursor:pointer;transition:transform .3s ease,box-shadow .3s ease;display:flex;flex-direction:column;}
+.bizar-card:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(0,0,0,.08);background:var(--crem);}
+.bizar-card-img-wrap{width:100%;height:180px;overflow:hidden;position:relative;}
+.bizar-card-img-wrap img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;transition:transform .4s ease;}
+.bizar-card:hover .bizar-card-img-wrap img{transform:scale(1.05);}
+.bizar-card-body{padding:1.4rem 1.6rem;display:flex;flex-direction:column;flex:1;}
+.bizar-tara{font-family:'Epilogue',sans-serif;font-size:.62rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--terra);margin-bottom:.6rem;}
+.bizar-titlu{font-family:'Fraunces',serif;font-size:1.15rem;font-weight:700;line-height:1.3;color:var(--negru);margin-bottom:.6rem;}
 .bizar-titlu em{font-style:italic;color:var(--terra);}
-.bizar-text{font-family:'Unna',serif;font-size:.9rem;line-height:1.75;color:var(--cerneala);margin-bottom:1.2rem;}
-.bizar-sursa{font-family:'Epilogue',sans-serif;font-size:.55rem;font-weight:500;letter-spacing:.1em;color:var(--gri-lt);text-transform:uppercase;border-top:1px solid var(--linie);padding-top:1rem;}
+.bizar-text{font-family:'Unna',serif;font-size:.9rem;line-height:1.65;color:var(--cerneala);margin-bottom:1.2rem;flex:1;}
+.bizar-sursa{font-family:'Epilogue',sans-serif;font-size:.55rem;font-weight:500;letter-spacing:.1em;color:var(--gri-lt);text-transform:uppercase;border-top:1px solid var(--linie);padding-top:.8rem;}
 .bizar-sursa a{color:var(--terra);text-decoration:none;}
 
 /* FAPTE */
@@ -452,31 +454,37 @@ footer{background:var(--crem-dk);border-top:2px solid var(--linie-bold);}
 
 <section class="bizare-grid">
   <div class="bizar-card reveal rd1" onclick="location.href='articole/lume-larga/hikikomori-retragerea-sociala-din-japonia.html'" style="cursor: pointer;">
-    <div class="bizar-tara">🇯🇵 Japonia</div>
-    <div style="margin-bottom: 1rem;">
-      <img src="images/lume-larga/hikikomori-retragerea-sociala-din-japonia-1.jpg" alt="Japanese apartment building" style="width: 100%; height: auto; display: block; border-radius: 6px;">
+    <div class="bizar-card-img-wrap">
+      <img src="images/ciudatenii/hikikomori.jpg" alt="Hikikomori Japan">
     </div>
-    <h3 class="bizar-titlu">Hikikomori: <em>1,5 milioane</em> de japonezi care nu au ieșit din casă de ani de zile</h3>
-    <p class="bizar-text">Nu sunt bolnavi. Nu sunt în pericol. Au ales, cu tot confortul dat de o societate care funcționează, să se retragă complet din ea. Guvernul japonez a creat un minister special pentru a-i convinge să iasă afară.</p>
-    <div class="bizar-sursa">Sursa: <a href="#">NHK World, 2024</a></div>
+    <div class="bizar-card-body">
+      <div class="bizar-tara">🇯🇵 Japonia</div>
+      <h3 class="bizar-titlu">Hikikomori: <em>1,5 milioane</em> de japonezi care nu au ieșit din casă de ani de zile</h3>
+      <p class="bizar-text">Nu sunt bolnavi. Nu sunt în pericol. Au ales, cu tot confortul dat de o societate care funcționează, să se retragă complet din ea. Guvernul japonez a creat un minister special pentru a-i convinge să iasă afară.</p>
+      <div class="bizar-sursa">Sursa: <a href="articole/lume-larga/hikikomori-retragerea-sociala-din-japonia.html">NHK World, 2024</a></div>
+    </div>
   </div>
   <div class="bizar-card reveal rd2" onclick="location.href='articole/lume-larga/la-tomatina-festivalul-luptei-cu-rosiile.html'" style="cursor: pointer;">
-    <div class="bizar-tara">🇪🇸 Spania</div>
-    <div style="margin-bottom: 1rem;">
-      <img src="images/lume-larga/la-tomatina-festivalul-luptei-cu-rosiile-1.jpg" alt="La Tomatina festival" style="width: 100%; height: auto; display: block; border-radius: 6px;">
+    <div class="bizar-card-img-wrap">
+      <img src="images/ciudatenii/tomatina.jpg" alt="La Tomatina Spain">
     </div>
-    <h3 class="bizar-titlu">La Tomatina: <em>20.000 de oameni</em> aruncă roșii unul în altul timp de o oră</h3>
-    <p class="bizar-text">A început în 1945 când un grup de tineri s-a bătut cu roșii la un festival. S-au simțit atât de bine că au venit și anul următor. Acum e patrimoniu cultural imaterial. Primăria cumpără 40 de tone de roșii special pentru asta.</p>
-    <div class="bizar-sursa">Sursa: <a href="#">El País, 2023</a></div>
+    <div class="bizar-card-body">
+      <div class="bizar-tara">🇪🇸 Spania</div>
+      <h3 class="bizar-titlu">La Tomatina: <em>20.000 de oameni</em> aruncă roșii unul în altul timp de o oră</h3>
+      <p class="bizar-text">A început în 1945 când un grup de tineri s-a bătut cu roșii la un festival. S-au simțit atât de bine că au venit și anul următor. Acum e patrimoniu cultural imaterial. Primăria cumpără 40 de tone de roșii special pentru asta.</p>
+      <div class="bizar-sursa">Sursa: <a href="articole/lume-larga/la-tomatina-festivalul-luptei-cu-rosiile.html">El País, 2023</a></div>
+    </div>
   </div>
   <div class="bizar-card reveal rd3" onclick="location.href='articole/lume-larga/savonlinna-campionatul-mondial-de-aruncat-telefoane.html'" style="cursor: pointer;">
-    <div class="bizar-tara">🇫🇮 Finlanda</div>
-    <div style="margin-bottom: 1rem;">
-      <img src="images/lume-larga/savonlinna-campionatul-mondial-de-aruncat-telefoane-1.jpg" alt="Mobile phone" style="width: 100%; height: auto; display: block; border-radius: 6px;">
+    <div class="bizar-card-img-wrap">
+      <img src="images/ciudatenii/phone-throwing.png" alt="Phone Throwing Finland">
     </div>
-    <h3 class="bizar-titlu">Campionatul Mondial de <em>Aruncat Telefoane</em> se ține în Finlanda din 2000</h3>
-    <p class="bizar-text">Există categorii pe distanță, pe stil și pe originalitate. Recordul mondial este de 110 metri. Organizatorii colectează telefoanele și le reciclează. A început ca protest la adresa tehnologiei. A devenit cel mai mare eveniment de reciclare din țară.</p>
-    <div class="bizar-sursa">Sursa: <a href="#">Finnish Broadcasting Company</a></div>
+    <div class="bizar-card-body">
+      <div class="bizar-tara">🇫🇮 Finlanda</div>
+      <h3 class="bizar-titlu">Campionatul Mondial de <em>Aruncat Telefoane</em> se ține în Finlanda din 2000</h3>
+      <p class="bizar-text">Există categorii pe distanță, pe stil și pe originalitate. Recordul mondial este de 110 metri. Organizatorii colectează telefoanele și le reciclează. A început ca protest la adresa tehnologiei. A devenit cel mai mare eveniment de reciclare din țară.</p>
+      <div class="bizar-sursa">Sursa: <a href="articole/lume-larga/savonlinna-campionatul-mondial-de-aruncat-telefoane.html">Finnish Broadcasting Company</a></div>
+    </div>
   </div>
 </section>
 
