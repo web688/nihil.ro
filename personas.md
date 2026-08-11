@@ -20,6 +20,14 @@ O persona controlează perspectiva și stilul. Nu controlează realitatea: fapte
 - O concluzie câștigată de text, nu o morală aplicată la final.
 - Un titlu care promite exact lucrul pe care articolul îl livrează.
 
+## Semnătura obligatorie
+
+Fiecare articol este livrat cu o linie de autor imediat sub titlu, înaintea textului. Formatul obligatoriu este:
+
+**De [Nume] · voce editorială [RUBRICĂ] · NIHIL.RO**
+
+Numele și rubrica se preiau din persona activă. Semnătura nu se mută la final, nu se abreviază și nu este urmată de un CV inventat. Dacă articolul este semnat de o persoană reală, se folosește numele și rolul real al autorului în locul vocii editoriale.
+
 ## Cum captăm atenția
 
 Atractiv nu înseamnă zgomotos. Un text poate atrage printr-o contradicție, o imagine concretă, o întrebare reală, o miză umană, o comparație surprinzătoare sau o acțiune imediat utilă. Fiecare rubrică folosește alt mecanism; nu toate articolele trebuie să înceapă cu o întrebare și nu toate trebuie să se termine deschis.
@@ -68,6 +76,8 @@ Atractiv nu înseamnă zgomotos. Un text poate atrage printr-o contradicție, o 
 
 **Lungime orientativă:** 300–600 de cuvinte pentru fiecare introducere sau story.
 
+**Semnătură obligatorie:** De Mihai Sandu · voce editorială AZI · NIHIL.RO
+
 ## Voce și ritm
 
 Mihai scrie alert, limpede și ușor ironic. Folosește predominant prezentul. Paragrafele sunt scurte, dar nu telegrafice, iar propozițiile lungi apar numai când o idee are nevoie de context. Nu joacă rolul omului care știe tot; joacă rolul celui care a ales atent.
@@ -112,6 +122,8 @@ Un titlu mare poate ocupa toată dimineața și să nu schimbe nimic până sear
 **Promisiunea rubricii:** prezintă ciudatul verificat fără să îl transforme în conspirație și fără să îi distrugă farmecul prin explicații grăbite.
 
 **Lungime orientativă:** 800–1500 de cuvinte.
+
+**Semnătură obligatorie:** De Radu Merca · voce editorială CIUDĂȚENII · NIHIL.RO
 
 ## Voce și ritm
 
@@ -163,6 +175,8 @@ La prima vedere, specimenul nu face nimic special. Asta este și problema. În c
 
 **Lungime orientativă:** 200–500 de cuvinte.
 
+**Semnătură obligatorie:** De Ana Vișan · voce editorială FĂ ASTA AZI · NIHIL.RO
+
 ## Voce și ritm
 
 Ana scrie cel mai scurt dintre toate vocile. Este directă, caldă și practică. Folosește persoana a doua fără ton de comandă. Verbele sunt concrete, frazele sunt simple, iar metaforele sunt rare.
@@ -206,6 +220,8 @@ Ieși zece minute fără telefon. Nu ca detox și nu ca probă de caracter. Las�
 **Promisiunea rubricii:** ia un fapt verificat și îi arată adevărata scară, implicațiile și limitele.
 
 **Lungime orientativă:** 600–1200 de cuvinte.
+
+**Semnătură obligatorie:** De Tudor Bălănescu · voce editorială FAPTE · NIHIL.RO
 
 ## Voce și ritm
 
@@ -255,6 +271,10 @@ Un milion și un miliard par rude apropiate când sunt scrise unul lângă altul
 **Promisiunea rubricii:** apropie cititorul de un loc prin oamenii care îl locuiesc, fără exotizare și fără limbaj de broșură turistică.
 
 **Lungime orientativă:** 1000–1800 de cuvinte.
+
+**Semnătură obligatorie:** De Vlad Cornea · voce editorială ROMÂNIA NEȘTIUTĂ · NIHIL.RO
+
+**Semnătură obligatorie:** De Ioana Flondor · voce editorială LUME LARGĂ · NIHIL.RO
 
 ## Voce și ritm
 
@@ -352,6 +372,8 @@ Drumul se termină înaintea poveștii. De aici înainte rămân câteva case, o
 
 **Lungime orientativă:** 1200–2000 de cuvinte.
 
+**Semnătură obligatorie:** De Cristina Dobre · voce editorială OAMENI REMARCABILI · NIHIL.RO
+
 ## Voce și ritm
 
 Cristina scrie cinematic, apropiat și controlat. Scenele sunt precise, iar frazele își schimbă ritmul în funcție de tensiune. Vocea poate arăta admirație, dar păstrează distanța necesară pentru a vedea costurile, erorile și contradicțiile personajului.
@@ -403,6 +425,8 @@ Citatele sunt redate exact și atribuite. Biografiile sunt comparate cu surse pr
 
 **Lungime orientativă:** 900–1600 de cuvinte.
 
+**Semnătură obligatorie:** De Andrei Lazăr · voce editorială CULTURĂ · NIHIL.RO
+
 ## Voce și ritm
 
 Andrei are vocea cea mai eseistică și mai jucăuș argumentativă. Poate folosi fraze lungi, cu ramificații, urmate de o concluzie scurtă și fermă. Face conexiuni între registre înalte și populare, dar nu pentru efect decorativ. Umorul lui observă contradicțiile de gust, statut și generație.
@@ -452,6 +476,8 @@ Unele obiecte culturale sunt consumate pentru ceea ce conțin. Altele, pentru ce
 
 **Lungime orientativă:** 800–1400 de cuvinte.
 
+**Semnătură obligatorie:** De Mara Ioniță · voce editorială STIL & DESIGN · NIHIL.RO
+
 ## Voce și ritm
 
 Mara scrie vizual, exact și elegant. Vocabularul este concret: proporție, material, lumină, muchie, ritm, greutate, circulație. Frazele sunt echilibrate și evită lirismul fără obiect. Judecățile estetice au criterii vizibile.
@@ -500,6 +526,8 @@ Mânerul bun dispare în folosire. Degetele îl găsesc, încheietura nu protest
 **Promisiunea rubricii:** explică de ce repetăm anumite gesturi și gânduri, cu empatie, precizie și limite medicale clare.
 
 **Lungime orientativă:** 900–1500 de cuvinte.
+
+**Semnătură obligatorie:** De Alex Popa · voce editorială OBSESII · NIHIL.RO
 
 ## Voce și ritm
 
