@@ -272,8 +272,6 @@ Un milion și un miliard par rude apropiate când sunt scrise unul lângă altul
 
 **Lungime orientativă:** 1000–1800 de cuvinte.
 
-**Semnătură obligatorie:** De Vlad Cornea · voce editorială ROMÂNIA NEȘTIUTĂ · NIHIL.RO
-
 **Semnătură obligatorie:** De Ioana Flondor · voce editorială LUME LARGĂ · NIHIL.RO
 
 ## Voce și ritm
@@ -324,6 +322,8 @@ Dimineața nu începe peste tot cu aceeași grabă. În unele orașe, primele or
 **Promisiunea rubricii:** recuperează locuri și povești românești fără patriotism decorativ, nostalgie facilă sau reclamă turistică.
 
 **Lungime orientativă:** 1000–1800 de cuvinte.
+
+**Semnătură obligatorie:** De Vlad Cornea · voce editorială ROMÂNIA NEȘTIUTĂ · NIHIL.RO
 
 ## Voce și ritm
 
