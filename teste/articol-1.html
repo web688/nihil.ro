@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Satul în care o casă are o singură țiglă — NIHIL.RO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&amp;family=Unna:ital,wght@0,400;0,700;1,400&amp;family=Epilogue:wght@500;600;700&amp;display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --negru: #1a1710;
+            --cerneala: #2d2822;
+            --terra: #c4522a;
+            --terra-lt: #d6785e;
+            --crem-dk: #ebe4d1;
+            --gri: #6b6258;
+            --gri-lt: #8b837a;
+            --linie: #d4cfc4;
+            --linie-bold: #b8b2a6;
+            --hartie: #faf7f0;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Unna', serif;
+            font-size: 1.08rem;
+            line-height: 1.8;
+            color: var(--cerneala);
+            background: var(--hartie);
+        }
+
+        .meta-info {
+            padding: 1.5rem 3rem;
+            border-bottom: 1px solid var(--linie);
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            font-family: 'Epilogue', sans-serif;
+            font-size: 0.65rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--terra);
+        }
+
+        .meta-left { display: flex; gap: 2rem; }
+
+        .breadcrumb {
+            padding: 1rem 3rem;
+            font-family: 'Epilogue', sans-serif;
+            font-size: 0.55rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--gri-lt);
+        }
+
+        .breadcrumb a,
+        .nav-footer a { color: var(--terra); text-decoration: none; }
+
+        .article-container {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 3rem 3rem 5rem;
+        }
+
+        .article-header { margin-bottom: 2.4rem; }
+
+        .category-tag {
+            display: block;
+            margin-bottom: 1rem;
+            font-family: 'Epilogue', sans-serif;
+            font-size: 0.58rem;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--terra);
+        }
+
+        .article-title {
+            margin-bottom: 1rem;
+            font-family: 'Fraunces', serif;
+            font-size: clamp(2.35rem, 6vw, 4.25rem);
+            font-weight: 700;
+            line-height: 1.03;
+            letter-spacing: -0.035em;
+            color: var(--negru);
+        }
+
+        .article-title em {
+            font-weight: 300;
+            color: var(--terra);
+        }
+
+        .article-subtitle {
+            font-family: 'Fraunces', serif;
+            font-size: 1.35rem;
+            font-style: italic;
+            font-weight: 300;
+            line-height: 1.45;
+            color: var(--gri);
+        }
+
+        .author-block {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--linie);
+            font-family: 'Epilogue', sans-serif;
+            font-size: 0.66rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            line-height: 1.5;
+            color: var(--gri-lt);
+        }
+
+        .hero-image,
+        .article-image img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 2px;
+        }
+
+        .hero-image { margin-bottom: 2.6rem; }
+
+        .article-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+
+        .article-content h2 {
+            margin: 3.25rem 0 1.25rem;
+            font-family: 'Fraunces', serif;
+            font-size: clamp(1.7rem, 4vw, 2.35rem);
+            line-height: 1.15;
+            color: var(--negru);
+        }
+
+        .article-content em { color: var(--terra); }
+
+        .article-content > p:first-child::first-letter {
+            float: left;
+            margin: 0.08em 0.1em 0 0;
+            font-family: 'Fraunces', serif;
+            font-size: 4.2rem;
+            font-weight: 600;
+            line-height: 0.78;
+            color: var(--terra);
+        }
+
+        .article-image { margin: 2.8rem 0; }
+
+        .article-image figcaption {
+            margin-top: 0.65rem;
+            font-family: 'Epilogue', sans-serif;
+            font-size: 0.65rem;
+            letter-spacing: 0.08em;
+            line-height: 1.5;
+            text-transform: uppercase;
+            color: var(--gri-lt);
+        }
+
+        .nav-footer {
+            padding: 2rem 3rem;
+            border-top: 2px solid var(--linie-bold);
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            background: var(--crem-dk);
+        }
+
+        .nav-footer a {
+            font-family: 'Epilogue', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+
+        .nav-footer a:hover { color: var(--terra-lt); }
+
+        @media (max-width: 640px) {
+            body { font-size: 1.02rem; }
+            .meta-info { padding: 1rem 1.25rem; align-items: flex-start; }
+            .meta-left { flex-direction: column; gap: 0.25rem; }
+            .breadcrumb { padding: 0.85rem 1.25rem; }
+            .article-container { padding: 2.25rem 1.25rem 4rem; }
+            .article-title { font-size: clamp(2.35rem, 13vw, 3.35rem); }
+            .article-subtitle { font-size: 1.18rem; }
+            .article-content h2 { margin-top: 2.7rem; }
+            .nav-footer { padding: 1.5rem 1.25rem; flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <!--
+    WORKING SOURCES, NOT DISPLAYED:
+    https://aldeiashistoricasdeportugal.com/en/local/gruta/
+    https://aldeiashistoricasdeportugal.com/en/aldeia/monsanto/
+    https://www.cm-idanhanova.pt/media/66399/adufe_18_web.pdf
+    -->
+
+    <div class="meta-info">
+        <div class="meta-left">
+            <div>marți, 11 august 2026</div>
+            <div>7 minute</div>
+        </div>
+        <div>LUME LARGĂ</div>
+    </div>
+
+    <div class="breadcrumb">
+        <a href="../index.html">Azi</a> / <a href="../lume-larga.html">Lume Largă</a> / Satul cu o singură țiglă
+    </div>
+
+    <main class="article-container">
+        <article>
+            <header class="article-header">
+                <span class="category-tag">LUME LARGĂ</span>
+                <h1 class="article-title">Satul în care o casă are <em>o singură țiglă</em></h1>
+                <p class="article-subtitle">La Monsanto, în Portugalia, stâncile uriașe nu au fost mutate ca să facă loc caselor. Au devenit pereți, podele și acoperișuri.</p>
+                <div class="author-block">De Ioana Flondor · voce editorială LUME LARGĂ · NIHIL.RO</div>
+            </header>
+
+            <!--
+            IMAGE 1 PACKAGE
+            Role: hero and reusable card image
+            File: teste/images/articol-1-1.jpg
+            Ratio: 16:9
+            Alt: Satul Monsanto urcând printre blocuri uriașe de granit, cu ruinele castelului pe culme
+            Focal point: houses and central-right boulder; safe for centered mobile crop
+            Prompt: Use case: photorealistic-natural. Asset type: NIHIL.RO editorial article hero image. A geographically plausible documentary photograph of the historic village of Monsanto in Idanha-a-Nova, Portugal, showing small granite houses built among and beneath enormous rounded granite boulders on the steep hillside, with the ruined hilltop castle visible above. Inland central-eastern Portuguese landscape and distant plain, dry late-summer vegetation. Photorealistic editorial documentary photography, natural imperfections, subtle analog film grain, slightly desaturated warm earthy palette. Wide 16:9 establishing view from a moderately elevated oblique viewpoint; village and boulders are the clear subject; a few very small residents may provide scale but no posed portrait. Warm late-afternoon side light, clear air, contemplative rather than promotional. Coarse pale-gray granite, weathered stone masonry, muted terracotta roof tiles, worn paths. Authentic Portuguese vernacular architecture; visually believable gravity and construction; no text, signs, captions, logos or watermarks.
+            Forbidden: fantasy castle, fairytale styling, dramatic CGI, impossible balancing rocks, tourism-ad gloss, exaggerated saturation, crowds, modern city buildings.
+            -->
+            <img class="hero-image" src="images/articol-1-1.jpg" alt="Satul Monsanto urcând printre blocuri uriașe de granit, cu ruinele castelului pe culme">
+
+            <div class="article-content">
+                <p>În partea de sus a străzii Rua do Castelo, o casă pare să fi pierdut o dispută cu muntele. Zidurile ei se opresc sub un bloc uriaș de granit, atât de mare încât acoperă aproape întreaga construcție. Privită în grabă, scena seamănă cu urmarea unui accident geologic: bolovanul a căzut, casa a rămas dedesubt și nimeni nu a mai îndrăznit să miște ceva.</p>
+
+                <p>Numai că piatra nu a venit peste casă. Casa a fost ridicată sub ea.</p>
+
+                <p>Locuitorii din Monsanto i-au găsit construcției un nume mai bun decât ar fi reușit orice catalog de arhitectură: <em>casa de uma só telha</em>, casa cu o singură țiglă. Țigla este, desigur, stânca. Nu se sparge la grindină, nu alunecă de pe acoperiș și nu poate fi schimbată de un meșter într-o după-amiază. Este o bucată din munte, acceptată ca parte a locuinței.</p>
+
+                <p>Această singură țiglă spune aproape toată povestea satului.</p>
+
+                <!--
+                IMAGE 2 PACKAGE
+                Role: first interior image, exterior detail of the central fact
+                File: teste/images/articol-1-2.jpg
+                Ratio: 4:3
+                Alt: Casă din Monsanto construită sub un singur bloc uriaș de granit folosit drept acoperiș
+                Focal point: junction between boulder and masonry in the center
+                Prompt: Use case: photorealistic-natural. Asset type: first interior editorial image for a NIHIL.RO article. A close documentary exterior photograph in Monsanto, Portugal, of the vernacular stone house locally described as the house with a single tile, where one colossal rounded granite boulder forms nearly the entire natural roof above modest human-built granite walls and a small doorway. Upper Rua do Castelo, narrow worn stone lane, neighboring granite masonry only at the margins. Photorealistic editorial documentary photography, natural imperfections, subtle analog film grain, slightly desaturated warm earthy palette. 4:3 landscape, eye-level three-quarter view; show clearly how the masonry meets the underside of the boulder; include one unposed adult resident walking past for human scale, face not prominent. Soft angled morning light, quiet everyday atmosphere, curious rather than dramatic. Rough weathered granite, aged lime mortar, worn wooden door, muted terracotta detail. Structurally believable traditional Portuguese construction; the boulder must visibly function as the roof rather than merely sit behind the house; natural human anatomy; no text, signs, captions, logos or watermarks.
+                Forbidden: crushed or damaged house, catastrophe imagery, cave fantasy, luxury renovation, tourism-ad styling, staged pose, modern cars, fantasy props, oversaturation.
+                -->
+                <figure class="article-image">
+                    <img src="images/articol-1-2.jpg" alt="Casă din Monsanto construită sub un singur bloc uriaș de granit folosit drept acoperiș" loading="lazy">
+                    <figcaption>„Casa cu o singură țiglă”: granitul nu stă lângă construcție, ci participă la ea.</figcaption>
+                </figure>
+
+                <h2>Un loc construit după forma obstacolelor</h2>
+
+                <p>Monsanto se află în interiorul Portugaliei, în regiunea Idanha-a-Nova, aproape de granița cu Spania. Satul urcă pe versantul unui deal abrupt al cărui punct cel mai înalt ajunge la 758 de metri. Deasupra caselor se află ruinele castelului; dincolo de ele, câmpia. Între cele două există granitul: blocuri rotunjite, fisuri, platforme naturale și spații atât de neregulate încât ideea unei străzi drepte pare o glumă spusă de cineva de la șes.</p>
+
+                <p>Într-un loc obișnuit, constructorul eliberează terenul și apoi ridică o clădire. La Monsanto, terenul nu putea fi convins atât de ușor. Stâncile erau prea mari pentru a fi mutate, iar suprafețele plane erau puține. Soluția nu a fost să se redeseneze dealul, ci să se deseneze fiecare casă în jurul porțiunii de deal pe care o primea.</p>
+
+                <p>Uneori, un bolovan formează un perete întreg. Alteori, două pietre lasă între ele un gol care poate fi închis cu zidărie. O stâncă ieșită în afară devine o parte din acoperiș. La baza unor blocuri s-au format adăposturi folosite cândva pentru animale. Pereții construiți de oameni nu ascund întotdeauna granitul; se termină pur și simplu acolo unde începe el.</p>
+
+                <p>De aceea casele nu urmează un model unic. Fiecare este răspunsul la altă întrebare pusă de relief: cât spațiu a rămas între pietre, unde poate fi deschisă o ușă, ce poate susține un zid și ce este mai înțelept să rămână neatins. Privit de sus, satul pare așezat printre bolovani. Privit de aproape, devine limpede că bolovanii participă la construcție.</p>
+
+                <p>Nu este o tehnică spectaculoasă inventată pentru vizitatori. Este arhitectură fără luxul foii albe.</p>
+
+                <h2>Dealul care a fost și fortăreață</h2>
+
+                <p>Avantajele unui asemenea loc nu s-au limitat la materialele de construcție. Dealul domina împrejurimile și putea fi apărat. În zonă există urme ale prezenței umane încă din paleolitic, precum și vestigii atribuite unei așezări fortificate lusitane, ocupației romane și perioadelor vizigotă și arabă. Istoria exactă are golurile ei, dar poziția locului nu are nevoie de explicații complicate: de sus se vede departe, iar până sus se ajunge greu.</p>
+
+                <p>În 1165, regele Afonso Henriques a încredințat Monsanto Ordinului Templierilor, care a ridicat fortificații pe culme. Satul medieval s-a organizat sub zidurile castelului, coborând pe versant atât cât îi permiteau piatra și panta. Aici, geografia a hotărât deopotrivă apărarea, traseul ulițelor și conturul bucătăriilor.</p>
+
+                <p>Castelul a pierdut în timp părți din ziduri și turnuri, inclusiv în urma exploziei accidentale a unui depozit de muniții în secolul al XIX-lea. Granitul de sub el a rămas. Este una dintre micile ironii ale locului: construcția militară concepută să reziste a devenit ruină, în timp ce bolovanii pe care oamenii i-au tratat ca pereți continuă să țină umbră deasupra caselor.</p>
+
+                <h2>Frumos de privit, incomod de locuit</h2>
+
+                <p>Fotografiile transformă foarte ușor Monsanto într-o poveste despre ingeniozitate perfectă. Piatra pare să se potrivească exact, casele par crescute din munte, iar ulițele înguste capătă aerul unui decor pregătit cu grijă. Dar soluțiile bune pentru un sat vechi, construit pe un relief abrupt, nu sunt automat bune pentru viața contemporană.</p>
+
+                <p>O casă adaptată unui bolovan nu poate fi reorganizată ca un apartament. Un perete natural nu se mută pentru a lărgi camera. O scară dictată de pantă nu devine mai puțin abruptă pentru că locuitorul îmbătrânește. Ferestrele, instalațiile și mobilierul trebuie să negocieze cu forme care nu cunosc unghiul drept. Ceea ce în fotografie pare organic poate deveni, într-o zi obișnuită, pur și simplu incomod.</p>
+
+                <p>Chiar rețeaua locală a satelor istorice descrie aceste soluții drept bine adaptate geografiei accidentate, dar nepotrivite multor așteptări moderne de confort. Formularea merită păstrată. Ea împiedică transformarea satului într-o lecție siropoasă despre cât de ușor trăiau oamenii „în armonie cu natura”. Nu trăiau într-o metaforă. Trăiau într-un spațiu disponibil și îl făceau utilizabil.</p>
+
+                <p>Adaptarea continuă și astăzi, doar că instrumentele s-au schimbat. În unele case restaurate, porțiuni din vechii pereți de piatră au fost păstrate în spatele unor suprafețe transparente, ca niște ferestre orientate nu spre peisaj, ci spre însăși materia casei. Este un compromis straniu și foarte potrivit pentru Monsanto: confortul modern intră în cameră, dar nu primește voie să se prefacă că stânca nu există.</p>
+
+                <!--
+                IMAGE 3 PACKAGE
+                Role: second interior image, contemporary adaptation detail
+                File: teste/images/articol-1-3.jpg
+                Ratio: 4:3
+                Alt: Interior simplu din Monsanto în care un perete natural de granit pătrunde în încăpere
+                Focal point: granite and framed glass panel on the left-center
+                Prompt: Use case: photorealistic-natural. Asset type: second interior editorial image for a NIHIL.RO article. A believable modest restored dwelling interior in Monsanto, Portugal, where a massive natural granite outcrop forms most of one interior wall and visibly intrudes into the room; simple modern daily furnishings have been carefully fitted around the immovable stone. Small irregular room inside an old granite house, with a narrow wooden-framed glass protective panel revealing part of the original rough rock surface, a plain wooden table and chair, one small window. Photorealistic editorial documentary interior photography, natural imperfections, subtle analog film grain, slightly desaturated warm earthy palette. 4:3 landscape, medium-wide eye-level view; the junction between human-built plaster or masonry and natural granite is the focal point; no people. Quiet indirect daylight from the small window, warm but not luxurious. Coarse gray granite with natural weathering, worn wood, limewashed wall, simple linen, restrained terracotta accents. Practical lived-in scale; structurally believable; clear difference from the two exterior images; no text, labels, logos or watermarks.
+                Forbidden: cave dwelling, underground tunnel, fantasy interior, spa or luxury hotel, staged showroom, excessive decoration, impossible stone geometry, dramatic CGI, oversaturation.
+                -->
+                <figure class="article-image">
+                    <img src="images/articol-1-3.jpg" alt="Interior simplu din Monsanto în care un perete natural de granit pătrunde în încăpere" loading="lazy">
+                    <figcaption>În unele restaurări, o „fereastră” interioară păstrează la vedere materia vechii case.</figcaption>
+                </figure>
+
+                <p>În același timp, așezările răspândite pe versanți și la poalele dealului arată o mișcare firească a populației spre terenul mai ușor. Partea cea mai fotogenică a satului nu este neapărat și partea cea mai simplă pentru cumpărături, transport, reparații sau o viață fără urcușuri zilnice. Imaginea turistică privește în sus, către castel. Viața practică are motive să privească și în jos, către câmpie.</p>
+
+                <h2>Cum devine o excepție simbol național</h2>
+
+                <p>În 1938, Monsanto a primit titlul de „cel mai portughez sat din Portugalia”. Formula are ceva comic atunci când este aplicată unui loc atât de puțin obișnuit. Majoritatea portughezilor nu locuiau sub bolovani uriași nici atunci și nu locuiesc nici acum. Monsanto nu este o mostră medie a țării. Este exact opusul unei medii.</p>
+
+                <p>Probabil tocmai de aceea titlul a prins. Un simbol național nu este ales pentru că seamănă cu toate celelalte locuri, ci pentru că poate fi recunoscut dintr-o singură imagine. La Monsanto, imaginea există dinainte ca aparatul foto să fie ridicat: case mici, granit enorm, acoperișuri portocalii strecurate printre forme cenușii și un castel deasupra lor.</p>
+
+                <p>Titlul din 1938 și includerea ulterioară în rețeaua satelor istorice au adus vizitatori, restaurări și o nouă întrebuințare pentru unele clădiri. Un adăpost rustic format în golul dintre stânci, folosit în trecut drept coteț, poate apărea astăzi ca punct de interes. Casa cu o singură țiglă nu mai este doar o soluție de construcție; este o poveste pe care satul o spune despre sine.</p>
+
+                <p>Totuși, dincolo de nume și fotografii, rămâne gestul inițial. Cineva a privit cândva un bloc de granit imposibil de mutat și nu l-a considerat capătul construcției. A trasat lângă el un zid. Altcineva a închis un gol dintre două pietre. O familie a folosit stânca drept acoperiș și a continuat să intre pe ușă ca într-o casă obișnuită.</p>
+
+                <p>La capătul de sus al Rua do Castelo, „singura țiglă” nu încearcă să pară ușoară. Apasă vizual asupra casei și ocupă mai mult din peisaj decât zidurile făcute de oameni. Dar casa nu pare strivită. Pare terminată.</p>
+
+                <p>În Monsanto, arhitectura începe acolo unde omul renunță să mai câștige împotriva pietrei și se întreabă, mult mai practic, dacă nu cumva piatra poate ține loc de acoperiș.</p>
+            </div>
+        </article>
+    </main>
+
+    <nav class="nav-footer" aria-label="Navigare articol">
+        <a href="../lume-larga.html">← Înapoi la Lume Largă</a>
+        <a href="../index.html">Spre Azi →</a>
+    </nav>
+</body>
+</html>
