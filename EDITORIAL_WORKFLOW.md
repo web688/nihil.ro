@@ -15,6 +15,24 @@ Toate etapele tehnice și editoriale dintre ele sunt responsabilitatea agentului
 
 # PROMPTUL MINIM
 
+## Când AI-ul alege tot
+
+Pentru alegerea automată a rubricii și a subiectului este suficient:
+
+> Pregătește următorul articol NIHIL.RO.
+
+## Când utilizatorul alege doar rubrica
+
+Pentru ca AI-ul să aleagă subiectul potrivit rubricii este suficient:
+
+> Pregătește următorul articol pentru rubrica [RUBRICĂ].
+
+Exemplu:
+
+> Pregătește următorul articol pentru rubrica FAPTE.
+
+## Când utilizatorul oferă și subiectul
+
 Pentru un articol este suficient:
 
 > Pregătește pentru publicare un articol pentru rubrica [RUBRICĂ] despre [SUBIECT].
@@ -33,6 +51,42 @@ Cuvintele „pregătește pentru publicare” înseamnă: implementează complet
 
 ---
 
+# ALEGEREA AUTOMATĂ A IDEII
+
+Dacă subiectul nu este furnizat, agentul îl alege fără o etapă separată de aprobare.
+
+Înainte de alegere:
+
+1. inspectează pagina principală și pagina rubricii;
+2. inventariază articolele și unghiurile publicate recent;
+3. observă repetițiile de temă, perioadă, geografie, structură și tip de imagine;
+4. consultă `subiecte.md` ca hartă de posibilități, nu ca listă fixă;
+5. generează intern minimum trei idei noi;
+6. evaluează fiecare idee după:
+   - potrivirea cu identitatea NIHIL.RO;
+   - potrivirea cu persona rubricii;
+   - noutatea față de conținutul existent;
+   - posibilitatea de verificare;
+   - forța poveștii sau a ideii centrale;
+   - potențialul pentru o imagine editorială bună;
+   - posibilitatea unei legături naturale cu un articol existent;
+7. alege ideea cu cel mai bun rezultat și continuă direct cu articolul.
+
+Continuitatea nu înseamnă repetare. Noul articol trebuie să pară publicat de aceeași redacție, dar să aducă un subiect, un unghi sau o scară diferită.
+
+Dacă utilizatorul nu indică nici rubrica, agentul alege rubrica ce completează cel mai bine ediția curentă și echilibrează materialele deja publicate.
+
+În descrierea draftului PR se consemnează pe scurt:
+
+- ideea aleasă;
+- de ce se potrivește rubricii;
+- ce repetări a evitat;
+- cu ce material existent poate crea o legătură.
+
+Agentul nu cere aprobarea separată a ideii decât atunci când cererea utilizatorului admite două direcții incompatibile, cu impact material asupra rezultatului.
+
+---
+
 # CE EXECUTĂ AGENTUL AUTOMAT
 
 ## 1. Protejează producția
@@ -43,8 +97,9 @@ Cuvintele „pregătește pentru publicare” înseamnă: implementează complet
 - deschide un draft PR;
 - nu scrie direct în `main`.
 
-## 2. Construiește articolul
+## 2. Alege ideea și construiește articolul
 
+- alege ideea conform regulilor de continuitate, dacă subiectul nu a fost furnizat;
 - identifică persona din `personas.md`;
 - stabilește unghiul editorial și miza;
 - documentează și verifică afirmațiile importante;
@@ -102,6 +157,7 @@ Agentul verifică:
 
 Apoi actualizează descrierea PR-ului cu:
 
+- ideea aleasă și motivul selecției;
 - rezumatul articolului;
 - fișierele modificate;
 - prompturile imaginilor;
@@ -149,6 +205,7 @@ Regula exactă se ia din secțiunea „Când afișăm sursele” din `personas.m
 
 # CE NU MAI TREBUIE SĂ FACĂ UTILIZATORUL
 
+- să propună separat subiecte sau să aprobe un brainstorming;
 - să ceară separat articolul și integrarea;
 - să ceară separat prompturile imaginilor;
 - să transfere promptul într-un alt instrument;
