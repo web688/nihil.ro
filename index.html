@@ -102,18 +102,18 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9998;o
 .bizar-sursa a{color:var(--terra);text-decoration:none;}
 
 /* FAPTE */
-.fapte-section{background:var(--crem-dk);border-bottom:2px solid var(--linie-bold);padding:3.5rem 3rem;}
-.fapte-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.8rem;margin-top:1.5rem;background:transparent;}
+.fapte-section{background:var(--crem-dk);border-bottom:2px solid var(--linie-bold);padding:2.5rem 2.5rem;}
+.fapte-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin-top:1.5rem;background:transparent;}
 .fapt{background:var(--hartie);border:1px solid var(--linie);border-radius:8px;overflow:hidden;display:flex;flex-direction:column;cursor:default;transition:transform .3s ease,box-shadow .3s ease;}
 .fapt:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(0,0,0,.08);background:var(--crem);}
-.fapt-img-wrap{width:100%;height:210px;overflow:hidden;position:relative;}
+.fapt-img-wrap{width:100%;height:160px;overflow:hidden;position:relative;}
 .fapt-img-wrap img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;transition:transform .4s ease;}
-.fapt:hover .fapt-img-wrap img{transform:scale(1.04);}
-.fapt-body{padding:2rem 2.2rem;display:flex;flex-direction:column;flex:1;}
-.fapt-nr{font-family:'Fraunces',serif;font-size:3rem;font-weight:700;color:var(--terra);line-height:1;margin-bottom:.6rem;}
-.fapt-text{font-family:'Fraunces',serif;font-size:1.2rem;font-weight:400;line-height:1.45;color:var(--negru);margin-bottom:1rem;flex:1;}
+.fapt:hover .fapt-img-wrap img{transform:scale(1.05);}
+.fapt-body{padding:1.2rem 1.4rem 1.4rem 1.4rem;display:flex;flex-direction:column;flex:1;}
+.fapt-nr{font-family:'Fraunces',serif;font-size:2.2rem;font-weight:700;color:var(--terra);line-height:1;margin-bottom:.4rem;}
+.fapt-text{font-family:'Fraunces',serif;font-size:1.05rem;font-weight:400;line-height:1.35;color:var(--negru);margin-bottom:.5rem;flex:1;}
 .fapt-text em{font-style:italic;color:var(--terra);}
-.fapt-sursa{font-family:'Epilogue',sans-serif;font-size:.65rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--gri-lt);border-top:1px solid var(--linie);padding-top:1rem;}
+.fapt-sursa{font-family:'Epilogue',sans-serif;font-size:.6rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--gri-lt);border-top:1px solid var(--linie);padding-top:.8rem;margin-top:auto;}
 
 /* CITAT */
 .citat-section{padding:6rem 3rem;text-align:center;border-bottom:2px solid var(--linie-bold);background:var(--hartie);position:relative;overflow:hidden;}
@@ -204,10 +204,10 @@ footer{background:var(--crem-dk);border-top:2px solid var(--linie-bold);}
   .hero{grid-template-columns:1fr;}
   .hero-separator,.hero-dreapta{display:none;}
   .hero-stanga{padding:2.5rem 1.5rem;min-height:60vh;}
-  .fa-grid{grid-template-columns:1fr 1fr;}
+  .fa-grid,.fapte-grid{grid-template-columns:1fr 1fr;}
   .bizare-grid{grid-template-columns:1fr;}
   .bizar-card{border-right:none;border-bottom:1px solid var(--linie);}
-  .fapte-grid{grid-template-columns:1fr;}
+
   .eseu-section{grid-template-columns:1fr;}
   .eseu-sidebar{display:none;}
   .newsletter{grid-template-columns:1fr;padding:3.5rem 1.5rem;gap:3rem;}
@@ -304,11 +304,7 @@ footer{background:var(--crem-dk);border-top:2px solid var(--linie-bold);}
 }
 </style>
 
-<style>
-/* Homepage Cultura & Arta: complete 16:9 images, no crop. */
-.cultura-home-section .fapt-img-wrap{width:100%;height:auto;aspect-ratio:16/9;overflow:hidden;background:var(--negru);}
-.cultura-home-section .fapt-img-wrap img{width:100%;height:100%;object-fit:contain;object-position:center;display:block;}
-</style>
+
 </head>
 <body>
 
@@ -676,7 +672,7 @@ footer{background:var(--crem-dk);border-top:2px solid var(--linie-bold);}
   <div class="fapte-grid">
     <div class="fapt reveal">
       <div class="fapt-img-wrap">
-        <img src="images/cultura/cultura-mona-lisa-hd-v3.jpg?v=7" alt="Mona Lisa da Vinci">
+        <img src="images/cultura/cultura-mona-lisa-hd-v5.jpg?v=9" alt="Mona Lisa cu sprâncenele rase">
       </div>
       <div class="fapt-body">
         <div class="fapt-nr">01</div>
@@ -686,7 +682,7 @@ footer{background:var(--crem-dk);border-top:2px solid var(--linie-bold);}
     </div>
     <div class="fapt reveal rd1">
       <div class="fapt-img-wrap">
-        <img src="images/cultura/cultura-shakespeare-hd-v3.jpg?v=7" alt="Shakespeare cuvinte">
+        <img src="images/cultura/cultura-shakespeare-hd-v6.jpg?v=9" alt="Shakespeare cuvinte noile scenarii">
       </div>
       <div class="fapt-body">
         <div class="fapt-nr">02</div>
@@ -696,7 +692,7 @@ footer{background:var(--crem-dk);border-top:2px solid var(--linie-bold);}
     </div>
     <div class="fapt reveal rd2">
       <div class="fapt-img-wrap">
-        <img src="images/cultura/cultura-tale-of-genji-hd-v4.jpg?v=7" alt="Tale of Genji Murasaki">
+        <img src="images/cultura/cultura-tale-of-genji-hd-v6.jpg?v=9" alt="Tale of Genji Murasaki manuscris">
       </div>
       <div class="fapt-body">
         <div class="fapt-nr">03</div>
@@ -706,7 +702,7 @@ footer{background:var(--crem-dk);border-top:2px solid var(--linie-bold);}
     </div>
     <div class="fapt reveal rd3">
       <div class="fapt-img-wrap">
-        <img src="images/cultura/cultura-van-gogh-hd-v3.jpg?v=7" alt="Van Gogh Red Vineyard">
+        <img src="images/cultura/cultura-van-gogh-hd-v5.jpg?v=9" alt="Van Gogh si Theo numărând monedele">
       </div>
       <div class="fapt-body">
         <div class="fapt-nr">04</div>
