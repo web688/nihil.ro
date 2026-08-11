@@ -17,6 +17,8 @@ Aceste reguli se aplică întregului repository NIHIL.RO.
 
 Când utilizatorul cere un articol sau o adaptare a site-ului, agentul execută singur întregul flux descris în `EDITORIAL_WORKFLOW.md`.
 
+Dacă utilizatorul nu oferă un subiect, alegerea ideii aparține agentului. Cererea „Pregătește următorul articol pentru rubrica X” este completă și nu necesită o rundă separată de brainstorming sau aprobare a temei.
+
 Utilizatorul nu trebuie să:
 
 - creeze branch-uri sau PR-uri;
@@ -38,6 +40,22 @@ Agentul cere clarificări numai dacă lipsește o decizie care ar schimba materi
 4. `subiecte.md` când este relevant pentru selecția temei.
 
 Dacă un document lipsește, nu inventa conținutul lui. Continuă numai dacă lipsa nu afectează decizia cerută.
+
+## Continuitatea editorială și alegerea ideii
+
+Înainte de a alege subiectul unui articol, agentul:
+
+- inspectează pagina principală și pagina rubricii;
+- identifică subiectele, unghiurile și imaginile folosite recent;
+- consultă `subiecte.md` ca sursă de direcții, nu ca listă obligatorie;
+- evită repetarea aceleiași idei, aceleiași perioade, aceleiași geografii sau aceluiași mecanism vizual;
+- păstrează continuitatea vocii și a promisiunii rubricii;
+- caută legături naturale către materiale deja publicate;
+- generează intern cel puțin trei idei și o alege pe cea mai bună după potrivire, originalitate, verificabilitate și potențial vizual.
+
+Dacă utilizatorul cere „următorul articol NIHIL.RO” fără să aleagă rubrica, agentul identifică singur rubrica ce are cea mai mare nevoie de conținut nou sau de echilibrare tematică.
+
+Ideea aleasă este consemnată în draftul PR împreună cu motivul selecției. Agentul nu oprește fluxul pentru aprobarea separată a ideii, cu excepția unei ambiguități care ar schimba material direcția cerută.
 
 ## Reguli pentru articole
 
