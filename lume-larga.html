@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ro">
 <head>
 <meta charset="UTF-8">
@@ -58,15 +58,17 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9998;o
 .stories-titlu{font-family:'Fraunces',serif;font-size:2.5rem;font-weight:700;color:var(--negru);margin-bottom:1rem;}
 .stories-subtitlu{font-family:'Fraunces',serif;font-style:italic;font-size:1.1rem;color:var(--gri);}
 .stories-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem;}
-.story-card{background:var(--hartie);border:1px solid var(--linie);border-radius:8px;overflow:hidden;transition:transform .3s,box-shadow .3s;cursor:pointer;}
+.story-card{background:var(--hartie);border:1px solid var(--linie);border-radius:8px;overflow:hidden;transition:transform .3s ease,box-shadow .3s ease;cursor:pointer;display:flex;flex-direction:column;}
 .story-card:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(0,0,0,.1);}
-.story-image{width:100%;height:200px;object-fit:cover;}
-.story-content{padding:2rem;}
+.story-card-img-wrap{width:100%;aspect-ratio:16/9;overflow:hidden;position:relative;}
+.story-card-img-wrap img, .story-image{width:100%;aspect-ratio:16/9;object-fit:cover;object-position:center;display:block;transition:transform .4s ease;}
+.story-card:hover .story-card-img-wrap img, .story-card:hover .story-image{transform:scale(1.05);}
+.story-content{padding:2rem;display:flex;flex-direction:column;flex:1;}
 .story-region{font-family:'Epilogue',sans-serif;font-size:.55rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gri-lt);margin-bottom:.5rem;}
 .story-titlu{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:700;line-height:1.2;color:var(--negru);margin-bottom:1rem;}
 .story-titlu em{font-style:italic;color:var(--terra);}
-.story-text{font-family:'Unna',serif;font-size:.95rem;line-height:1.7;color:var(--cerneala);margin-bottom:1.5rem;}
-.story-meta{display:flex;justify-content:space-between;align-items:center;font-family:'Epilogue',sans-serif;font-size:.65rem;color:var(--gri);}
+.story-text{font-family:'Unna',serif;font-size:.95rem;line-height:1.7;color:var(--cerneala);margin-bottom:1.5rem;flex:1;}
+.story-meta{display:flex;justify-content:space-between;align-items:center;font-family:'Epilogue',sans-serif;font-size:.65rem;color:var(--gri);margin-top:auto;}
 .story-citeste{color:var(--terra);text-decoration:none;font-weight:700;letter-spacing:.1em;text-transform:uppercase;}
 .story-citeste:hover{color:var(--terra-dk);}
 
@@ -103,65 +105,6 @@ footer{background:var(--crem-dk);border-top:2px solid var(--linie-bold);}
   .logo-text{font-size:2.2rem;}
   .nav-link{padding:.6rem 1rem;font-size:.6rem;}
   .regions-grid{grid-template-columns:repeat(2,1fr);}
-}
-</style>
-<style>
-
-/* MODERATE COMPACT FULL-IMAGE STYLING (100% COMPLETE PHOTO, COMPACT CONTROLLED HEIGHT, NO STRETCH, NO CROP) */
-.hero-sub-img-wrap {
-  width: 100% !important;
-  height: 140px !important;
-  border-radius: 6px !important;
-  overflow: hidden !important;
-  margin-bottom: 0.8rem !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  background: transparent !important;
-}
-.hero-sub-img-wrap img {
-  max-width: 100% !important;
-  max-height: 140px !important;
-  width: auto !important;
-  height: auto !important;
-  object-fit: contain !important;
-  display: block !important;
-  margin: 0 auto !important;
-  border-radius: 6px !important;
-  transition: transform 0.4s ease !important;
-}
-.article-card img, .bizar-card img, .article-image {
-  max-width: 100% !important;
-  max-height: 180px !important;
-  width: auto !important;
-  height: auto !important;
-  object-fit: contain !important;
-  display: block !important;
-  margin: 0 auto 1rem auto !important;
-  border-radius: 6px !important;
-  box-shadow: none !important;
-}
-
-.article-card img, .bizar-card img, .article-image, .hero-sub-img-wrap img {
-  width: 100% !important;
-  height: auto !important;
-  max-height: none !important;
-  object-fit: contain !important;
-  display: block !important;
-  border-radius: 6px !important;
-  margin-bottom: 1rem !important;
-  box-shadow: none !important;
-}
-.article-card, .bizar-card {
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: flex-start !important;
-}
-.article-card-img-wrap, .bizar-img-wrap {
-  width: 100% !important;
-  border-radius: 6px !important;
-  overflow: hidden !important;
-  margin-bottom: 1rem !important;
 }
 </style>
 </head>
