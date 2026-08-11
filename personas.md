@@ -54,6 +54,23 @@ Atractiv nu înseamnă zgomotos. Un text poate atrage printr-o contradicție, o 
 - Nu ascunde o controversă reală doar pentru ca povestea să curgă mai bine.
 - Nu folosi un număr exact fără să poți explica de unde vine și ce înseamnă.
 
+## Când afișăm sursele
+
+Verificarea informațiilor este obligatorie. Afișarea unei bibliografii complete nu este.
+
+- **AZI:** include linkul către documentul, declarația sau relatarea originală atunci când articolul depinde de ea.
+- **CIUDĂȚENII:** afișează 1–3 surse pentru fenomenul central; sunt obligatorii când afirmația este disputată sau extraordinară.
+- **FĂ ASTA AZI:** sursele sunt opționale; devin obligatorii pentru recomandări de sănătate, siguranță sau afirmații statistice.
+- **FAPTE:** afișează 1–3 surse directe pentru faptul central. Etichete generale precum „biologie” sau „istorie” nu sunt suficiente.
+- **LUME LARGĂ:** sursele sunt opționale, cu excepția citatelor, statisticilor și afirmațiilor istorice contestabile.
+- **ROMÂNIA NEȘTIUTĂ:** afișează sursa când povestea se bazează pe un document, o dată istorică disputată sau o afirmație locală greu de verificat.
+- **OAMENI REMARCABILI:** citează direct originea citatelor și a anecdotelor controversate; o listă separată este necesară numai când povestea depinde de ele.
+- **CULTURĂ:** sursele sunt opționale pentru interpretare, dar obligatorii pentru citate, cifre de audiență și declarații atribuite.
+- **STIL & DESIGN:** sursele sunt opționale, exceptând afirmațiile tehnice, istorice sau de sustenabilitate.
+- **OBSESII:** afișează 1–3 surse când textul folosește concepte clinice, statistici sau recomandări legate de sănătatea mintală.
+
+Când sunt afișate, sursele apar la final sub titlul **Surse**, ca linkuri descriptive. Nu se publică o listă de documentare doar pentru a da textului aparență academică.
+
 ## Testul final
 
 Înainte de publicare, textul trebuie să treacă cinci întrebări:
