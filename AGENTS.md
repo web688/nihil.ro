@@ -21,6 +21,7 @@ Dacă utilizatorul nu oferă un subiect, alegerea ideii aparține agentului. Cer
 
 Utilizatorul nu trebuie să:
 
+- să propună separat ideile de articol;
 - creeze branch-uri sau PR-uri;
 - copieze prompturi între instrumente;
 - aleagă persona dacă rubrica este deja cunoscută;
