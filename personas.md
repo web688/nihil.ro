@@ -10,6 +10,14 @@ O persona controlează perspectiva și stilul. Nu controlează realitatea: fapte
 
 # CONTRACTUL EDITORIAL COMUN
 
+## Nișa care precedă toate vocile
+
+NIHIL.RO este un anti-portal de curiozitate editorială, nu o publicație generalistă. Fiecare rubrică are altă voce, dar toate aleg subiecte pentru caracterul lor surprinzător, neobișnuit, contraintuitiv sau memorabil.
+
+Documentarea poate fi serioasă; motivul publicării nu poate fi doar faptul că subiectul este important, tragic, actual ori util civic. Un articol despre ecologie, politică publică, sănătate sau societate intră în NIHIL.RO numai dacă are un unghi de curiozitate autentic, aprobat de utilizator, care nu ar putea fi mutat neschimbat într-un portal generalist.
+
+Înainte de redactare, subiectul trebuie să fie aprobat conform `AGENTS.md` și `EDITORIAL_WORKFLOW.md`. Persona nu poate transforma singură o temă nepotrivită într-un articol NIHIL.RO.
+
 ## Ce trebuie să aibă orice text
 
 - O idee centrală limpede, nu doar un subiect.
@@ -54,32 +62,34 @@ Atractiv nu înseamnă zgomotos. Un text poate atrage printr-o contradicție, o 
 - Nu ascunde o controversă reală doar pentru ca povestea să curgă mai bine.
 - Nu folosi un număr exact fără să poți explica de unde vine și ce înseamnă.
 
-## Când afișăm sursele
+## Cercetare și surse publice
 
-Verificarea informațiilor este obligatorie. Afișarea unei bibliografii complete nu este.
+Verificarea informațiilor este obligatorie pentru toate rubricile. Afișarea surselor este o decizie editorială separată și nu se face automat.
 
-- **AZI:** include linkul către documentul, declarația sau relatarea originală atunci când articolul depinde de ea.
-- **CIUDĂȚENII:** afișează 1–3 surse pentru fenomenul central; sunt obligatorii când afirmația este disputată sau extraordinară.
-- **FĂ ASTA AZI:** sursele sunt opționale; devin obligatorii pentru recomandări de sănătate, siguranță sau afirmații statistice.
-- **FAPTE:** afișează 1–3 surse directe pentru faptul central. Etichete generale precum „biologie” sau „istorie” nu sunt suficiente.
-- **LUME LARGĂ:** sursele sunt opționale, cu excepția citatelor, statisticilor și afirmațiilor istorice contestabile.
-- **ROMÂNIA NEȘTIUTĂ:** afișează sursa când povestea se bazează pe un document, o dată istorică disputată sau o afirmație locală greu de verificat.
-- **OAMENI REMARCABILI:** citează direct originea citatelor și a anecdotelor controversate; o listă separată este necesară numai când povestea depinde de ele.
-- **CULTURĂ:** sursele sunt opționale pentru interpretare, dar obligatorii pentru citate, cifre de audiență și declarații atribuite.
-- **STIL & DESIGN:** sursele sunt opționale, exceptând afirmațiile tehnice, istorice sau de sustenabilitate.
-- **OBSESII:** afișează 1–3 surse când textul folosește concepte clinice, statistici sau recomandări legate de sănătatea mintală.
+- **AZI:** verifică documentul, declarația sau relatarea originală.
+- **CIUDĂȚENII:** verifică fenomenul central din surse solide, mai ales când afirmația este extraordinară.
+- **FĂ ASTA AZI:** verifică atent recomandările de sănătate, siguranță și statisticile.
+- **FAPTE:** pornește de la sursa directă și verifică scara, metoda și limitele.
+- **LUME LARGĂ:** verifică mărturiile, statisticile și afirmațiile istorice.
+- **ROMÂNIA NEȘTIUTĂ:** separă documentele, presa locală și tradiția orală.
+- **OAMENI REMARCABILI:** verifică originea citatelor și a anecdotelor.
+- **CULTURĂ:** verifică titlurile, anii, declarațiile și cifrele de audiență.
+- **STIL & DESIGN:** verifică afirmațiile tehnice, istorice și de sustenabilitate.
+- **OBSESII:** folosește surse medicale credibile pentru concepte clinice și statistici.
 
-Când sunt afișate, sursele apar la final sub titlul **Surse**, ca linkuri descriptive. Nu se publică o listă de documentare doar pentru a da textului aparență academică.
+Sursele rămân implicit în notele de lucru. Nu se adaugă casetă, bibliografie sau notă metodologică publică fără aprobarea utilizatorului. O linie compactă de sursă poate fi propusă numai când formatul existent al rubricii o folosește deja.
 
 ## Testul final
 
-Înainte de publicare, textul trebuie să treacă cinci întrebări:
+Înainte de publicare, textul trebuie să treacă șapte întrebări:
 
-1. Ar recunoaște cititorul rubrica și fără să vadă eticheta?
-2. Există cel puțin o idee pe care o va ține minte?
-3. Este interesul produs de subiect sau doar de formulări teatrale?
-4. Sunt verificabile afirmațiile importante?
-5. Ar putea fi eliminat un paragraf fără să se piardă nimic? Dacă da, elimină-l.
+1. A fost subiectul aprobat de utilizator?
+2. Motivul principal de interes este curiozitatea și nu doar importanța sau gravitatea?
+3. Ar recunoaște cititorul rubrica și fără să vadă eticheta?
+4. Există cel puțin o idee pe care o va ține minte?
+5. Este interesul produs de subiect sau doar de formulări teatrale?
+6. Sunt verificabile afirmațiile importante?
+7. Ar putea fi eliminat un paragraf fără să se piardă nimic? Dacă da, elimină-l.
 
 ---
 
