@@ -1,218 +1,214 @@
-# NIHIL.RO — Workflow editorial cu un singur prompt
+# NIHIL.RO — Workflow editorial universal
 
 ## Scop
 
-Un singur mesaj trebuie să fie suficient pentru pregătirea completă a unui articol sau a unei adaptări a site-ului. Munca se desfășoară în afara producției, iar publicarea are o singură confirmare separată.
+Acest workflow poate fi executat de orice AI care poate citi proiectul, documenta și scrie text, genera sau coordona imagini, modifica fișiere și verifica rezultatul. Niciun pas nu depinde de numele unui model.
 
-Pentru utilizator, fluxul are doar două mesaje:
+Fluxul are două praguri umane obligatorii:
 
-1. cererea de lucru;
-2. `PUBLICĂ`, după verificarea previzualizării.
+1. aprobarea subiectului înainte de redactare și imagini;
+2. mesajul `PUBLICĂ` înainte de integrarea în rubricile site-ului.
 
-Toate etapele tehnice și editoriale dintre ele sunt responsabilitatea agentului.
-
----
-
-# PROMPTUL MINIM
-
-## Când AI-ul alege tot
-
-Pentru alegerea automată a rubricii și a subiectului este suficient:
-
-> Pregătește următorul articol NIHIL.RO.
-
-## Când utilizatorul alege doar rubrica
-
-Pentru ca AI-ul să aleagă subiectul potrivit rubricii este suficient:
-
-> Pregătește următorul articol pentru rubrica [RUBRICĂ].
-
-Exemplu:
-
-> Pregătește următorul articol pentru rubrica FAPTE.
-
-## Când utilizatorul oferă și subiectul
-
-Pentru un articol este suficient:
-
-> Pregătește pentru publicare un articol pentru rubrica [RUBRICĂ] despre [SUBIECT].
-
-Exemplu:
-
-> Pregătește pentru publicare un articol pentru România Neștiută despre satul Geamăna.
-
-Opțional, utilizatorul poate adăuga un unghi, o lungime sau o cerință vizuală. Dacă nu le adaugă, agentul folosește regulile rubricii și ia singur deciziile necesare.
-
-Pentru o modificare generală a site-ului este suficient:
-
-> Pregătește pentru publicare următoarea adaptare a site-ului: [CERINȚĂ].
-
-Cuvintele „pregătește pentru publicare” înseamnă: implementează complet pe branch, verifică și arată previzualizarea, dar nu modifica site-ul live.
+Între aceste două praguri, AI-ul execută singur munca tehnică și editorială. Utilizatorul nu copiază prompturi între instrumente și nu administrează fișierele.
 
 ---
 
-# ALEGEREA AUTOMATĂ A IDEII
+# 1. CEREREA INIȚIALĂ
 
-Dacă subiectul nu este furnizat, agentul îl alege fără o etapă separată de aprobare.
+Utilizatorul poate cere, de exemplu:
 
-Înainte de alegere:
+> Propune următorul articol NIHIL.RO.
 
-1. inspectează pagina principală și pagina rubricii;
-2. inventariază articolele și unghiurile publicate recent;
-3. observă repetițiile de temă, perioadă, geografie, structură și tip de imagine;
-4. consultă `subiecte.md` ca hartă de posibilități, nu ca listă fixă;
-5. generează intern minimum trei idei noi;
-6. evaluează fiecare idee după:
-   - potrivirea cu identitatea NIHIL.RO;
-   - potrivirea cu persona rubricii;
-   - noutatea față de conținutul existent;
-   - posibilitatea de verificare;
-   - forța poveștii sau a ideii centrale;
-   - potențialul pentru o imagine editorială bună;
-   - posibilitatea unei legături naturale cu un articol existent;
-7. alege ideea cu cel mai bun rezultat și continuă direct cu articolul.
+> Propune următorul articol pentru rubrica FAPTE.
 
-Continuitatea nu înseamnă repetare. Noul articol trebuie să pară publicat de aceeași redacție, dar să aducă un subiect, un unghi sau o scară diferită.
+> Scrie un articol pentru CIUDĂȚENII despre [SUBIECT].
 
-Dacă utilizatorul nu indică nici rubrica, agentul alege rubrica ce completează cel mai bine ediția curentă și echilibrează materialele deja publicate.
-
-În descrierea draftului PR se consemnează pe scurt:
-
-- ideea aleasă;
-- de ce se potrivește rubricii;
-- ce repetări a evitat;
-- cu ce material existent poate crea o legătură.
-
-Agentul nu cere aprobarea separată a ideii decât atunci când cererea utilizatorului admite două direcții incompatibile, cu impact material asupra rezultatului.
+Dacă cererea conține comanda clară de a scrie despre un subiect precis, subiectul este aprobat. Dacă subiectul lipsește, AI-ul trebuie să îl propună și să aștepte aprobarea înainte de a continua.
 
 ---
 
-# CE EXECUTĂ AGENTUL AUTOMAT
+# 2. CITIREA PROIECTULUI
 
-## 1. Protejează producția
+Înainte de a propune o idee, AI-ul citește:
 
-- verifică starea repository-ului;
-- pornește din versiunea curentă a lui `main`;
-- creează un branch `article/<slug>` sau `site/<descriere>`;
-- deschide un draft PR;
-- nu scrie direct în `main`.
+1. `AGENTS.md`;
+2. `index.html`;
+3. pagina rubricii vizate;
+4. articolele recente din acea rubrică;
+5. `personas.md`;
+6. `subiecte.md` ca listă neobligatorie.
 
-## 2. Alege ideea și construiește articolul
+AI-ul inventariază subiectele, unghiurile și imaginile recente și caută ce lipsește, nu doar ce apare într-o listă.
 
-- alege ideea conform regulilor de continuitate, dacă subiectul nu a fost furnizat;
-- identifică persona din `personas.md`;
-- stabilește unghiul editorial și miza;
-- documentează și verifică afirmațiile importante;
-- scrie titlul, introducerea și textul final;
-- adaugă byline-ul obligatoriu;
-- decide dacă articolul are nevoie de o secțiune publică de surse;
-- adaptează lungimea la rubrica și subiectul ales.
+---
 
-Utilizatorul nu trebuie să aprobe separat planul, titlul sau documentarea, exceptând cazul în care cererea conține o ambiguitate materială.
+# 3. FILTRUL DE NIȘĂ
 
-## 3. Pregătește imaginile odată cu textul
+AI-ul generează intern minimum trei idei și le testează astfel:
 
-Pentru fiecare imagine, agentul stabilește:
+1. Există un fapt, o contradicție sau o perspectivă care produce reacția „stai, ce?”?
+2. Motivul principal de interes este curiozitatea, nu doar importanța, tragedia, actualitatea sau utilitatea civică?
+3. Subiectul este diferit de materialele recente ale rubricii?
+4. Poate susține trei imagini distincte și relevante?
+5. Ar suna firesc pe NIHIL.RO și nefiresc pe un portal generalist?
 
-- rolul: hero, card sau interior;
+O idee care nu trece filtrul este eliminată chiar dacă apare în `subiecte.md`.
+
+AI-ul prezintă o singură recomandare bine aleasă, în format scurt:
+
+- rubrica;
+- titlul de lucru;
+- ideea surprinzătoare centrală;
+- de ce aparține nișei NIHIL.RO;
+- cele trei direcții vizuale posibile.
+
+AI-ul nu scrie articolul și nu generează imaginile până la aprobarea utilizatorului. Dacă ideea este respinsă, propune următoarea idee, fără a produce material inutil.
+
+---
+
+# 4. PACHETUL ARTICOLULUI APROBAT
+
+După aprobarea subiectului, AI-ul:
+
+1. identifică persona și semnătura rubricii;
+2. stabilește unghiul exact și ideea memorabilă;
+3. documentează afirmațiile importante;
+4. scrie articolul în lungimea și ritmul rubricii;
+5. elimină pasajele generice, moralizatoare sau specifice unui portal generalist;
+6. pregătește exact trei prompturi de imagine;
+7. construiește pagina completă de test.
+
+Autorul textului poate fi orice AI. Numele modelului nu apare în articol și nu schimbă regulile editoriale.
+
+## Sursele
+
+AI-ul verifică faptele și păstrează sursele în notele sale de lucru. Nu adaugă automat în articol:
+
+- casetă „Surse”;
+- bibliografie;
+- notă metodologică;
+- explicație că persona este fictivă;
+- etichetă că imaginile sunt generate sau reconstituite.
+
+Oricare dintre aceste elemente necesită aprobarea utilizatorului. O linie compactă de sursă poate fi propusă numai dacă formatul existent al rubricii o folosește.
+
+---
+
+# 5. CELE TREI IMAGINI
+
+Fiecare articol are exact:
+
+1. hero 16:9 — `[slug]-1.jpg`;
+2. imagine interioară 4:3 — `[slug]-2.jpg`;
+3. imagine interioară 4:3 — `[slug]-3.jpg`.
+
+Pentru fiecare imagine, pachetul conține:
+
+- rolul imaginii;
 - promptul complet;
-- modelul folosit;
-- raportul: de regulă 16:9 pentru hero și card, 4:3 pentru interior;
+- raportul;
 - numele fișierului;
 - textul alternativ;
-- punctul focal pentru decuparea pe mobil;
-- elementele care trebuie evitate.
+- punctul focal;
+- elementele interzise.
 
-Promptul respectă `nano_banana_guide.md` și este salvat în descrierea PR-ului. Nu este afișat în articol.
+Imaginile se generează și se validează secvențial. Fiecare imagine trebuie finalizată înainte de începerea următoarei.
 
-În mod implicit se generează o singură imagine hero reutilizabilă pentru card. Imagini suplimentare se creează numai dacă aduc informație sau atmosferă care nu poate fi obținută din aceeași imagine.
+## Procedura de validare și curățare
 
-Agentul generează, verifică, optimizează și integrează imaginile. Utilizatorul nu este folosit ca intermediar între agent și instrumentul de generare.
+Pentru fiecare imagine:
 
-## 4. Adaptează site-ul
+1. generează imaginea;
+2. verifică fidelitatea față de prompt;
+3. verifică diferențierea față de imaginile anterioare;
+4. respinge artefactele și textul accidental;
+5. redimensionează la maximum 1600 px și JPEG quality 90;
+6. elimină logo-ul vizibil al generatorului;
+7. elimină marcajul invizibil/SynthID;
+8. verifică rezultatul curățării;
+9. optimizează final la JPEG quality 80;
+10. salvează cu numele obligatoriu.
 
-Agentul identifică singur fișierele afectate și:
-
-- creează sau actualizează pagina articolului;
-- adaugă cardul în rubrica potrivită;
-- actualizează pagina principală numai dacă articolul trebuie promovat acolo;
-- introduce imaginea, byline-ul, textul alternativ și eventualele surse;
-- păstrează stilul și comportamentul responsive existente;
-- evită refactorizările fără legătură cu articolul.
-
-Textul, imaginile, linkurile și integrarea vizuală fac parte din același PR.
-
-## 5. Verifică rezultatul
-
-Agentul verifică:
-
-- coerența editorială și diferențierea vocii;
-- afirmațiile factuale importante;
-- HTML-ul și linkurile;
-- lipsa imaginilor sau a fișierelor nefolosite;
-- desktopul și mobilul;
-- decuparea imaginilor;
-- diacriticele, titlul și semnătura;
-- faptul că `main` nu a fost modificat.
-
-Apoi actualizează descrierea PR-ului cu:
-
-- ideea aleasă și motivul selecției;
-- rezumatul articolului;
-- fișierele modificate;
-- prompturile imaginilor;
-- regula de surse aplicată;
-- verificările efectuate;
-- capturile sau previzualizarea.
-
-## 6. Se oprește înainte de producție
-
-Agentul prezintă utilizatorului:
-
-- rezultatul vizual;
-- titlul și rubrica;
-- schimbările care vor apărea pe site;
-- linkul draftului PR;
-- eventualele probleme reale rămase.
-
-Nu face merge și nu actualizează site-ul live.
+Implementarea Gemini de referință folosește `GeminiWatermarkTool.exe` pentru logo-ul vizibil și `noai-watermark` cu CUDA pentru SynthID. Alte instrumente sunt permise numai dacă obțin și verifică același rezultat.
 
 ---
 
-# PUBLICAREA
+# 6. TESTUL
 
-Dacă rezultatul este acceptat, utilizatorul răspunde:
+După ce textul și cele trei imagini sunt complete, AI-ul actualizează numai:
+
+- `teste/articol-1.html`;
+- `teste/images/articol-1-1.jpg`;
+- `teste/images/articol-1-2.jpg`;
+- `teste/images/articol-1-3.jpg`.
+
+Pagina de test trebuie să conțină:
+
+```html
+<meta name="robots" content="noindex, nofollow">
+```
+
+În această etapă AI-ul nu modifică:
+
+- `index.html`;
+- pagina rubricii;
+- `arhiva.html`;
+- meniul, sitemap-ul sau feed-ul;
+- articolul ori imaginile finale.
+
+Testul rămâne accesibil numai prin adresa transmisă utilizatorului. Nu se creează branch sau PR pentru un articol de test obișnuit.
+
+AI-ul verifică pagina pe desktop și mobil, apoi prezintă:
+
+- adresa testului;
+- titlul și rubrica;
+- cele trei imagini în context;
+- un rezumat scurt al verificărilor;
+- orice blocaj real.
+
+---
+
+# 7. CORECȚIILE
+
+Observațiile utilizatorului actualizează același `teste/articol-1.html` și aceleași trei căi de imagine. Nu se creează un alt branch, alt PR sau alt flux paralel.
+
+Dacă se schimbă subiectul, noul subiect trebuie aprobat înainte de rescriere și generare.
+
+---
+
+# 8. PUBLICAREA
+
+Publicarea începe numai după mesajul:
 
 > PUBLICĂ
 
-Agentul tratează acest mesaj drept aprobarea explicită pentru integrarea PR-ului prezentat. Rulează verificarea finală, face merge în `main`, urmărește publicarea GitHub Pages și verifică pagina live.
+AI-ul:
 
-Dacă sunt necesare schimbări, utilizatorul răspunde direct, de exemplu:
+1. verifică faptul că aprobarea se referă la testul curent;
+2. verifică versiunea curentă a lui `main` și evită suprascrierea schimbărilor fără legătură;
+3. mută articolul în calea finală a rubricii;
+4. mută cele trei imagini în folderul final;
+5. actualizează cardul rubricii și arhiva;
+6. actualizează homepage-ul numai dacă promovarea a fost aprobată sau este cerută de formatul curent;
+7. elimină fișierele testului;
+8. publică schimbările într-un singur set coerent;
+9. verifică pagina finală pe desktop și mobil;
+10. verifică site-ul live și raportează rezultatul.
 
-> Fă imaginea mai puțin întunecată și scurtează introducerea.
-
-Agentul actualizează același branch și același PR, repetă verificarea și prezintă o nouă previzualizare. Nu creează un flux paralel.
+`PUBLICĂ` nu autorizează refactorizări, schimbări de layout sau alte articole.
 
 ---
 
-# REGULA SURSELOR
+# 9. ADAPTOARELE DE INSTRUMENTE
 
-Verificarea este obligatorie; bibliografia publică nu este automată.
+Documentele dedicate unui model sau unui mediu pot explica butoane, comenzi, căi ori programe concrete. Ele nu pot modifica:
 
-Regula exactă se ia din secțiunea „Când afișăm sursele” din `personas.md`. Sursele publice trebuie să fie linkuri descriptive și direct relevante. Etichete vagi precum „știință”, „istorie” sau „internet” nu sunt surse.
+- nișa;
+- aprobarea subiectului;
+- cele trei imagini;
+- generarea secvențială;
+- eliminarea logo-ului și SynthID;
+- testul din `/teste/`;
+- aprobarea `PUBLICĂ`.
 
----
-
-# CE NU MAI TREBUIE SĂ FACĂ UTILIZATORUL
-
-- să propună separat subiecte sau să aprobe un brainstorming;
-- să ceară separat articolul și integrarea;
-- să ceară separat prompturile imaginilor;
-- să transfere promptul într-un alt instrument;
-- să indice fiecare pagină care trebuie actualizată;
-- să ceară verificarea pe mobil;
-- să urmărească manual ce branch este live;
-- să repete contextul editorial al rubricii;
-- să autorizeze fiecare pas intermediar.
-
-Singurul prag obligatoriu rămas este publicarea în producție.
+Dacă un AI nu poate executa o cerință, se oprește și raportează blocajul. Nu transferă munca utilizatorului și nu redefinește cerința.
