@@ -1,99 +1,146 @@
 # AGENTS.md
 
-Aceste reguli se aplică întregului repository NIHIL.RO.
+Aceste reguli se aplică întregului repository NIHIL.RO și oricărui AI care lucrează la proiect.
 
-## Producția este protejată
+## 1. Identitatea NIHIL.RO
 
-- Branch-ul `main` alimentează site-ul live.
-- Nu modifica direct `main`.
-- Orice schimbare pornește dintr-un branch nou creat din versiunea curentă a lui `main`.
-- Deschide imediat un draft PR pentru schimbare.
-- Nu integra PR-ul și nu publica site-ul fără aprobarea explicită a utilizatorului.
-- Confirmarea standard de publicare este mesajul `PUBLICĂ`.
-- Până la acea confirmare, toate textele, imaginile și modificările de layout rămân pe branch-ul de lucru.
-- Păstrează schimbările fără legătură în afara PR-ului curent.
+NIHIL.RO este un anti-portal românesc de curiozitate editorială pentru cititori care vor lucruri reale, surprinzătoare și memorabile. Promisiunea site-ului este exprimată de formulele deja publicate: „Curiozitatea ca act de supraviețuire”, „Ciudățenii verificate”, „fapte care dezechilibrează” și „povești din colțuri neașteptate”.
 
-## Interfața simplă pentru utilizator
+Un subiect se potrivește numai dacă valoarea lui principală este cel puțin una dintre acestea:
 
-Când utilizatorul cere un articol sau o adaptare a site-ului, agentul execută singur întregul flux descris în `EDITORIAL_WORKFLOW.md`.
+- un fapt care provoacă reacția „stai, ce?”;
+- o excepție reală care contrazice intuiția;
+- un loc, om, obiect sau comportament puțin cunoscut și realmente neobișnuit;
+- o perspectivă neașteptată asupra unui lucru familiar;
+- o acțiune concretă care face ziua mai interesantă.
 
-Dacă utilizatorul nu oferă un subiect, alegerea ideii aparține agentului. Cererea „Pregătește următorul articol pentru rubrica X” este completă și nu necesită o rundă separată de brainstorming sau aprobare a temei.
+NIHIL.RO nu este portal generalist, site de știri, publicație ecologistă, tribună de activism sau revistă de probleme sociale. Documentarea poate fi serioasă, dar seriozitatea, importanța civică, tragedia sau actualitatea nu sunt singure motive suficiente pentru publicarea unui articol.
 
-Utilizatorul nu trebuie să:
+Dacă un material ar putea apărea aproape neschimbat pe un site generalist despre politică publică, ecologie, sănătate, educație sau societate, subiectul se respinge ori se caută un unghi NIHIL.RO autentic înainte de a fi propus.
 
-- propună separat ideile de articol;
-- creeze branch-uri sau PR-uri;
-- copieze prompturi între instrumente;
-- aleagă persona dacă rubrica este deja cunoscută;
-- scrie separat promptul imaginilor;
-- indice manual fișierele HTML care trebuie actualizate;
-- verifice căile imaginilor sau comportamentul responsive.
+`subiecte.md` este doar o colecție de posibilități. Prezența unei teme în acel fișier nu înseamnă aprobare și nu dovedește că tema se potrivește nișei.
 
-Agentul cere clarificări numai dacă lipsește o decizie care ar schimba material rezultatul. În rest, ia decizii editoriale rezonabile și le consemnează în draftul PR.
+## 2. Workflow independent de model
 
-## Documente obligatorii
+Regulile descriu rezultate și verificări, nu un furnizor. Articolul poate fi scris, ilustrat, integrat și verificat de Gemini, ChatGPT, Claude, Codex sau orice alt AI cu instrumentele necesare.
 
-Înainte de redactare sau integrare, consultă:
+- Un singur AI poate executa toate rolurile sau mai multe AI-uri le pot împărți.
+- Utilizatorul nu este folosit ca intermediar pentru copierea prompturilor între instrumente.
+- Un ghid dedicat unui model sau unui program este un adaptor de implementare, nu workflow-ul de bază.
+- Un AI nu poate elimina o cerință doar pentru că instrumentul său nu o poate executa.
+- Dacă lipsește o capacitate obligatorie, AI-ul oprește fluxul și raportează exact blocajul.
 
-1. `personas.md` pentru voce, semnătură și regula surselor;
-2. `nano_banana_guide.md` pentru direcția vizuală;
-3. `EDITORIAL_WORKFLOW.md` pentru fluxul complet;
-4. `subiecte.md` când este relevant pentru selecția temei.
+## 3. Cele două aprobări obligatorii
 
-Dacă un document lipsește, nu inventa conținutul lui. Continuă numai dacă lipsa nu afectează decizia cerută.
+### Aprobarea subiectului
 
-## Continuitatea editorială și alegerea ideii
+Dacă utilizatorul nu a cerut explicit scrierea unui subiect concret, AI-ul analizează site-ul, alege cea mai bună idee și o propune înainte de redactare. Nu scrie articolul și nu generează imaginile până când utilizatorul aprobă clar ideea.
 
-Înainte de a alege subiectul unui articol, agentul:
+O cerere precum „pregătește următorul articol NIHIL.RO” sau „putem încerca un articol?” nu aprobă automat nicio temă. O comandă explicită precum „scrie un articol despre X” reprezintă aprobarea subiectului X.
 
-- inspectează pagina principală și pagina rubricii;
-- identifică subiectele, unghiurile și imaginile folosite recent;
-- consultă `subiecte.md` ca sursă de direcții, nu ca listă obligatorie;
-- evită repetarea aceleiași idei, aceleiași perioade, aceleiași geografii sau aceluiași mecanism vizual;
-- păstrează continuitatea vocii și a promisiunii rubricii;
-- caută legături naturale către materiale deja publicate;
-- generează intern cel puțin trei idei și o alege pe cea mai bună după potrivire, originalitate, verificabilitate și potențial vizual.
+### Aprobarea publicării
 
-Dacă utilizatorul cere „următorul articol NIHIL.RO” fără să aleagă rubrica, agentul identifică singur rubrica ce are cea mai mare nevoie de conținut nou sau de echilibrare tematică.
+Testul nu devine articol public în rubrică până la mesajul explicit `PUBLICĂ`. Această comandă se aplică numai testului prezentat cel mai recent.
 
-Ideea aleasă este consemnată în draftul PR împreună cu motivul selecției. Agentul nu oprește fluxul pentru aprobarea separată a ideii, cu excepția unei ambiguități care ar schimba material direcția cerută.
+## 4. Documentele care trebuie citite
 
-## Reguli pentru articole
+Înainte de propunerea unei idei:
 
-- Fiecare articol folosește persona rubricii și byline-ul ei obligatoriu.
-- Fiecare articol este verificat factual conform `personas.md`.
-- Sursele se afișează numai în cazurile cerute de regula rubricii.
-- Fiecare imagine are prompt, raport, nume de fișier, text alternativ și punct focal.
-- Prompturile imaginilor se păstrează în descrierea PR-ului, nu în textul vizibil al paginii.
-- Articolul, imaginile, cardurile și linkurile sunt pregătite în același branch.
-- Nu publica un card care trimite către o pagină inexistentă.
-- Nu inventa experiențe personale, citate, surse sau biografii.
+1. `index.html` și pagina rubricii;
+2. articolele recente din rubrica respectivă;
+3. `personas.md`;
+4. `EDITORIAL_WORKFLOW.md`;
+5. `subiecte.md`, numai ca hartă orientativă.
 
-## Reguli pentru imagini
+Pentru imagini se consultă și direcția vizuală existentă. `nano_banana_guide.md` și fișierele din `backup_workflow/` pot fi folosite ca adaptoare sau referințe tehnice, dar cerințele obligatorii sunt cele din prezentul document și din `EDITORIAL_WORKFLOW.md`.
 
-- Generează imaginea în același flux cu articolul; nu transfera această etapă utilizatorului.
-- Respectă stilul NIHIL.RO și raportul cerut de poziția imaginii.
-- Verifică decuparea pe desktop și mobil.
-- Nu integra imagini cu text accidental, artefacte evidente, anatomie imposibilă sau subiect diferit de articol.
-- Optimizează fișierul pentru web fără degradare vizibilă.
-- Dacă instrumentul necesar nu este disponibil, oprește înainte de publicare și explică exact blocajul.
+## 5. Testul simplu și protecția producției
 
-## Verificare și publicare
+Branch-ul `main` alimentează GitHub Pages. Pentru articole, înainte de `PUBLICĂ`, singura excepție permisă de la protecția producției este suprafața de test:
 
-Înainte de a cere aprobarea:
+- pagina: `teste/articol-1.html`;
+- imaginile: `teste/images/articol-1-1.jpg`, `articol-1-2.jpg`, `articol-1-3.jpg`;
+- pagina conține `noindex, nofollow`;
+- testul nu este legat din homepage, rubrică, arhivă, meniu, sitemap sau feed;
+- nicio pagină publică existentă nu este modificată pentru pregătirea testului.
 
-- verifică HTML-ul și căile fișierelor;
-- verifică linkurile și semnătura;
-- verifică desktopul și mobilul;
-- verifică imaginile și textele alternative;
-- verifică dacă sursele publice sunt prezente numai unde trebuie;
-- oferă o previzualizare sau capturi clare;
-- rezumă exact ce se va schimba pe site.
+Nu se creează branch și PR pentru fiecare articol de test. Același slot `articol-1` este actualizat după observațiile utilizatorului.
 
-După mesajul `PUBLICĂ`:
+Orice modificare în afara `teste/` rămâne interzisă până la `PUBLICĂ`. Modificările generale de layout sau infrastructură, care nu pot fi izolate în `teste/`, folosesc branch separat și previzualizare înainte de integrare.
 
-1. rulează verificarea finală;
-2. actualizează PR-ul dacă este necesar;
-3. integrează schimbarea în `main`;
-4. verifică publicarea pe site-ul live;
-5. raportează rezultatul și orice problemă observată.
+După `PUBLICĂ`, articolul și cele trei imagini sunt mutate în căile finale, sunt actualizate numai paginile necesare, iar testul este eliminat în aceeași publicare coerentă.
+
+## 6. Contractul articolului
+
+- Subiectul și unghiul au fost aprobate de utilizator.
+- Textul respectă nișa și persona rubricii.
+- Semnătura obligatorie apare sub titlu.
+- Nu se inventează experiențe personale, citate, surse sau biografii.
+- Afirmațiile sunt verificate, dar cercetarea nu este transformată automat în bibliografie publică.
+- Nu se adaugă o casetă publică de surse fără aprobarea utilizatorului.
+- Nu se adaugă etichete precum „imagine generată”, „reconstituire editorială” sau explicații despre AI fără aprobarea utilizatorului.
+- Fiecare articol are exact trei imagini: una hero și două interioare.
+- Prompturile celor trei imagini sunt păstrate în pachetul de lucru și pot fi executate de orice generator compatibil.
+
+## 7. Contractul obligatoriu al imaginilor
+
+### Număr, raport și nume
+
+1. `[slug]-1.jpg` — imagine hero, raport 16:9, reutilizabilă pentru card.
+2. `[slug]-2.jpg` — imagine interioară, raport 4:3.
+3. `[slug]-3.jpg` — imagine interioară, raport 4:3.
+
+Cele trei imagini trebuie să arate momente, perspective sau detalii diferite. Nu sunt acceptate variații aproape identice.
+
+### Generare secvențială
+
+Imaginile se procesează una câte una. Pentru fiecare imagine:
+
+1. generează;
+2. verifică respectarea promptului;
+3. verifică diferențierea față de imaginile deja acceptate;
+4. respinge textul accidental, artefactele, anatomia imposibilă sau subiectul greșit;
+5. salvează și redenumește fișierul;
+6. finalizează toată curățarea și optimizarea;
+7. abia apoi trece la următoarea imagine.
+
+Generarea în lot fără verificarea fiecărei imagini este interzisă.
+
+### Curățarea obligatorie
+
+Pentru imaginile generate cu Gemini, procedura de referință restaurată din workflow-ul vechi este:
+
+1. redimensionare la maximum 1600 px, JPEG quality 90;
+2. eliminarea logo-ului vizibil cu `GeminiWatermarkTool.exe`;
+3. eliminarea marcajului invizibil/SynthID cu `noai-watermark` și CUDA;
+4. verificarea rezultatului;
+5. optimizare finală JPEG quality 80;
+6. mutarea în calea testului sau în calea finală aprobată.
+
+Alt AI sau alt mediu poate folosi instrumente echivalente. Eliminarea logo-ului vizibil și a marcajului invizibil rămâne obligatorie; numai instrumentul concret poate fi înlocuit.
+
+## 8. Sursele
+
+Verificarea factuală este obligatorie. Afișarea surselor este o decizie editorială separată.
+
+- Sursele sunt păstrate în notele de lucru ale AI-ului.
+- Articolul nu primește implicit o secțiune „Surse”.
+- O linie compactă de sursă poate fi propusă când formatul existent al rubricii o folosește deja.
+- O bibliografie, o notă metodologică sau o explicație despre autorul-persona se afișează numai după aprobarea utilizatorului.
+
+## 9. Verificarea testului
+
+Înainte de prezentarea testului, AI-ul confirmă:
+
+- subiect aprobat și potrivire cu nișa;
+- persona și semnătura corecte;
+- exact trei imagini, cu rapoartele corecte;
+- logo-ul vizibil și marcajul invizibil eliminate;
+- HTML, diacritice, căi și linkuri valide;
+- desktop și mobil verificate vizual;
+- `noindex, nofollow` prezent;
+- nicio legătură din site către test;
+- nicio sursă sau etichetă AI publică neaprobată;
+- nicio modificare accidentală în afara `teste/`.
+
+După `PUBLICĂ`, verificarea se repetă pe pagina finală live.
